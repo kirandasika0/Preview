@@ -7,15 +7,16 @@
 //
 
 #import "PRAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation PRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [Parse setApplicationId:@"KCxFjHvenUvaCDy0YnlvfG7SpwfyE0rCMy3tNPd6"
+                  clientKey:@"cUYdwtwVwIjb8a8EAdjpvnFoYkQy4hzCU491pDDk"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 

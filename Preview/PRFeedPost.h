@@ -1,0 +1,29 @@
+//
+//  PRFeedPost.h
+//  Preview
+//
+//  Created by SaiKiran Dasika on 10/05/14.
+//  Copyright (c) 2014 Burst. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface PRFeedPost : NSObject
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic,strong) NSString *decp;
+@property (nonatomic,strong) NSString *rating;
+@property (nonatomic,strong) NSString *uniqueID;
+
+
+- (id) initWithTitle:(NSString *)title;
++ (id) blogPostWithTitle:(NSString *)title;
+
+
+- (NSURL *) thumbnailURL;
+
+@end

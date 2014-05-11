@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32FC60191E98BC00520497 /* PRCategoryViewController.m */; };
+		9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */; };
+		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
+		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
 		9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F316191E206200776A16 /* Foundation.framework */; };
 		9FB1F319191E206200776A16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F318191E206200776A16 /* CoreGraphics.framework */; };
 		9FB1F31B191E206200776A16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F31A191E206200776A16 /* UIKit.framework */; };
@@ -19,6 +23,22 @@
 		9FB1F332191E206200776A16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F31A191E206200776A16 /* UIKit.framework */; };
 		9FB1F33A191E206200776A16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1F338191E206200776A16 /* InfoPlist.strings */; };
 		9FB1F33C191E206200776A16 /* PreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F33B191E206200776A16 /* PreviewTests.m */; };
+		9FB1F346191E219400776A16 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F345191E219400776A16 /* Parse.framework */; };
+		9FB1F350191E221C00776A16 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F347191E221C00776A16 /* AudioToolbox.framework */; };
+		9FB1F351191E221C00776A16 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F348191E221C00776A16 /* CFNetwork.framework */; };
+		9FB1F352191E221C00776A16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F349191E221C00776A16 /* CoreLocation.framework */; };
+		9FB1F353191E221C00776A16 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34A191E221C00776A16 /* libz.1.1.3.dylib */; };
+		9FB1F354191E221C00776A16 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34B191E221C00776A16 /* MobileCoreServices.framework */; };
+		9FB1F355191E221C00776A16 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34C191E221C00776A16 /* QuartzCore.framework */; };
+		9FB1F356191E221C00776A16 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34D191E221C00776A16 /* Security.framework */; };
+		9FB1F357191E221C00776A16 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34E191E221C00776A16 /* StoreKit.framework */; };
+		9FB1F358191E221C00776A16 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F34F191E221C00776A16 /* SystemConfiguration.framework */; };
+		9FB1F35A191E22F700776A16 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1F359191E22F700776A16 /* MainStoryboard.storyboard */; };
+		9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F35C191E277B00776A16 /* PRHomeFeedViewController.m */; };
+		9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */; };
+		9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F365191E38A400776A16 /* PRSignUPViewController.m */; };
+		9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */; };
+		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F32FC5F191E98BC00520497 /* PRCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryViewController.h; sourceTree = "<group>"; };
+		9F32FC60191E98BC00520497 /* PRCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryViewController.m; sourceTree = "<group>"; };
+		9F3B23A6191EA47E0057BFA5 /* PRCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryTitles.h; sourceTree = "<group>"; };
+		9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryTitles.m; sourceTree = "<group>"; };
+		9F58550B191E876000E2E6D1 /* PRFeedPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFeedPost.h; sourceTree = "<group>"; };
+		9F58550C191E876000E2E6D1 /* PRFeedPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFeedPost.m; sourceTree = "<group>"; };
+		9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRModalDetailFeedViewController.h; sourceTree = "<group>"; };
+		9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRModalDetailFeedViewController.m; sourceTree = "<group>"; };
 		9FB1F313191E206200776A16 /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB1F316191E206200776A16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FB1F318191E206200776A16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +76,27 @@
 		9FB1F337191E206200776A16 /* PreviewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PreviewTests-Info.plist"; sourceTree = "<group>"; };
 		9FB1F339191E206200776A16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9FB1F33B191E206200776A16 /* PreviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewTests.m; sourceTree = "<group>"; };
+		9FB1F345191E219400776A16 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9FB1F347191E221C00776A16 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9FB1F348191E221C00776A16 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9FB1F349191E221C00776A16 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9FB1F34A191E221C00776A16 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		9FB1F34B191E221C00776A16 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9FB1F34C191E221C00776A16 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9FB1F34D191E221C00776A16 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9FB1F34E191E221C00776A16 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9FB1F34F191E221C00776A16 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9FB1F359191E22F700776A16 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9FB1F35B191E277B00776A16 /* PRHomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRHomeFeedViewController.h; sourceTree = "<group>"; };
+		9FB1F35C191E277B00776A16 /* PRHomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRHomeFeedViewController.m; sourceTree = "<group>"; };
+		9FB1F35E191E2EDA00776A16 /* PRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRLoginViewController.h; sourceTree = "<group>"; };
+		9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRLoginViewController.m; sourceTree = "<group>"; };
+		9FB1F364191E38A400776A16 /* PRSignUPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSignUPViewController.h; sourceTree = "<group>"; };
+		9FB1F365191E38A400776A16 /* PRSignUPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSignUPViewController.m; sourceTree = "<group>"; };
+		9FBCC985191EBBE700B2D3FB /* PRSelectedCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryTitles.h; sourceTree = "<group>"; };
+		9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryTitles.m; sourceTree = "<group>"; };
+		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
+		9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +104,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1F350191E221C00776A16 /* AudioToolbox.framework in Frameworks */,
+				9FB1F351191E221C00776A16 /* CFNetwork.framework in Frameworks */,
+				9FB1F352191E221C00776A16 /* CoreLocation.framework in Frameworks */,
+				9FB1F353191E221C00776A16 /* libz.1.1.3.dylib in Frameworks */,
+				9FB1F354191E221C00776A16 /* MobileCoreServices.framework in Frameworks */,
+				9FB1F355191E221C00776A16 /* QuartzCore.framework in Frameworks */,
+				9FB1F356191E221C00776A16 /* Security.framework in Frameworks */,
+				9FB1F357191E221C00776A16 /* StoreKit.framework in Frameworks */,
+				9FB1F358191E221C00776A16 /* SystemConfiguration.framework in Frameworks */,
 				9FB1F319191E206200776A16 /* CoreGraphics.framework in Frameworks */,
 				9FB1F31B191E206200776A16 /* UIKit.framework in Frameworks */,
+				9FB1F346191E219400776A16 /* Parse.framework in Frameworks */,
 				9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +133,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3B23A9191EAF6A0057BFA5 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				9FB1F35B191E277B00776A16 /* PRHomeFeedViewController.h */,
+				9FB1F35C191E277B00776A16 /* PRHomeFeedViewController.m */,
+				9F58550B191E876000E2E6D1 /* PRFeedPost.h */,
+				9F58550C191E876000E2E6D1 /* PRFeedPost.m */,
+				9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */,
+				9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */,
+			);
+			name = "Home Feed";
+			sourceTree = "<group>";
+		};
+		9F3B23AA191EAF860057BFA5 /* Category View */ = {
+			isa = PBXGroup;
+			children = (
+				9F32FC5F191E98BC00520497 /* PRCategoryViewController.h */,
+				9F32FC60191E98BC00520497 /* PRCategoryViewController.m */,
+				9F3B23A6191EA47E0057BFA5 /* PRCategoryTitles.h */,
+				9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */,
+			);
+			name = "Category View";
+			sourceTree = "<group>";
+		};
+		9F3B23AB191EAFA10057BFA5 /* Selected Category */ = {
+			isa = PBXGroup;
+			children = (
+				9FBCC985191EBBE700B2D3FB /* PRSelectedCategoryTitles.h */,
+				9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */,
+				9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */,
+				9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */,
+			);
+			name = "Selected Category";
+			sourceTree = "<group>";
+		};
 		9FB1F30A191E206200776A16 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +190,16 @@
 		9FB1F315191E206200776A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FB1F347191E221C00776A16 /* AudioToolbox.framework */,
+				9FB1F348191E221C00776A16 /* CFNetwork.framework */,
+				9FB1F349191E221C00776A16 /* CoreLocation.framework */,
+				9FB1F34A191E221C00776A16 /* libz.1.1.3.dylib */,
+				9FB1F34B191E221C00776A16 /* MobileCoreServices.framework */,
+				9FB1F34C191E221C00776A16 /* QuartzCore.framework */,
+				9FB1F34D191E221C00776A16 /* Security.framework */,
+				9FB1F34E191E221C00776A16 /* StoreKit.framework */,
+				9FB1F34F191E221C00776A16 /* SystemConfiguration.framework */,
+				9FB1F345191E219400776A16 /* Parse.framework */,
 				9FB1F316191E206200776A16 /* Foundation.framework */,
 				9FB1F318191E206200776A16 /* CoreGraphics.framework */,
 				9FB1F31A191E206200776A16 /* UIKit.framework */,
@@ -107,10 +211,18 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F3B23AB191EAFA10057BFA5 /* Selected Category */,
+				9F3B23AA191EAF860057BFA5 /* Category View */,
+				9F3B23A9191EAF6A0057BFA5 /* Home Feed */,
 				9FB1F325191E206200776A16 /* PRAppDelegate.h */,
 				9FB1F326191E206200776A16 /* PRAppDelegate.m */,
 				9FB1F328191E206200776A16 /* Images.xcassets */,
 				9FB1F31D191E206200776A16 /* Supporting Files */,
+				9FB1F359191E22F700776A16 /* MainStoryboard.storyboard */,
+				9FB1F35E191E2EDA00776A16 /* PRLoginViewController.h */,
+				9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */,
+				9FB1F364191E38A400776A16 /* PRSignUPViewController.h */,
+				9FB1F365191E38A400776A16 /* PRSignUPViewController.m */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -220,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1F35A191E22F700776A16 /* MainStoryboard.storyboard in Resources */,
 				9FB1F321191E206200776A16 /* InfoPlist.strings in Resources */,
 				9FB1F329191E206200776A16 /* Images.xcassets in Resources */,
 			);
@@ -240,8 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
+				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
 				9FB1F327191E206200776A16 /* PRAppDelegate.m in Sources */,
+				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
+				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,
 				9FB1F323191E206200776A16 /* main.m in Sources */,
+				9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */,
+				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,
+				9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */,
+				9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */,
+				9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Kiran/Desktop/all\\ projys/Preview",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
@@ -373,6 +499,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Kiran/Desktop/all\\ projys/Preview",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
@@ -442,6 +572,7 @@
 				9FB1F341191E206200776A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FB1F342191E206200776A16 /* Build configuration list for PBXNativeTarget "PreviewTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +581,7 @@
 				9FB1F344191E206200776A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
