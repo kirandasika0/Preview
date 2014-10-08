@@ -84,4 +84,7 @@
     return cell;
 }
 
+- (IBAction)swipedRight:(id)sender {
+    NSLog(@"Just swiped right !");
+}
 @end

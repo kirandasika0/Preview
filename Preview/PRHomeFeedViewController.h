@@ -13,8 +13,17 @@
 
 @property (nonatomic,strong) NSMutableArray *feedPosts;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
+- (IBAction)shoeSettingsPopover:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *showReviewButton;
+
+
+@property (strong,nonatomic) NSTimer *timer;
+@property (strong,nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) UIPopoverController *popOver;
 
 - (IBAction)logout:(id)sender;
 
+@property (nonatomic,strong) NSString *IDForRelatedProductPictures;
 
 @end

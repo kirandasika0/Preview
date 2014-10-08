@@ -41,7 +41,7 @@
         //We can log the user
         [PFUser logInWithUsernameInBackground:usernameField password:passwordField block:^(PFUser *user, NSError *error) {
             if (error) {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error 403" message:@"Looks like there is a probelem in the server. Please try later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error 403" message:[error.userInfo objectForKey:@"error"]delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
             }
             else {

@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F06E537193F37FF00EDA245 /* i_p_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F06E536193F37FF00EDA245 /* i_p_r.png */; };
+		9F14D1F419E543FF001BC803 /* PRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */; };
+		9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */; };
+		9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */; };
+		9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */; };
 		9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32FC60191E98BC00520497 /* PRCategoryViewController.m */; };
+		9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1C19DFFB83006C7135 /* PRcommentsCollectionViewController.m */; };
+		9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */; };
+		9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */; };
 		9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */; };
 		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
+		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
+		9F812116194175D600249BAC /* PRCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F812115194175D600249BAC /* PRCollectionCell.m */; };
 		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
+		9FAD219519430B720055FA9D /* navBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD219419430B720055FA9D /* navBarBackground.png */; };
 		9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F316191E206200776A16 /* Foundation.framework */; };
 		9FB1F319191E206200776A16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F318191E206200776A16 /* CoreGraphics.framework */; };
 		9FB1F31B191E206200776A16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F31A191E206200776A16 /* UIKit.framework */; };
@@ -37,7 +48,13 @@
 		9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F35C191E277B00776A16 /* PRHomeFeedViewController.m */; };
 		9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */; };
 		9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F365191E38A400776A16 /* PRSignUPViewController.m */; };
+		9FBAAEFA194066FA006F39B3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */; };
+		9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */; };
+		9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */; };
 		9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */; };
+		9FCA652A1940BF1F009CA8D3 /* PRRelatedPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */; };
+		9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC5D919E538AA00D7FC39 /* PRShowJustReviewsViewController.m */; };
+		9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */; };
 		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -52,14 +69,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F06E536193F37FF00EDA245 /* i_p_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = i_p_r.png; path = "../../../My Stuff /ios pics/i_p_r.png"; sourceTree = "<group>"; };
+		9F14D1F219E543FF001BC803 /* PRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSettingsViewController.h; sourceTree = "<group>"; };
+		9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSettingsViewController.m; sourceTree = "<group>"; };
+		9F1E4E6419E1454300E3B242 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
+		9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
+		9F1F507F191F5C5700551499 /* PRSuggestProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSuggestProductViewController.h; sourceTree = "<group>"; };
+		9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSuggestProductViewController.m; sourceTree = "<group>"; };
+		9F1F5082191F5D6A00551499 /* PRSuggestCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSuggestCategoryViewController.h; sourceTree = "<group>"; };
+		9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSuggestCategoryViewController.m; sourceTree = "<group>"; };
 		9F32FC5F191E98BC00520497 /* PRCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryViewController.h; sourceTree = "<group>"; };
 		9F32FC60191E98BC00520497 /* PRCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryViewController.m; sourceTree = "<group>"; };
+		9F342A1B19DFFB83006C7135 /* PRcommentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRcommentsCollectionViewController.h; sourceTree = "<group>"; };
+		9F342A1C19DFFB83006C7135 /* PRcommentsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRcommentsCollectionViewController.m; sourceTree = "<group>"; };
+		9F342A1E19DFFBA1006C7135 /* PRCommentsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCommentsCollectionViewCell.h; sourceTree = "<group>"; };
+		9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCommentsCollectionViewCell.m; sourceTree = "<group>"; };
+		9F342A2119E00197006C7135 /* PRInsertCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRInsertCommentViewController.h; sourceTree = "<group>"; };
+		9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRInsertCommentViewController.m; sourceTree = "<group>"; };
 		9F3B23A6191EA47E0057BFA5 /* PRCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryTitles.h; sourceTree = "<group>"; };
 		9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryTitles.m; sourceTree = "<group>"; };
 		9F58550B191E876000E2E6D1 /* PRFeedPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFeedPost.h; sourceTree = "<group>"; };
 		9F58550C191E876000E2E6D1 /* PRFeedPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFeedPost.m; sourceTree = "<group>"; };
+		9F6F189619443BDA0071360E /* PRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProfileViewController.h; sourceTree = "<group>"; };
+		9F6F189719443BDA0071360E /* PRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProfileViewController.m; sourceTree = "<group>"; };
+		9F812114194175D600249BAC /* PRCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCollectionCell.h; sourceTree = "<group>"; };
+		9F812115194175D600249BAC /* PRCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCollectionCell.m; sourceTree = "<group>"; };
 		9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRModalDetailFeedViewController.h; sourceTree = "<group>"; };
 		9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRModalDetailFeedViewController.m; sourceTree = "<group>"; };
+		9FAD219419430B720055FA9D /* navBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBackground.png; sourceTree = "<group>"; };
 		9FB1F313191E206200776A16 /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB1F316191E206200776A16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FB1F318191E206200776A16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,8 +130,19 @@
 		9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRLoginViewController.m; sourceTree = "<group>"; };
 		9FB1F364191E38A400776A16 /* PRSignUPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSignUPViewController.h; sourceTree = "<group>"; };
 		9FB1F365191E38A400776A16 /* PRSignUPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSignUPViewController.m; sourceTree = "<group>"; };
+		9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		9FBB579319DD63A900F62CE8 /* PRFriendsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewController.h; sourceTree = "<group>"; };
+		9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFriendsCollectionViewController.m; sourceTree = "<group>"; };
+		9FBB579619DD641100F62CE8 /* PRFriendsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewCell.h; sourceTree = "<group>"; };
+		9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFriendsCollectionViewCell.m; sourceTree = "<group>"; };
 		9FBCC985191EBBE700B2D3FB /* PRSelectedCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryTitles.h; sourceTree = "<group>"; };
 		9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryTitles.m; sourceTree = "<group>"; };
+		9FCA65281940BF1F009CA8D3 /* PRRelatedPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedPicturesViewController.h; sourceTree = "<group>"; };
+		9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedPicturesViewController.m; sourceTree = "<group>"; };
+		9FCCC5D819E538AA00D7FC39 /* PRShowJustReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowJustReviewsViewController.h; sourceTree = "<group>"; };
+		9FCCC5D919E538AA00D7FC39 /* PRShowJustReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowJustReviewsViewController.m; sourceTree = "<group>"; };
+		9FEE1D5F194C8D0B005F7A46 /* PREditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PREditProfileViewController.h; sourceTree = "<group>"; };
+		9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PREditProfileViewController.m; sourceTree = "<group>"; };
 		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
 		9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +165,7 @@
 				9FB1F31B191E206200776A16 /* UIKit.framework in Frameworks */,
 				9FB1F346191E219400776A16 /* Parse.framework in Frameworks */,
 				9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */,
+				9FBAAEFA194066FA006F39B3 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +182,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1E4E6319E1452700E3B242 /* Time Ago */ = {
+			isa = PBXGroup;
+			children = (
+				9F1E4E6419E1454300E3B242 /* NSDate+NVTimeAgo.h */,
+				9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */,
+			);
+			name = "Time Ago";
+			sourceTree = "<group>";
+		};
+		9F1F507E191F5C2C00551499 /* Suggest */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F507F191F5C5700551499 /* PRSuggestProductViewController.h */,
+				9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */,
+				9F1F5082191F5D6A00551499 /* PRSuggestCategoryViewController.h */,
+				9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */,
+			);
+			name = Suggest;
+			sourceTree = "<group>";
+		};
+		9F342A1A19DFFB59006C7135 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				9F342A1B19DFFB83006C7135 /* PRcommentsCollectionViewController.h */,
+				9F342A1C19DFFB83006C7135 /* PRcommentsCollectionViewController.m */,
+				9F342A1E19DFFBA1006C7135 /* PRCommentsCollectionViewCell.h */,
+				9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */,
+				9F342A2119E00197006C7135 /* PRInsertCommentViewController.h */,
+				9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
 		9F3B23A9191EAF6A0057BFA5 /* Home Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +224,12 @@
 				9F58550C191E876000E2E6D1 /* PRFeedPost.m */,
 				9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */,
 				9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */,
+				9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */,
+				9FCA65281940BF1F009CA8D3 /* PRRelatedPicturesViewController.h */,
+				9F812114194175D600249BAC /* PRCollectionCell.h */,
+				9F812115194175D600249BAC /* PRCollectionCell.m */,
+				9FCCC5D819E538AA00D7FC39 /* PRShowJustReviewsViewController.h */,
+				9FCCC5D919E538AA00D7FC39 /* PRShowJustReviewsViewController.m */,
 			);
 			name = "Home Feed";
 			sourceTree = "<group>";
@@ -168,6 +256,25 @@
 			name = "Selected Category";
 			sourceTree = "<group>";
 		};
+		9F6F189519443BC00071360E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9F6F189619443BDA0071360E /* PRProfileViewController.h */,
+				9F6F189719443BDA0071360E /* PRProfileViewController.m */,
+				9FEE1D5F194C8D0B005F7A46 /* PREditProfileViewController.h */,
+				9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		9FAD219319430B4E0055FA9D /* Other Images */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD219419430B720055FA9D /* navBarBackground.png */,
+			);
+			name = "Other Images";
+			sourceTree = "<group>";
+		};
 		9FB1F30A191E206200776A16 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +297,7 @@
 		9FB1F315191E206200776A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */,
 				9FB1F347191E221C00776A16 /* AudioToolbox.framework */,
 				9FB1F348191E221C00776A16 /* CFNetwork.framework */,
 				9FB1F349191E221C00776A16 /* CoreLocation.framework */,
@@ -211,6 +319,12 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F1E4E6319E1452700E3B242 /* Time Ago */,
+				9F342A1A19DFFB59006C7135 /* Comments */,
+				9FBB579219DD634000F62CE8 /* Friends */,
+				9F6F189519443BC00071360E /* Profile */,
+				9FAD219319430B4E0055FA9D /* Other Images */,
+				9F1F507E191F5C2C00551499 /* Suggest */,
 				9F3B23AB191EAFA10057BFA5 /* Selected Category */,
 				9F3B23AA191EAF860057BFA5 /* Category View */,
 				9F3B23A9191EAF6A0057BFA5 /* Home Feed */,
@@ -223,6 +337,8 @@
 				9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */,
 				9FB1F364191E38A400776A16 /* PRSignUPViewController.h */,
 				9FB1F365191E38A400776A16 /* PRSignUPViewController.m */,
+				9F14D1F219E543FF001BC803 /* PRSettingsViewController.h */,
+				9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -231,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB1F31E191E206200776A16 /* Preview-Info.plist */,
+				9F06E536193F37FF00EDA245 /* i_p_r.png */,
 				9FB1F31F191E206200776A16 /* InfoPlist.strings */,
 				9FB1F322191E206200776A16 /* main.m */,
 				9FB1F324191E206200776A16 /* Preview-Prefix.pch */,
@@ -254,6 +371,17 @@
 				9FB1F338191E206200776A16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FBB579219DD634000F62CE8 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				9FBB579319DD63A900F62CE8 /* PRFriendsCollectionViewController.h */,
+				9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */,
+				9FBB579619DD641100F62CE8 /* PRFriendsCollectionViewCell.h */,
+				9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */,
+			);
+			name = Friends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +429,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PR;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Burst;
 				TargetAttributes = {
 					9FB1F32D191E206200776A16 = {
@@ -333,6 +461,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB1F35A191E22F700776A16 /* MainStoryboard.storyboard in Resources */,
+				9FAD219519430B720055FA9D /* navBarBackground.png in Resources */,
+				9F06E537193F37FF00EDA245 /* i_p_r.png in Resources */,
 				9FB1F321191E206200776A16 /* InfoPlist.strings in Resources */,
 				9FB1F329191E206200776A16 /* Images.xcassets in Resources */,
 			);
@@ -353,16 +483,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F812116194175D600249BAC /* PRCollectionCell.m in Sources */,
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
+				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
+				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
+				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
 				9FB1F327191E206200776A16 /* PRAppDelegate.m in Sources */,
 				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
 				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,
+				9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */,
+				9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */,
 				9FB1F323191E206200776A16 /* main.m in Sources */,
 				9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */,
+				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
+				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,
+				9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */,
+				9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */,
+				9FCA652A1940BF1F009CA8D3 /* PRRelatedPicturesViewController.m in Sources */,
+				9F14D1F419E543FF001BC803 /* PRSettingsViewController.m in Sources */,
 				9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */,
 				9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */,
+				9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */,
+				9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */,
 				9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +553,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -448,7 +591,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -484,7 +626,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Kiran/Desktop/all\\ projys/Preview",
+					/Users/Kiran/Desktop/all,
+					projys/Preview,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
@@ -501,7 +645,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Kiran/Desktop/all\\ projys/Preview",
+					/Users/Kiran/Desktop/all,
+					projys/Preview,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
@@ -514,7 +660,6 @@
 		9FB1F343191E206200776A16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Preview.app/Preview";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -537,7 +682,6 @@
 		9FB1F344191E206200776A16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Preview.app/Preview";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

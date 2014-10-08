@@ -93,6 +93,9 @@
         selectedCategoryViewController.emitterFileURL = feedPost.emitterURL;
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
     }
+    if ([segue.identifier isEqualToString:@"showAddProduct"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
 }
 
 @end

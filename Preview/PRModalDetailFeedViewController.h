@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface PRModalDetailFeedViewController : UIViewController
 
@@ -17,6 +18,9 @@
 @property (nonatomic,strong) NSString *productRating;
 @property (nonatomic,strong) NSString *productUniqueID;
 
+#pragma mark - Parse Objects
+@property (nonatomic,strong) PFUser *currentUser;
+
 
 
 #pragma mark - All IB Outlets
@@ -26,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *category;
 @property (weak, nonatomic) IBOutlet UITextView *productDecpTextView;
 @property (weak, nonatomic) IBOutlet UILabel *ratinglabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfLikesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfReviewsLabel;
 
 - (IBAction)homeTabAction:(id)sender;
 

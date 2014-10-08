@@ -15,8 +15,7 @@
 {
     [Parse setApplicationId:@"KCxFjHvenUvaCDy0YnlvfG7SpwfyE0rCMy3tNPd6"
                   clientKey:@"cUYdwtwVwIjb8a8EAdjpvnFoYkQy4hzCU491pDDk"];
-    
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [self coustomizeUserInterface];
     return YES;
 }
 
@@ -47,4 +46,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)coustomizeUserInterface {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+}
 @end

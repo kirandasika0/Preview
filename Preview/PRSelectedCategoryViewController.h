@@ -13,4 +13,7 @@
 @property (nonatomic,strong) NSString *emitterFileURL;
 @property (nonatomic,strong) NSMutableArray *feedPost;
 
+
+
+
 @end
