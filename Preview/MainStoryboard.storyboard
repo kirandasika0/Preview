@@ -20,11 +20,40 @@
                         <segue destination="aDw-K7-iXJ" kind="relationship" relationship="viewControllers" id="kDg-4L-nHo"/>
                         <segue destination="fLX-BP-qJ9" kind="relationship" relationship="viewControllers" id="kll-ZA-ehw"/>
                         <segue destination="pvD-wJ-gR5" kind="relationship" relationship="viewControllers" id="kz1-RS-N0l"/>
+                        <segue destination="rPg-1X-ntL" kind="relationship" relationship="viewControllers" id="aeE-aB-zVM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKh-My-okE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19" y="66"/>
+        </scene>
+        <!--Professional Content-->
+        <scene sceneID="CvK-09-KtJ">
+            <objects>
+                <viewController id="l9A-yr-kZy" customClass="PRPurchaseWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lz5-jz-WFp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ffG-Eo-87n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBe-lK-qDS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0F-eR-16N">
+                                <rect key="frame" x="-5" y="0.0" width="331" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Professional Content" id="EPE-Z9-pkz"/>
+                    <connections>
+                        <outlet property="webView" destination="E0F-eR-16N" id="vM1-Md-KpI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbF-AN-ITz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-507" y="884"/>
         </scene>
         <!--Suggest Product-->
         <scene sceneID="2ff-DS-9yz">
@@ -371,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofa-2T-9w0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="565"/>
+            <point key="canvasLocation" x="2031" y="565"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="Pxi-7w-7pg">
@@ -420,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhT-nJ-BL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="1303"/>
+            <point key="canvasLocation" x="2558" y="1303"/>
         </scene>
         <!--Modal Detail Feed View Controller-->
         <scene sceneID="NvX-ic-rhV">
@@ -491,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjn-0s-VTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="565"/>
+            <point key="canvasLocation" x="2549" y="565"/>
         </scene>
         <!--Rcomments Collection View Controller-->
         <scene sceneID="wXA-hP-TOw">
@@ -557,7 +586,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcs-SW-eB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="565"/>
+            <point key="canvasLocation" x="3474" y="565"/>
         </scene>
         <!--Insert Comment View Controller-->
         <scene sceneID="aKT-fW-6zh">
@@ -610,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1k-uX-kM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3319" y="565"/>
+            <point key="canvasLocation" x="3851" y="565"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8fC-Hg-qA0">
@@ -957,7 +986,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yl-Ks-or2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="1205"/>
+            <point key="canvasLocation" x="2037" y="1205"/>
         </scene>
         <!--Profile-->
         <scene sceneID="z7v-gc-emI">
@@ -976,7 +1005,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BC1-7O-d8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="565"/>
+            <point key="canvasLocation" x="1505" y="565"/>
         </scene>
         <!--Friends-->
         <scene sceneID="OyL-fC-1ih">
@@ -995,7 +1024,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2m-pk-Jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="1205"/>
+            <point key="canvasLocation" x="1505" y="1205"/>
+        </scene>
+        <!--Pro-->
+        <scene sceneID="UPi-Rf-00d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rPg-1X-ntL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pro" image="password2-32" badgeValue="Become" id="pgS-M8-1n1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hbZ-d4-EiG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l9A-yr-kZy" kind="relationship" relationship="rootViewController" id="hpi-rI-h7Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4O-9N-EKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1039" y="884"/>
         </scene>
     </scenes>
     <resources>
@@ -1008,6 +1056,7 @@
         <image name="home" width="32" height="32"/>
         <image name="navBarBackground" width="1" height="1"/>
         <image name="navBarBackground.png" width="1" height="1"/>
+        <image name="password2-32" width="32" height="32"/>
         <image name="tabBarBackground" width="1" height="1"/>
         <image name="thumb_up-50" width="50" height="50"/>
     </resources>

@@ -17,6 +17,7 @@
 		9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */; };
 		9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */; };
 		9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */; };
+		9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */; };
 		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
 		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
 		9F812116194175D600249BAC /* PRCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F812115194175D600249BAC /* PRCollectionCell.m */; };
@@ -88,6 +89,8 @@
 		9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRInsertCommentViewController.m; sourceTree = "<group>"; };
 		9F3B23A6191EA47E0057BFA5 /* PRCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryTitles.h; sourceTree = "<group>"; };
 		9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryTitles.m; sourceTree = "<group>"; };
+		9F447E1C19EEFAB3007BD7FB /* PRPurchaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPurchaseWebViewController.h; sourceTree = "<group>"; };
+		9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPurchaseWebViewController.m; sourceTree = "<group>"; };
 		9F58550B191E876000E2E6D1 /* PRFeedPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFeedPost.h; sourceTree = "<group>"; };
 		9F58550C191E876000E2E6D1 /* PRFeedPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFeedPost.m; sourceTree = "<group>"; };
 		9F6F189619443BDA0071360E /* PRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProfileViewController.h; sourceTree = "<group>"; };
@@ -256,6 +259,15 @@
 			name = "Selected Category";
 			sourceTree = "<group>";
 		};
+		9F447E1B19EEFA9B007BD7FB /* EXC Content */ = {
+			isa = PBXGroup;
+			children = (
+				9F447E1C19EEFAB3007BD7FB /* PRPurchaseWebViewController.h */,
+				9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */,
+			);
+			name = "EXC Content";
+			sourceTree = "<group>";
+		};
 		9F6F189519443BC00071360E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +331,7 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F447E1B19EEFA9B007BD7FB /* EXC Content */,
 				9F1E4E6319E1452700E3B242 /* Time Ago */,
 				9F342A1A19DFFB59006C7135 /* Comments */,
 				9FBB579219DD634000F62CE8 /* Friends */,
@@ -489,6 +502,7 @@
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
+				9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */,
 				9FB1F327191E206200776A16 /* PRAppDelegate.m in Sources */,
 				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
 				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,

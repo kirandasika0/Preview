@@ -68,7 +68,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
-
     cell.textLabel.text = feedPost.title;
     if ([feedPost.category isEqualToString:@"1"]) {
         cell.detailTextLabel.text = @"Movie";
