@@ -11,6 +11,7 @@
 #import "PRModalDetailFeedViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "PRRelatedPicturesViewController.h"
+#import "PRShowJustReviewsViewController.h"
 
 @interface PRHomeFeedViewController ()
 
@@ -193,6 +194,13 @@
         NSLog(@"%@",pictureViewController.productUniqueID);
         
     }
+    if ([segue.identifier isEqualToString:@"showReviews"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
+        
+        PRShowJustReviewsViewController *justReviewsController = (PRShowJustReviewsViewController *)segue.destinationViewController;
+        justReviewsController.productUniqueID = feedPost.uniqueID;
+    }
     
 }
 
@@ -289,12 +297,8 @@
     }
 }
 -(void)longPressAction{
-    [self performSegueWithIdentifier:@"showReviews" sender:nil];
+    //[self performSegueWithIdentifier:@"showReviews" sender:nil];
+    
 }
-- (IBAction)shoeSettingsPopover:(id)sender {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"SettingsPopover"];
-    self.popOver = [[UIPopoverController alloc] initWithContentViewController:viewController];
-    [self.popOver presentPopoverFromBarButtonItem:self.showReviewButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-}
+
 @end
