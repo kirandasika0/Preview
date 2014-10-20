@@ -11,7 +11,6 @@
 #import "PRModalDetailFeedViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "PRRelatedPicturesViewController.h"
-#import "PRShowJustReviewsViewController.h";
 
 @interface PRHomeFeedViewController ()
 
@@ -194,13 +193,7 @@
         NSLog(@"%@",pictureViewController.productUniqueID);
         
     }
-    if ([segue.identifier isEqualToString:@"showReviews"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
-        
-        PRShowJustReviewsViewController *showJustReviewsViewController = (PRShowJustReviewsViewController *)segue.destinationViewController;
-        showJustReviewsViewController.productUniqueID = feedPost.uniqueID;
-    }
+    
 }
 
 #pragma mark - Main Method

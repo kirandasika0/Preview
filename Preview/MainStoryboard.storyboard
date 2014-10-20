@@ -326,7 +326,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="fKs-of-F85">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="shoeSettingsPopover:" destination="ehs-17-vN6" id="392-to-eOY"/>
+                                <action selector="logout:" destination="ehs-17-vN6" id="VjQ-dM-gOr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -797,43 +797,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbG-3G-b9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="447" y="-126"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="3IW-Bd-iuR">
-            <objects>
-                <viewController storyboardIdentifier="SettingsPopover" id="JB5-Ck-DNK" customClass="PRSettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IUk-re-BJU"/>
-                        <viewControllerLayoutGuide type="bottom" id="wVE-xp-RDK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ckE-g5-IY2">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-S1-OPk">
-                                <rect key="frame" x="54" y="122" width="192" height="55"/>
-                                <color key="backgroundColor" red="0.45923201200000002" green="0.38544751960000001" blue="0.67570921989999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="LOGOUT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="JB5-Ck-DNK" eventType="touchUpInside" id="99p-iN-CIh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="300"/>
-                    <connections>
-                        <outlet property="logout" destination="OkK-S1-OPk" id="oGb-wA-ZuF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5KK-HN-I0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1436" y="-498"/>
         </scene>
         <!--Show Just Reviews View Controller-->
         <scene sceneID="MFC-k9-Ytt">
