@@ -26,4 +26,6 @@
 
 @property (nonatomic,strong) NSString *IDForRelatedProductPictures;
 
+@property (nonatomic, strong) NSString *likesString;
+@property (nonatomic, strong) NSString *reviewsString;
 @end

@@ -298,7 +298,39 @@
 }
 -(void)longPressAction{
     //[self performSegueWithIdentifier:@"showReviews" sender:nil];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
+    PFQuery *queryForLikes = [PFQuery queryWithClassName:@"liked_products"];
+    [queryForLikes whereKey:@"product_id" equalTo:feedPost.uniqueID];
+    [queryForLikes countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (error) {
+            NSLog(@"Error.");
+        }
+        else{
+            self.likesString = [NSString stringWithFormat:@"%d",number];
+        }
+    }];
+    PFQuery *queryForReviews = [PFQuery queryWithClassName:@"comments"];
+    [queryForReviews whereKey:@"product_id" equalTo:feedPost.uniqueID];
+    [queryForReviews countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (error) {
+            NSLog(@"Error.");
+        }
+        else{
+            self.reviewsString = [NSString stringWithFormat:@"%d",number];
+        }
+    }];
     
+    NSString *quickInformationString = [NSString stringWithFormat:@"Likes: %@ \n Reviews: %@",self.likesString,self.reviewsString];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quick Info" message:quickInformationString delegate: nil cancelButtonTitle:nil otherButtonTitles: nil];
+    [alertView reloadInputViews];
+    [alertView show];
+    
+    [self performSelector:@selector(closeQuickAlert:) withObject:alertView afterDelay:3];
+}
+
+-(void)closeQuickAlert:(UIAlertView *)x{
+    [x dismissWithClickedButtonIndex:-1 animated:YES];
 }
 
 @end
