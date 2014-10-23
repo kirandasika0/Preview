@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F03F8D319F8E74B00D39B10 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F03F8D219F8E74B00D39B10 /* iAd.framework */; };
 		9F06E537193F37FF00EDA245 /* i_p_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F06E536193F37FF00EDA245 /* i_p_r.png */; };
 		9F100CE419F8231300553FD7 /* PRRelatedProductsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE319F8231300553FD7 /* PRRelatedProductsCollectionViewController.m */; };
 		9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE619F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F03F8D219F8E74B00D39B10 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9F06E536193F37FF00EDA245 /* i_p_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = i_p_r.png; path = "../../../My Stuff /ios pics/i_p_r.png"; sourceTree = "<group>"; };
 		9F100CE219F8231300553FD7 /* PRRelatedProductsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedProductsCollectionViewController.h; sourceTree = "<group>"; };
 		9F100CE319F8231300553FD7 /* PRRelatedProductsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedProductsCollectionViewController.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F03F8D319F8E74B00D39B10 /* iAd.framework in Frameworks */,
 				9FB1F350191E221C00776A16 /* AudioToolbox.framework in Frameworks */,
 				9FB1F351191E221C00776A16 /* CFNetwork.framework in Frameworks */,
 				9FB1F352191E221C00776A16 /* CoreLocation.framework in Frameworks */,
@@ -351,6 +354,7 @@
 		9FB1F315191E206200776A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F03F8D219F8E74B00D39B10 /* iAd.framework */,
 				9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */,
 				9FB1F347191E221C00776A16 /* AudioToolbox.framework */,
 				9FB1F348191E221C00776A16 /* CFNetwork.framework */,
@@ -506,6 +510,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Burst;
 				TargetAttributes = {
+					9FB1F312191E206200776A16 = {
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
 					9FB1F32D191E206200776A16 = {
 						TestTargetID = 9FB1F312191E206200776A16;
 					};

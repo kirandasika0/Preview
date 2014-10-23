@@ -14,7 +14,6 @@
 @property (nonatomic,strong) NSMutableArray *feedPosts;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
-- (IBAction)shoeSettingsPopover:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *showReviewButton;
 
 

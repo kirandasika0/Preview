@@ -8,6 +8,7 @@
 
 #import "PRSignUPViewController.h"
 #import <Parse/Parse.h>
+#import <iAd/iAd.h>
 
 @interface PRSignUPViewController ()
 
@@ -60,4 +61,19 @@
     }
 
 }
+
+#pragma mark - Banner Methods
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+}
+
 @end

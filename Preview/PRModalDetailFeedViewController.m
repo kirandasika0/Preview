@@ -9,8 +9,9 @@
 #import "PRModalDetailFeedViewController.h"
 #import "PRInsertCommentViewController.h"
 #import "PRcommentsCollectionViewController.h"
+#import <iAd/iAd.h>
 
-@interface PRModalDetailFeedViewController ()
+@interface PRModalDetailFeedViewController () <ADBannerViewDelegate>
 
 @end
 
@@ -223,5 +224,18 @@
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - Banner Methods
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
 }
 @end

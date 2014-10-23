@@ -9,6 +9,7 @@
 #import "PRCategoryViewController.h"
 #import "PRCategoryTitles.h"
 #import "PRSelectedCategoryViewController.h"
+#import <iAd/iAd.h>
 
 @interface PRCategoryViewController ()
 
@@ -96,6 +97,20 @@
     if ([segue.identifier isEqualToString:@"showAddProduct"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
     }
+}
+
+#pragma mark - Banner Methods
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
 }
 
 @end
