@@ -8,6 +8,7 @@
 
 #import "PRLeaderBoardViewController.h"
 #import "PRLeaderboardViewCell.h"
+#import "PRShowAllReviewsOfUsersCollectionViewController.h"
 
 @interface PRLeaderBoardViewController ()
 
@@ -60,6 +61,17 @@
             [self.tableView reloadData];
         }
     }];
+}
+
+#pragma mark - Segue Methods
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showAllReviews"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFUser *userObject = [self.allUsers objectAtIndex:indexPath.row];
+        PRShowAllReviewsOfUsersCollectionViewController *pushViewController = (PRShowAllReviewsOfUsersCollectionViewController *)segue.destinationViewController;
+        pushViewController.userOBJID = userObject.objectId;
+    }
 }
 
 @end

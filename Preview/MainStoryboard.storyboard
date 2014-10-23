@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="178" id="K8c-VR-bn2" customClass="PRLeaderboardViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="178" id="K8c-VR-bn2" customClass="PRLeaderboardViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8c-VR-bn2" id="9K1-7e-mdE">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -68,6 +68,7 @@
                                     <outlet property="profilePictureImageView" destination="kxq-mU-mP1" id="eJr-8S-raR"/>
                                     <outlet property="usernameLabel" destination="p6l-Yb-Ro9" id="ADB-Am-VUS"/>
                                     <outlet property="usersFullNameLabel" destination="M6m-jg-hu1" id="n5u-l5-bhQ"/>
+                                    <segue destination="uhz-9y-v6g" kind="push" identifier="showAllReviews" id="VYh-tn-Q8z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,6 +82,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r06-TS-YFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="673"/>
+        </scene>
+        <!--Show All Reviews Of Users Collection View Controller-->
+        <scene sceneID="nbU-zU-XhG">
+            <objects>
+                <collectionViewController id="uhz-9y-v6g" customClass="PRShowAllReviewsOfUsersCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NhP-7j-Gg9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Oh-Aa-Lbn">
+                            <size key="itemSize" width="319" height="222"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="vc8-kY-LSr" customClass="PRShowAllReviewsOfUsersCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="222"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="all reviews" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A97-kN-ri4">
+                                            <rect key="frame" x="8" y="8" width="303" height="206"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="reviewLabel" destination="A97-kN-ri4" id="3OD-PX-PMj"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uhz-9y-v6g" id="wh6-5p-Je9"/>
+                            <outlet property="delegate" destination="uhz-9y-v6g" id="Lvi-jh-ioJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="p1H-0g-4Xe"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HES-Rh-vCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="678"/>
         </scene>
         <!--Suggest Product-->
         <scene sceneID="2ff-DS-9yz">

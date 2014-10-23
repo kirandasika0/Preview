@@ -64,6 +64,8 @@
 		9FDEEE0219F80A060002210E /* PRLeaderboardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */; };
 		9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */; };
 		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
+		9FFAEC8719F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */; };
+		9FFAEC8A19F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,10 @@
 		9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PREditProfileViewController.m; sourceTree = "<group>"; };
 		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
 		9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryViewController.m; sourceTree = "<group>"; };
+		9FFAEC8519F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowAllReviewsOfUsersCollectionViewController.h; sourceTree = "<group>"; };
+		9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsOfUsersCollectionViewController.m; sourceTree = "<group>"; };
+		9FFAEC8819F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowAllReviewsOfUsersCollectionViewCell.h; sourceTree = "<group>"; };
+		9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsOfUsersCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +450,10 @@
 				9FDEEDFE19F808B40002210E /* PRLeaderBoardViewController.m */,
 				9FDEEE0019F80A060002210E /* PRLeaderboardViewCell.h */,
 				9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */,
+				9FFAEC8519F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.h */,
+				9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */,
+				9FFAEC8819F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.h */,
+				9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */,
 			);
 			name = Leaderboard;
 			sourceTree = "<group>";
@@ -552,6 +562,7 @@
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
+				9FFAEC8A19F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
@@ -568,6 +579,7 @@
 				9FC814D219F8A0E900C29B55 /* PRDetailRelatedPostViewController.m in Sources */,
 				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
+				9FFAEC8719F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m in Sources */,
 				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,
 				9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */,
