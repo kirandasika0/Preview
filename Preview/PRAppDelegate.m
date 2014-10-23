@@ -47,7 +47,7 @@
 }
 
 -(void)coustomizeUserInterface {
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBarBackground-2"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBarBackground"] forBarMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
     
