@@ -12,7 +12,6 @@
 		9F100CE419F8231300553FD7 /* PRRelatedProductsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE319F8231300553FD7 /* PRRelatedProductsCollectionViewController.m */; };
 		9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE619F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m */; };
 		9F100CEA19F8381100553FD7 /* PRRelatedVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE919F8381100553FD7 /* PRRelatedVariables.m */; };
-		9F14D1F419E543FF001BC803 /* PRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */; };
 		9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */; };
 		9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */; };
 		9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */; };
@@ -54,6 +53,7 @@
 		9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */; };
 		9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F365191E38A400776A16 /* PRSignUPViewController.m */; };
 		9FBAAEFA194066FA006F39B3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */; };
+		9FBB2EC819F907CF00735B6A /* PRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */; };
 		9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */; };
 		9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */; };
 		9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */; };
@@ -88,8 +88,6 @@
 		9F100CE619F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedSearchCollectionViewCell.m; sourceTree = "<group>"; };
 		9F100CE819F8381100553FD7 /* PRRelatedVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedVariables.h; sourceTree = "<group>"; };
 		9F100CE919F8381100553FD7 /* PRRelatedVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedVariables.m; sourceTree = "<group>"; };
-		9F14D1F219E543FF001BC803 /* PRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSettingsViewController.h; sourceTree = "<group>"; };
-		9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSettingsViewController.m; sourceTree = "<group>"; };
 		9F1E4E6419E1454300E3B242 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
 		9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
 		9F1F507F191F5C5700551499 /* PRSuggestProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSuggestProductViewController.h; sourceTree = "<group>"; };
@@ -151,6 +149,8 @@
 		9FB1F364191E38A400776A16 /* PRSignUPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSignUPViewController.h; sourceTree = "<group>"; };
 		9FB1F365191E38A400776A16 /* PRSignUPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSignUPViewController.m; sourceTree = "<group>"; };
 		9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		9FBB2EC619F907CF00735B6A /* PRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSettingsViewController.h; sourceTree = "<group>"; };
+		9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSettingsViewController.m; sourceTree = "<group>"; };
 		9FBB579319DD63A900F62CE8 /* PRFriendsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewController.h; sourceTree = "<group>"; };
 		9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFriendsCollectionViewController.m; sourceTree = "<group>"; };
 		9FBB579619DD641100F62CE8 /* PRFriendsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewCell.h; sourceTree = "<group>"; };
@@ -377,6 +377,7 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9FBB2EC519F907A300735B6A /* Settings */,
 				9F100CE119F822BD00553FD7 /* Related Searches */,
 				9FDEEDFC19F8088D0002210E /* Leaderboard */,
 				9F447E1B19EEFA9B007BD7FB /* EXC Content */,
@@ -398,8 +399,6 @@
 				9FB1F35F191E2EDA00776A16 /* PRLoginViewController.m */,
 				9FB1F364191E38A400776A16 /* PRSignUPViewController.h */,
 				9FB1F365191E38A400776A16 /* PRSignUPViewController.m */,
-				9F14D1F219E543FF001BC803 /* PRSettingsViewController.h */,
-				9F14D1F319E543FF001BC803 /* PRSettingsViewController.m */,
 				9FC1A57819F56922006FBD0F /* PRForgotPasswordViewController.h */,
 				9FC1A57919F56922006FBD0F /* PRForgotPasswordViewController.m */,
 			);
@@ -434,6 +433,15 @@
 				9FB1F338191E206200776A16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FBB2EC519F907A300735B6A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9FBB2EC619F907CF00735B6A /* PRSettingsViewController.h */,
+				9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		9FBB579219DD634000F62CE8 /* Friends */ = {
@@ -577,6 +585,7 @@
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
+				9FBB2EC819F907CF00735B6A /* PRSettingsViewController.m in Sources */,
 				9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */,
 				9FB1F327191E206200776A16 /* PRAppDelegate.m in Sources */,
 				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
@@ -596,7 +605,6 @@
 				9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */,
 				9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */,
 				9FCA652A1940BF1F009CA8D3 /* PRRelatedPicturesViewController.m in Sources */,
-				9F14D1F419E543FF001BC803 /* PRSettingsViewController.m in Sources */,
 				9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */,
 				9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */,
 				9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */,

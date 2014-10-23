@@ -1134,6 +1134,41 @@
             </objects>
             <point key="canvasLocation" x="447" y="678"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="sMQ-3O-8yn">
+            <objects>
+                <tableViewController id="eaS-Oq-rY2" customClass="PRSettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="22" sectionFooterHeight="22" id="wBC-Me-ozj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Ice-tP-TgM" rowHeight="49" style="IBUITableViewCellStyleDefault" id="wJA-c6-aKL">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wJA-c6-aKL" id="GW0-zP-q1z">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ice-tP-TgM">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eaS-Oq-rY2" id="gVL-vT-rXf"/>
+                            <outlet property="delegate" destination="eaS-Oq-rY2" id="L0k-q2-bEZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="blh-mF-jai"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQM-Y1-IT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="2036"/>
+        </scene>
         <!--Related-->
         <scene sceneID="3gH-l4-NYZ">
             <objects>
