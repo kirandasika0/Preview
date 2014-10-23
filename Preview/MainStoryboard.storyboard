@@ -10,7 +10,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="PPR-QT-58R" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabBarBackground" id="1Dg-dx-xRZ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabBarBackground-2" id="1Dg-dx-xRZ">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1100,7 +1100,7 @@
         <scene sceneID="LOV-IL-y9O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvc-bX-5HG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leaderboards" id="qtP-UB-WP8"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboards" image="Leaderboard" id="qtP-UB-WP8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sd6-pf-Y71">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1119,7 +1119,7 @@
         <scene sceneID="3gH-l4-NYZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mHw-Jh-0PH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Related" id="pKH-zJ-79T"/>
+                    <tabBarItem key="tabBarItem" title="Related" image="Recent" id="pKH-zJ-79T"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gm7-sQ-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1136,6 +1136,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Leaderboard" width="40" height="40"/>
+        <image name="Recent" width="40" height="40"/>
         <image name="add" width="50" height="50"/>
         <image name="category" width="32" height="32"/>
         <image name="day_view-50" width="50" height="50"/>
@@ -1144,6 +1146,7 @@
         <image name="navBarBackground" width="1" height="1"/>
         <image name="navBarBackground.png" width="1" height="1"/>
         <image name="tabBarBackground" width="1" height="1"/>
+        <image name="tabBarBackground-2" width="2" height="2"/>
         <image name="thumb_up-50" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

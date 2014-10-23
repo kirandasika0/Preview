@@ -7,6 +7,7 @@
 //
 
 #import "PRLeaderboardViewCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation PRLeaderboardViewCell
 
@@ -34,6 +35,8 @@
             self.numberOfReviews.text = [NSString stringWithFormat:@"No: of Reviews Given: %d",number];
         }
     }];
+    self.profilePictureImageView.image = [UIImage imageNamed:@"tabBarBackground"];
+    self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
 }
 
 @end
