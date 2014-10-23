@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 - (IBAction)login:(id)sender;
+- (IBAction)openContactUsPage:(id)sender;
 
 @end

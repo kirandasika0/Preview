@@ -257,17 +257,22 @@
 }
 
 -(void)share {
-    NSLog(@"Swiped right.");
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
+    
+    //NSLog(@"Swiped right.");
     //[self performSegueWithIdentifier:@"showShareView" sender:nil];
     //Checking if the facebook app is installed or not
     //Making a Instace type of NSURl in the class of FbLInkShareParams
     
     FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
-    params.link = [NSURL URLWithString:@"http://burst.co.in"];
+    NSString *urlString = [NSString stringWithFormat:@"http://burst.co.in/preview/web/view_product.php?id=%@",feedPost.uniqueID];
+    NSLog(@"%@",urlString);
+    params.link = [NSURL URLWithString:urlString];
     
     if ([FBDialogs canPresentShareDialogWithParams:params]) {
         //We can show the fbDialog.
-        [FBDialogs presentShareDialogWithLink:params.link  handler:^(FBAppCall *call, NSDictionary *results, NSError *error){
+        [FBDialogs presentShareDialogWithLink:params.link handler:^(FBAppCall *call, NSDictionary *results, NSError *error){
             if (error) {
                 //An error occured we can show it in the log
                 NSLog(@"Error: %@",error.description);
