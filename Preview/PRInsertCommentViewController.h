@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface PRInsertCommentViewController : UIViewController
+@interface PRInsertCommentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (strong, nonatomic) NSString *productUniqueID;
 
 - (IBAction)insertComment:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UITableView *ratingTableView;
+@property (strong, nonatomic) NSArray *ratingParas;
 
 @end

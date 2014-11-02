@@ -13,10 +13,12 @@
 @end
 
 @implementation PRInsertCommentViewController
+@synthesize ratingTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [PFUser currentUser];
+    self.ratingParas = [[NSArray alloc] initWithObjects:@"1 Star",@"2 Stars",@"3 Stars",@"4 Stars",@"5 Stars", nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -24,6 +26,7 @@
     UITapGestureRecognizer *closeInsertPost = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeViewController)];
     closeInsertPost.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:closeInsertPost];
+    [self.ratingTableView reloadData];
 }
 
 
@@ -57,4 +60,30 @@
 -(void)closeViewController{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Table View Methods
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.ratingParas count];
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [self.ratingTableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    //We have to popoulate the table view
+    UILabel* cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,12, 141, 111)];
+    cellLabel.textColor=[UIColor greenColor];
+    cellLabel.font=[UIFont boldSystemFontOfSize:18];
+    cellLabel.text = [self.ratingParas objectAtIndex:indexPath.row];
+    cellLabel.backgroundColor = [UIColor clearColor];
+    cellLabel.opaque = NO;
+    
+    [cell.contentView addSubview:cellLabel];
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
 @end
