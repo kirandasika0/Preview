@@ -22,6 +22,8 @@
 		9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */; };
 		9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */; };
 		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
+		9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */; };
+		9F648F0C1A092BF300D15BD2 /* PRShowReviewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */; };
 		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
 		9F812116194175D600249BAC /* PRCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F812115194175D600249BAC /* PRCollectionCell.m */; };
 		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
@@ -65,8 +67,6 @@
 		9FDEEE0219F80A060002210E /* PRLeaderboardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */; };
 		9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */; };
 		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
-		9FFAEC8719F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */; };
-		9FFAEC8A19F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +108,10 @@
 		9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPurchaseWebViewController.m; sourceTree = "<group>"; };
 		9F58550B191E876000E2E6D1 /* PRFeedPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFeedPost.h; sourceTree = "<group>"; };
 		9F58550C191E876000E2E6D1 /* PRFeedPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFeedPost.m; sourceTree = "<group>"; };
+		9F648F071A092AAA00D15BD2 /* PRShowAllReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowAllReviewsViewController.h; sourceTree = "<group>"; };
+		9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsViewController.m; sourceTree = "<group>"; };
+		9F648F0A1A092BF300D15BD2 /* PRShowReviewViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowReviewViewCell.h; sourceTree = "<group>"; };
+		9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowReviewViewCell.m; sourceTree = "<group>"; };
 		9F6F189619443BDA0071360E /* PRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProfileViewController.h; sourceTree = "<group>"; };
 		9F6F189719443BDA0071360E /* PRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProfileViewController.m; sourceTree = "<group>"; };
 		9F812114194175D600249BAC /* PRCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCollectionCell.h; sourceTree = "<group>"; };
@@ -173,10 +177,6 @@
 		9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PREditProfileViewController.m; sourceTree = "<group>"; };
 		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
 		9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryViewController.m; sourceTree = "<group>"; };
-		9FFAEC8519F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowAllReviewsOfUsersCollectionViewController.h; sourceTree = "<group>"; };
-		9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsOfUsersCollectionViewController.m; sourceTree = "<group>"; };
-		9FFAEC8819F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowAllReviewsOfUsersCollectionViewCell.h; sourceTree = "<group>"; };
-		9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsOfUsersCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,10 +462,10 @@
 				9FDEEDFE19F808B40002210E /* PRLeaderBoardViewController.m */,
 				9FDEEE0019F80A060002210E /* PRLeaderboardViewCell.h */,
 				9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */,
-				9FFAEC8519F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.h */,
-				9FFAEC8619F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m */,
-				9FFAEC8819F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.h */,
-				9FFAEC8919F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m */,
+				9F648F071A092AAA00D15BD2 /* PRShowAllReviewsViewController.h */,
+				9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */,
+				9F648F0A1A092BF300D15BD2 /* PRShowReviewViewCell.h */,
+				9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */,
 			);
 			name = Leaderboard;
 			sourceTree = "<group>";
@@ -519,6 +519,7 @@
 				ORGANIZATIONNAME = Burst;
 				TargetAttributes = {
 					9FB1F312191E206200776A16 = {
+						DevelopmentTeam = 6754879FL3;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -581,7 +582,6 @@
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
-				9FFAEC8A19F8C35000EF274E /* PRShowAllReviewsOfUsersCollectionViewCell.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
@@ -591,6 +591,7 @@
 				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
 				9F100CEA19F8381100553FD7 /* PRRelatedVariables.m in Sources */,
 				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,
+				9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */,
 				9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */,
 				9F100CE419F8231300553FD7 /* PRRelatedProductsCollectionViewController.m in Sources */,
 				9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */,
@@ -599,10 +600,10 @@
 				9FC814D219F8A0E900C29B55 /* PRDetailRelatedPostViewController.m in Sources */,
 				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
-				9FFAEC8719F8C31B00EF274E /* PRShowAllReviewsOfUsersCollectionViewController.m in Sources */,
 				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,
 				9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */,
+				9F648F0C1A092BF300D15BD2 /* PRShowReviewViewCell.m in Sources */,
 				9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */,
 				9FCA652A1940BF1F009CA8D3 /* PRRelatedPicturesViewController.m in Sources */,
 				9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */,
@@ -691,7 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -701,6 +702,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
 				WRAPPER_EXTENSION = app;
@@ -804,7 +806,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -814,6 +816,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
 				WRAPPER_EXTENSION = app;
@@ -825,7 +828,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -835,6 +838,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Preview/Preview-Prefix.pch";
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
 				WRAPPER_EXTENSION = app;

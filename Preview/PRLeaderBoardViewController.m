@@ -8,7 +8,7 @@
 
 #import "PRLeaderBoardViewController.h"
 #import "PRLeaderboardViewCell.h"
-#import "PRShowAllReviewsOfUsersCollectionViewController.h"
+#import "PRShowAllReviewsViewController.h"
 
 @interface PRLeaderBoardViewController ()
 
@@ -69,7 +69,7 @@
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PFUser *userObject = [self.allUsers objectAtIndex:indexPath.row];
-        PRShowAllReviewsOfUsersCollectionViewController *pushViewController = (PRShowAllReviewsOfUsersCollectionViewController *)segue.destinationViewController;
+        PRShowAllReviewsViewController *pushViewController = (PRShowAllReviewsViewController *)segue.destinationViewController;
         pushViewController.userOBJID = userObject.objectId;
     }
 }

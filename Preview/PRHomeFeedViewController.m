@@ -110,7 +110,7 @@
         });
     }
     else {
-        //cell.imageView.image = [UIImage imageNamed:@"export"];
+        cell.imageView.image = [UIImage imageNamed:@"tabBarBackground"];
     }
     
     //Gesture reg code down below.
