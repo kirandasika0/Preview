@@ -70,7 +70,7 @@
     
     //We have to show the discription.
     
-    NSString *fullDecp = [NSString stringWithFormat:@"Product Description: \n %@",self.productDecp];
+    NSString *fullDecp = [NSString stringWithFormat:@" \n %@",self.productDecp];
     self.productDecpTextView.text = fullDecp;
     
     //We have to set the rating label too...

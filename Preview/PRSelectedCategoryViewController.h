@@ -12,7 +12,7 @@
 
 @property (nonatomic,strong) NSString *emitterFileURL;
 @property (nonatomic,strong) NSMutableArray *feedPost;
-
+@property (strong, nonatomic) NSArray *productsArray;
 
 
 

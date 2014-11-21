@@ -22,6 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    PFQuery *pushQuery = [PFUser query];
+    [pushQuery whereKey:@"username" equalTo:@"kirandasika"];
+    [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                   withMessage:@"Hello World!"];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         NSLog(@"Current User: %@", currentUser.username);
@@ -38,12 +42,13 @@
     //We will also refresh the view after every one minute.
    
     //[NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(refresh) userInfo:nil repeats:YES];
-    
+    self.searchResults = [[NSArray alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
     }
 
 
@@ -60,14 +65,23 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.feedPosts count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [self.searchResults count];
+    }
+    else{
+     return [self.feedPosts count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    //Adding the search functions
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
+    }
+    else {
     PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
     cell.textLabel.text = feedPost.title;
     if ([feedPost.category isEqualToString:@"1"]) {
@@ -96,6 +110,12 @@
     }
     if ([feedPost.category isEqualToString:@"9"]) {
         cell.detailTextLabel.text = @"Sports";
+    }
+    if ([feedPost.category isEqualToString:@"10"]) {
+        cell.detailTextLabel.text = @"Restaurants";
+    }
+    if ([feedPost.category isEqualToString:@"11"]) {
+        cell.detailTextLabel.text = @"TV Shows";
     }
     if ([feedPost.thumbnail isKindOfClass:[NSString class]]) {
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -128,6 +148,7 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction)];
     [longPress setMinimumPressDuration:2];
     [self.view addGestureRecognizer:longPress];
+    }
     return cell;
 }
 
@@ -241,6 +262,8 @@
                 feedPost.originalImage = [fdDictionary objectForKey:@"product_original"];
                 
                 //We have to add all the object to the feed posts mutable array.
+                //Setting up the PFObject for the filterArray
+                
                 
                 [self.feedPosts addObject:feedPost];
             }
@@ -299,7 +322,7 @@
     PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
     self.IDForRelatedProductPictures = feedPost.uniqueID;
     if (self.IDForRelatedProductPictures) {
-        [self performSegueWithIdentifier:@"showShareView" sender:self];
+        //[self performSegueWithIdentifier:@"showShareView" sender:self];
     }
 }
 -(void)longPressAction{
@@ -339,4 +362,17 @@
     [x dismissWithClickedButtonIndex:-1 animated:YES];
 }
 
+/*
+#pragma mark - Search Methods
+
+-(void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF .title contains[c] %@",searchText];
+    self.searchResults = [NSMutableArray arrayWithArray:[self.feedPosts filteredArrayUsingPredicate:predicate]];
+}
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
+}
+ */
 @end

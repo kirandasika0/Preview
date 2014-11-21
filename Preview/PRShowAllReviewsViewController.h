@@ -14,4 +14,8 @@
 @property (strong, nonatomic) NSArray *allReviews;
 @property (strong, nonatomic) NSString *userOBJID;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (nonatomic, strong) PFUser *currentUser;
+- (IBAction)likeReviews:(id)sender;
+
+
 @end

@@ -26,6 +26,7 @@
 		9F648F0C1A092BF300D15BD2 /* PRShowReviewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */; };
 		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
 		9F812116194175D600249BAC /* PRCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F812115194175D600249BAC /* PRCollectionCell.m */; };
+		9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */; };
 		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
 		9FAD219519430B720055FA9D /* navBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD219419430B720055FA9D /* navBarBackground.png */; };
 		9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F316191E206200776A16 /* Foundation.framework */; };
@@ -116,6 +117,8 @@
 		9F6F189719443BDA0071360E /* PRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProfileViewController.m; sourceTree = "<group>"; };
 		9F812114194175D600249BAC /* PRCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCollectionCell.h; sourceTree = "<group>"; };
 		9F812115194175D600249BAC /* PRCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCollectionCell.m; sourceTree = "<group>"; };
+		9F8F67BC1A1FB31200F3E000 /* PRSelectedCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategory.h; sourceTree = "<group>"; };
+		9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategory.m; sourceTree = "<group>"; };
 		9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRModalDetailFeedViewController.h; sourceTree = "<group>"; };
 		9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRModalDetailFeedViewController.m; sourceTree = "<group>"; };
 		9FAD219419430B720055FA9D /* navBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBackground.png; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 				9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */,
 				9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */,
 				9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */,
+				9F8F67BC1A1FB31200F3E000 /* PRSelectedCategory.h */,
+				9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */,
 			);
 			name = "Selected Category";
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 				9F812116194175D600249BAC /* PRCollectionCell.m in Sources */,
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
+				9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */,
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */,
@@ -681,7 +687,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -693,6 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -704,7 +711,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -762,7 +769,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -795,7 +802,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -807,6 +814,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -818,7 +826,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -829,6 +837,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -840,7 +849,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01f7c5f6-6494-4142-8584-54fba5c823ee";
+				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

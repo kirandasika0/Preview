@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *userFullNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reviewLabel;
 
+
 @end

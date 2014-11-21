@@ -23,6 +23,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.currentUser = [PFUser currentUser];
+    
     [self getAllReviews];
 }
 
@@ -77,4 +79,8 @@
     }
 }
 
+- (IBAction)likeReviews:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Liked" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alertView show];
+}
 @end

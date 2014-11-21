@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface PRHomeFeedViewController : UITableViewController
+@interface PRHomeFeedViewController : UITableViewController<UISearchBarDelegate,UISearchDisplayDelegate>
 
 @property (nonatomic,strong) NSMutableArray *feedPosts;
 
@@ -27,4 +27,5 @@
 
 @property (nonatomic, strong) NSString *likesString;
 @property (nonatomic, strong) NSString *reviewsString;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 @end
