@@ -12,6 +12,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "PRRelatedPicturesViewController.h"
 #import "PRShowJustReviewsViewController.h"
+#import "SAMCache.h"
 
 @interface PRHomeFeedViewController ()
 
@@ -22,10 +23,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PFQuery *pushQuery = [PFUser query];
-    [pushQuery whereKey:@"username" equalTo:@"kirandasika"];
-    [PFPush sendPushMessageToQueryInBackground:pushQuery
-                                   withMessage:@"Hello World!"];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         NSLog(@"Current User: %@", currentUser.username);
@@ -48,7 +45,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    // Create our Installation query
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
     
+    // Send push notification to query
+    [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                   withMessage:@"Hello World!"];
     }
 
 
@@ -118,12 +121,18 @@
         cell.detailTextLabel.text = @"TV Shows";
     }
     if ([feedPost.thumbnail isKindOfClass:[NSString class]]) {
+        NSString *key = [NSString stringWithFormat:@"%@-thumbnail",feedPost.uniqueID];
+        UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
+        if (photo) {
+            cell.imageView.image = photo;
+        }
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(queue, ^{
             NSData *imageData = [NSData dataWithContentsOfURL:feedPost.thumbnailURL];
             if (imageData != nil) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UIImage *image = [UIImage imageWithData:imageData];
+                    [[SAMCache sharedCache] setImage:image forKey:key];
                     cell.imageView.image = image;
                 });
             }
@@ -137,7 +146,6 @@
     //UISwipeGestureRecognizer
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(share)];
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    
     [self.tableView addGestureRecognizer:rightSwipe];
     
     //Adding left swpipe for more pictures.
@@ -242,11 +250,15 @@
             NSData *data = [[NSData alloc] initWithContentsOfURL:location];
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                                                options:kNilOptions error:nil];
+            if (data == nil) {
+                [self.tabBarController setSelectedIndex:1];
+            }
             
             NSArray *feedPostsArray = [responseDictionary objectForKey:@"posts"];
             self.feedPosts = [NSMutableArray array];
             
             for (NSDictionary *fdDictionary in feedPostsArray) {
+                
                 PRFeedPost *feedPost = [PRFeedPost blogPostWithTitle:[fdDictionary objectForKey:@"product_name"]];
                 feedPost.category = [fdDictionary objectForKey:@"product_category"];
                 NSString *imageCheckString = [fdDictionary objectForKey:@"product_thumbnail"];

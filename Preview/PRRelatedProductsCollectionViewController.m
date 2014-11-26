@@ -10,6 +10,7 @@
 #import "PRRelatedSearchCollectionViewCell.h"
 #import "PRRelatedVariables.h"
 #import "PRDetailRelatedPostViewController.h"
+#import "SAMCache.h"
 
 @interface PRRelatedProductsCollectionViewController ()
 
@@ -54,6 +55,11 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     PRRelatedVariables *feedPosts = [self.allProducts objectAtIndex:indexPath.row];
     cell.productnameLabel.text = feedPosts.productName;
+    NSString *key = [NSString stringWithFormat:@"%@-relatedThumbnail",feedPosts.productUniqueID];
+    UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
+    if (photo) {
+        cell.productPictureImageView.image = photo;
+    }
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         NSString *imageURLString = feedPosts.imageURL;
@@ -62,6 +68,7 @@ static NSString * const reuseIdentifier = @"Cell";
         if (imageData != nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
                  UIImage *image = [UIImage imageWithData:imageData];
+                [[SAMCache sharedCache] setImage:image forKey:key];
                 cell.productPictureImageView.image = image;
             });
         }

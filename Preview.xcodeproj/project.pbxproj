@@ -25,8 +25,10 @@
 		9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */; };
 		9F648F0C1A092BF300D15BD2 /* PRShowReviewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */; };
 		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
+		9F7B02D81A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B02D71A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m */; };
 		9F812116194175D600249BAC /* PRCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F812115194175D600249BAC /* PRCollectionCell.m */; };
 		9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */; };
+		9F90E1441A24F2DB009EE5AB /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90E1431A24F2DB009EE5AB /* SAMCache.m */; };
 		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
 		9FAD219519430B720055FA9D /* navBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD219419430B720055FA9D /* navBarBackground.png */; };
 		9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F316191E206200776A16 /* Foundation.framework */; };
@@ -115,10 +117,14 @@
 		9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowReviewViewCell.m; sourceTree = "<group>"; };
 		9F6F189619443BDA0071360E /* PRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProfileViewController.h; sourceTree = "<group>"; };
 		9F6F189719443BDA0071360E /* PRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProfileViewController.m; sourceTree = "<group>"; };
+		9F7B02D61A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		9F7B02D71A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		9F812114194175D600249BAC /* PRCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCollectionCell.h; sourceTree = "<group>"; };
 		9F812115194175D600249BAC /* PRCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCollectionCell.m; sourceTree = "<group>"; };
 		9F8F67BC1A1FB31200F3E000 /* PRSelectedCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategory.h; sourceTree = "<group>"; };
 		9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategory.m; sourceTree = "<group>"; };
+		9F90E1421A24F2DB009EE5AB /* SAMCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMCache.h; sourceTree = "<group>"; };
+		9F90E1431A24F2DB009EE5AB /* SAMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMCache.m; sourceTree = "<group>"; };
 		9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRModalDetailFeedViewController.h; sourceTree = "<group>"; };
 		9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRModalDetailFeedViewController.m; sourceTree = "<group>"; };
 		9FAD219419430B720055FA9D /* navBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBackground.png; sourceTree = "<group>"; };
@@ -329,6 +335,24 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		9F7B02D51A22242F00FCA8E4 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F7B02D61A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.h */,
+				9F7B02D71A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		9F90E1411A24F2C5009EE5AB /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				9F90E1421A24F2DB009EE5AB /* SAMCache.h */,
+				9F90E1431A24F2DB009EE5AB /* SAMCache.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
 		9FAD219319430B4E0055FA9D /* Other Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +406,8 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F90E1411A24F2C5009EE5AB /* Cache */,
+				9F7B02D51A22242F00FCA8E4 /* Keyboard */,
 				9FBB2EC519F907A300735B6A /* Settings */,
 				9F100CE119F822BD00553FD7 /* Related Searches */,
 				9FDEEDFC19F8088D0002210E /* Leaderboard */,
@@ -593,8 +619,10 @@
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
 				9FBB2EC819F907CF00735B6A /* PRSettingsViewController.m in Sources */,
 				9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */,
+				9F7B02D81A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				9FB1F327191E206200776A16 /* PRAppDelegate.m in Sources */,
 				9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */,
+				9F90E1441A24F2DB009EE5AB /* SAMCache.m in Sources */,
 				9F100CEA19F8381100553FD7 /* PRRelatedVariables.m in Sources */,
 				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,
 				9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */,
@@ -675,7 +703,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Dasika (HK4MMNN2Y8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -687,7 +715,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "f4e5d7eb-c66a-4cf5-bcc5-bcf55f0ecf07";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -711,7 +739,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "e899858c-a7bb-46c4-bdc8-9c1d3b7e0ec9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -750,7 +778,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Dasika (HK4MMNN2Y8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -769,7 +797,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "f4e5d7eb-c66a-4cf5-bcc5-bcf55f0ecf07";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -790,7 +818,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Dasika (HK4MMNN2Y8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -802,7 +830,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "f4e5d7eb-c66a-4cf5-bcc5-bcf55f0ecf07";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -814,7 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Dasika (HK4MMNN2Y8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kiran/Desktop/all,
@@ -826,7 +854,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "e899858c-a7bb-46c4-bdc8-9c1d3b7e0ec9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -849,7 +877,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32a3d520-4c5d-4ba0-a165-304bcf365f15";
+				PROVISIONING_PROFILE = "e899858c-a7bb-46c4-bdc8-9c1d3b7e0ec9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

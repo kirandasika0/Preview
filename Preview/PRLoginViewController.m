@@ -55,4 +55,5 @@
 - (IBAction)openContactUsPage:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://burst.co.in/preview/contact_us.php"]];
 }
+
 @end
