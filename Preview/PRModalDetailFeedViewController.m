@@ -11,6 +11,8 @@
 #import "PRcommentsCollectionViewController.h"
 #import <iAd/iAd.h>
 
+
+
 @interface PRModalDetailFeedViewController () <ADBannerViewDelegate>
 
 @end
@@ -34,7 +36,8 @@
     //Setting the product label name in the below line.
     
     self.productnameLabel.text = self.productName;
-    
+    self.productnameLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.productnameLabel.numberOfLines = 0;
     //We have set the category of the product in the below if and else block. :D
     if ([self.productCategory isEqualToString:@"1"]) {
         self.category.text = @"Category: Movies";
@@ -106,8 +109,31 @@
     leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:leftSwipe];
     
+    //Getting User Location
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (bannerView == nil) {
+        bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top withView:self.view withDelegate:nil];
+    [self.view addSubview:bannerView];
+    }
+    
+    //[startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
+}
+
+-(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [bannerView didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+}
+//For iOS 8
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [bannerView viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
 -(void)likeProduct{
     PFQuery *queryForLike = [PFQuery queryWithClassName:@"liked_products"];
     [queryForLike whereKey:@"product_id" equalTo:self.productUniqueID];
@@ -225,7 +251,8 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-#pragma mark - Banner Methods
+#pragma mark - iAd Banner Methods
+/*
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1];
@@ -238,4 +265,5 @@
     [banner setAlpha:0];
     [UIView commitAnimations];
 }
+ */
 @end

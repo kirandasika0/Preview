@@ -30,6 +30,11 @@
 		9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F67BD1A1FB31200F3E000 /* PRSelectedCategory.m */; };
 		9F90E1441A24F2DB009EE5AB /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90E1431A24F2DB009EE5AB /* SAMCache.m */; };
 		9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */; };
+		9FA28A541A33609F005D509C /* PRUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA28A531A33609F005D509C /* PRUserLocation.m */; };
+		9FA28A571A3367A2005D509C /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA28A551A3367A2005D509C /* StartApp.bundle */; };
+		9FA28A581A3367A2005D509C /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A561A3367A2005D509C /* StartApp.framework */; };
+		9FA28A5A1A3367DF005D509C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A591A3367DF005D509C /* CoreTelephony.framework */; };
+		9FA28A5C1A3367FF005D509C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A5B1A3367FF005D509C /* AdSupport.framework */; };
 		9FAD219519430B720055FA9D /* navBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD219419430B720055FA9D /* navBarBackground.png */; };
 		9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F316191E206200776A16 /* Foundation.framework */; };
 		9FB1F319191E206200776A16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1F318191E206200776A16 /* CoreGraphics.framework */; };
@@ -127,6 +132,12 @@
 		9F90E1431A24F2DB009EE5AB /* SAMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMCache.m; sourceTree = "<group>"; };
 		9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRModalDetailFeedViewController.h; sourceTree = "<group>"; };
 		9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRModalDetailFeedViewController.m; sourceTree = "<group>"; };
+		9FA28A521A33609F005D509C /* PRUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRUserLocation.h; sourceTree = "<group>"; };
+		9FA28A531A33609F005D509C /* PRUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRUserLocation.m; sourceTree = "<group>"; };
+		9FA28A551A3367A2005D509C /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		9FA28A561A3367A2005D509C /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		9FA28A591A3367DF005D509C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9FA28A5B1A3367FF005D509C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9FAD219419430B720055FA9D /* navBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBackground.png; sourceTree = "<group>"; };
 		9FB1F313191E206200776A16 /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB1F316191E206200776A16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +204,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA28A5C1A3367FF005D509C /* AdSupport.framework in Frameworks */,
+				9FA28A5A1A3367DF005D509C /* CoreTelephony.framework in Frameworks */,
 				9F03F8D319F8E74B00D39B10 /* iAd.framework in Frameworks */,
 				9FB1F350191E221C00776A16 /* AudioToolbox.framework in Frameworks */,
 				9FB1F351191E221C00776A16 /* CFNetwork.framework in Frameworks */,
@@ -206,6 +219,7 @@
 				9FB1F319191E206200776A16 /* CoreGraphics.framework in Frameworks */,
 				9FB1F31B191E206200776A16 /* UIKit.framework in Frameworks */,
 				9FB1F346191E219400776A16 /* Parse.framework in Frameworks */,
+				9FA28A581A3367A2005D509C /* StartApp.framework in Frameworks */,
 				9FB1F317191E206200776A16 /* Foundation.framework in Frameworks */,
 				9FBAAEFA194066FA006F39B3 /* FacebookSDK.framework in Frameworks */,
 			);
@@ -268,6 +282,8 @@
 				9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */,
 				9F342A2119E00197006C7135 /* PRInsertCommentViewController.h */,
 				9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */,
+				9FA28A521A33609F005D509C /* PRUserLocation.h */,
+				9FA28A531A33609F005D509C /* PRUserLocation.m */,
 			);
 			name = Comments;
 			sourceTree = "<group>";
@@ -383,6 +399,10 @@
 		9FB1F315191E206200776A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FA28A5B1A3367FF005D509C /* AdSupport.framework */,
+				9FA28A591A3367DF005D509C /* CoreTelephony.framework */,
+				9FA28A551A3367A2005D509C /* StartApp.bundle */,
+				9FA28A561A3367A2005D509C /* StartApp.framework */,
 				9F03F8D219F8E74B00D39B10 /* iAd.framework */,
 				9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */,
 				9FB1F347191E221C00776A16 /* AudioToolbox.framework */,
@@ -587,6 +607,7 @@
 			files = (
 				9FB1F35A191E22F700776A16 /* MainStoryboard.storyboard in Resources */,
 				9FAD219519430B720055FA9D /* navBarBackground.png in Resources */,
+				9FA28A571A3367A2005D509C /* StartApp.bundle in Resources */,
 				9F06E537193F37FF00EDA245 /* i_p_r.png in Resources */,
 				9FB1F321191E206200776A16 /* InfoPlist.strings in Resources */,
 				9FB1F329191E206200776A16 /* Images.xcassets in Resources */,
@@ -633,6 +654,7 @@
 				9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */,
 				9FC814D219F8A0E900C29B55 /* PRDetailRelatedPostViewController.m in Sources */,
 				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
+				9FA28A541A33609F005D509C /* PRUserLocation.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
 				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,

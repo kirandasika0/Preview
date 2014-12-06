@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PRAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface PRAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager* locationManager;
+}
 @property (strong, nonatomic) UIWindow *window;
-
 @end

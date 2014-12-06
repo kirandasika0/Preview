@@ -8,6 +8,7 @@
 
 #import "PRAppDelegate.h"
 #import <Parse/Parse.h>
+#import <StartApp/StartApp.h>
 
 @implementation PRAppDelegate
 
@@ -31,6 +32,18 @@
                                                          UIRemoteNotificationTypeAlert |
                                                          UIRemoteNotificationTypeSound)];
     }
+    //Init of Start App
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"112622444";
+    sdk.devID = @"212845347";
+    sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Female];
+    
+    //Getting the location of the user
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    
     return YES;
 }
 
@@ -73,14 +86,4 @@
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    [currentInstallation saveInBackground];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
-}
 @end

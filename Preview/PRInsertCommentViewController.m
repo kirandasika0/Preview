@@ -7,6 +7,7 @@
 //
 
 #import "PRInsertCommentViewController.h"
+#import "PRUserLocation.h"
 
 @interface PRInsertCommentViewController ()
 
@@ -26,7 +27,8 @@
     UITapGestureRecognizer *closeInsertPost = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeViewController)];
     closeInsertPost.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:closeInsertPost];
-    [self.ratingTableView reloadData];
+    //[self.ratingTableView reloadData];
+    [self getUserDetails];
 }
 
 
@@ -74,6 +76,48 @@
     cell.textLabel.text = self.ratingParas[indexPath.row];
 
     return cell;
+}
+
+-(void)getUserDetails{
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSString *urlString = @"http://burst.co.in/preview/USERLOCATION.php";
+        NSURL *url = [NSURL URLWithString:urlString];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+            //Getting the data from the JSon file
+            NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                               options:kNilOptions error:nil];
+            
+            NSArray *userLocationArray = [responseDictionary objectForKey:@"userLocation"];
+            self.userLocation = [NSMutableArray array];
+            
+            for(NSDictionary *ulDictionary in userLocationArray){
+                PRUserLocation *userLocation = [[PRUserLocation alloc] init];
+                userLocation.city = [ulDictionary objectForKey:@"city"];
+                userLocation.country = [ulDictionary objectForKey:@"country"];
+                userLocation.latitude = [ulDictionary objectForKey:@"latitude"];
+                userLocation.longitude = [ulDictionary objectForKey:@"longitude"];
+                userLocation.postalCode = [ulDictionary objectForKey:@"postal_code"];
+                userLocation.timeZone = [ulDictionary objectForKey:@"timezone"];
+                userLocation.regionCode = [ulDictionary objectForKey:@"region_code"];
+                userLocation.countryCode = [ulDictionary objectForKey:@"country_code"];
+                userLocation.asn = [ulDictionary objectForKey:@"asn"];
+                
+                [self.userLocation addObject:userLocation];
+            }
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+            });
+            
+        }];
+        [task resume];
+
+    }
 }
 
 @end

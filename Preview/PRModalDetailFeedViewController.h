@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <StartApp/StartApp.h>
+#import <StartApp/STABannerView.h>
+#import <StartApp/STABannerSize.h>
+#import <StartApp/STAStartAppSDK.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PRModalDetailFeedViewController : UIViewController
+@interface PRModalDetailFeedViewController : UIViewController<CLLocationManagerDelegate>
+{
+    STABannerView* bannerView;
+    STAAdPreferences* startAppAd;
+    CLLocationManager *locationManager;
+}
 
 @property (nonatomic,strong) NSString *productName;
 @property (nonatomic,strong) NSString *productCategory;
@@ -34,6 +44,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfReviewsLabel;
 
 - (IBAction)homeTabAction:(id)sender;
-
 
 @end

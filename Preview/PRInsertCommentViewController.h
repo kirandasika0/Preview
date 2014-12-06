@@ -18,5 +18,5 @@
 - (IBAction)insertComment:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *ratingTableView;
 @property (strong, nonatomic) NSMutableArray *ratingParas;
-
+@property (strong, nonatomic) NSMutableArray *userLocation;
 @end

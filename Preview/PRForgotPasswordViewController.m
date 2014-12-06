@@ -45,4 +45,8 @@
         }];
     }
 }
+
+- (IBAction)closeForgotPassword:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

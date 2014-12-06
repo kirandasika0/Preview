@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StartApp/StartApp.h>
+#import <StartApp/STABannerView.h>
+#import <StartApp/STABannerSize.h>
 
 @interface PRCategoryViewController : UITableViewController
+{
+    STABannerView* bannerView;
+}
 
 @property (nonatomic,strong) NSMutableArray *categoryPost;
 

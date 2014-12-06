@@ -21,7 +21,17 @@
     [super viewDidLoad];
 	
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    /*
+    [self.navigationController.navigationBar setTranslucent:YES];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+     */
+}
 
 - (IBAction)suggestProduct:(id)sender {
     NSString *suggestProduct = [self.suggestProductField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

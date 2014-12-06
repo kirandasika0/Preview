@@ -99,7 +99,27 @@
     }
 }
 
-#pragma mark - Banner Methods
+#pragma  mark - Start App Ads
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (bannerView == nil) {
+        bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Bottom withView:self.tableView withDelegate:nil];
+        [self.tableView addSubview:bannerView];
+    }
+}
+
+-(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [bannerView didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+}
+//For iOS 8
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [bannerView viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
+
+#pragma mark - iAd Banner Methods
+/*
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1];
@@ -112,5 +132,5 @@
     [banner setAlpha:0];
     [UIView commitAnimations];
 }
-
+*/
 @end

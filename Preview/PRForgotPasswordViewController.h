@@ -15,5 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *forgotPassword;
 - (IBAction)forgotPassword:(id)sender;
+- (IBAction)closeForgotPassword:(id)sender;
 
 @end

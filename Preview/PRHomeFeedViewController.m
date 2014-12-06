@@ -13,6 +13,7 @@
 #import "PRRelatedPicturesViewController.h"
 #import "PRShowJustReviewsViewController.h"
 #import "SAMCache.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PRHomeFeedViewController ()
 
@@ -125,6 +126,7 @@
         UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
         if (photo) {
             cell.imageView.image = photo;
+            cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
         }
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(queue, ^{
@@ -134,6 +136,7 @@
                     UIImage *image = [UIImage imageWithData:imageData];
                     [[SAMCache sharedCache] setImage:image forKey:key];
                     cell.imageView.image = image;
+                    cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
                 });
             }
         });
