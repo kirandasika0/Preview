@@ -46,14 +46,8 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
-    // Create our Installation query
-    PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
-    
-    // Send push notification to query
-    [PFPush sendPushMessageToQueryInBackground:pushQuery
-                                   withMessage:@"Hello World!"];
-    }
+    //Showing the User's location in the userLocationLabel in the cellForRowat index
+}
 
 
 #pragma mark - Table view data source
@@ -127,6 +121,8 @@
         if (photo) {
             cell.imageView.image = photo;
             cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
+            self.userLocationLabel.lineBreakMode = NSLineBreakByWordWrapping;
+            self.userLocationLabel.text = [NSString stringWithFormat:@"Previewing from: %@, %@", feedPost.userCity,feedPost.userCountry];
         }
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(queue, ^{
@@ -160,6 +156,7 @@
     [longPress setMinimumPressDuration:2];
     [self.view addGestureRecognizer:longPress];
     }
+    //Displaying the users location
     return cell;
 }
 
@@ -275,6 +272,8 @@
                 feedPost.rating = [fdDictionary objectForKey:@"product_rating"];
                 feedPost.uniqueID = [fdDictionary objectForKey:@"id"];
                 feedPost.originalImage = [fdDictionary objectForKey:@"product_original"];
+                feedPost.userCity = [fdDictionary objectForKey:@"usrcity"];
+                feedPost.userCountry = [fdDictionary objectForKey:@"usrcountry"];
                 
                 //We have to add all the object to the feed posts mutable array.
                 //Setting up the PFObject for the filterArray

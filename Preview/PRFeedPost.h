@@ -19,6 +19,8 @@
 @property (nonatomic,strong) NSString *decp;
 @property (nonatomic,strong) NSString *rating;
 @property (nonatomic,strong) NSString *uniqueID;
+@property (nonatomic, strong) NSString *userCity;
+@property (nonatomic, strong) NSString *userCountry;
 
 
 - (id) initWithTitle:(NSString *)title;

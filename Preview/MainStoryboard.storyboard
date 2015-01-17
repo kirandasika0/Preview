@@ -363,6 +363,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="937-sv-XV8">
+                            <rect key="frame" x="0.0" y="-21" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="15"/>
+                            <color key="textColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="JAl-Ki-rzn">
                             <rect key="frame" x="0.0" y="178" width="320" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -380,14 +387,14 @@
                                             <rect key="frame" x="15" y="27" width="82" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="20"/>
-                                            <color key="textColor" red="0.033394865429999997" green="0.73553730439999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hcE-B9-fNx">
                                             <rect key="frame" x="15" y="49" width="56" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="14"/>
-                                            <color key="textColor" red="1" green="0.1411764771" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="textColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -418,6 +425,7 @@
                         <outlet property="activityInd" destination="JAl-Ki-rzn" id="S7Z-8s-WBy"/>
                         <outlet property="searchDisplayController" destination="xbo-0v-t8Y" id="R2c-8w-8xl"/>
                         <outlet property="showReviewButton" destination="fKs-of-F85" id="QiK-3R-wUa"/>
+                        <outlet property="userLocationLabel" destination="937-sv-XV8" id="Qrs-YP-ytX"/>
                         <segue destination="MBC-Db-qVP" kind="push" identifier="showLogin" id="xhb-mX-taO"/>
                         <segue destination="Fdc-tb-2l1" kind="modal" identifier="showDetailPostFeed" modalTransitionStyle="crossDissolve" id="uiL-Fs-AiA"/>
                         <segue destination="0kP-Pe-dHe" kind="modal" identifier="showShareView" modalTransitionStyle="crossDissolve" id="CIO-Gf-XLc"/>

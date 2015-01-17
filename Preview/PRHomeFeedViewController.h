@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *showReviewButton;
+@property (weak, nonatomic) IBOutlet UILabel *userLocationLabel;
 
 
 @property (strong,nonatomic) NSTimer *timer;
