@@ -35,7 +35,21 @@
             self.numberOfReviews.text = [NSString stringWithFormat:@"No: of Reviews Given: %d",number];
         }
     }];
-    self.profilePictureImageView.image = [UIImage imageNamed:@"tabBarBackground"];
+    PFFile *file = [entry objectForKey:@"pro_pic"];
+    NSURL *url = [NSURL URLWithString:file.url];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSData *imageData = [NSData dataWithContentsOfURL:url];
+        if (imageData != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *image = [UIImage imageWithData:imageData];
+                self.profilePictureImageView.image = image;
+            });
+        }
+        else{
+            self.profilePictureImageView.image = [UIImage imageNamed:@"default-avatar"];
+        }
+    });
     self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
 }
 

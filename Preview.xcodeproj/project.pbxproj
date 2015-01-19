@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9F03F8D319F8E74B00D39B10 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F03F8D219F8E74B00D39B10 /* iAd.framework */; };
 		9F06E537193F37FF00EDA245 /* i_p_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F06E536193F37FF00EDA245 /* i_p_r.png */; };
+		9F0803801A6BAE3B00A4CB9C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F08037F1A6BAE3B00A4CB9C /* SWRevealViewController.m */; };
+		9F0803911A6BC95B00A4CB9C /* CAAnimation+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0803831A6BC95B00A4CB9C /* CAAnimation+Blocks.m */; };
+		9F0803921A6BC95B00A4CB9C /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0803851A6BC95B00A4CB9C /* Evaluate.m */; };
+		9F0803931A6BC95B00A4CB9C /* UIButton+LongTapShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0803881A6BC95B00A4CB9C /* UIButton+LongTapShare.m */; };
+		9F0803941A6BC95B00A4CB9C /* YLLongTapShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F08038A1A6BC95B00A4CB9C /* YLLongTapShareView.m */; };
+		9F0803951A6BC95B00A4CB9C /* YLShareAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F08038C1A6BC95B00A4CB9C /* YLShareAnimationHelper.m */; };
+		9F0803961A6BC95B00A4CB9C /* YLShareButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F08038E1A6BC95B00A4CB9C /* YLShareButtonView.m */; };
+		9F0803971A6BC95B00A4CB9C /* YLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0803901A6BC95B00A4CB9C /* YLShareView.m */; };
 		9F100CE419F8231300553FD7 /* PRRelatedProductsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE319F8231300553FD7 /* PRRelatedProductsCollectionViewController.m */; };
 		9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE619F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m */; };
 		9F100CEA19F8381100553FD7 /* PRRelatedVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F100CE919F8381100553FD7 /* PRRelatedVariables.m */; };
@@ -90,6 +98,23 @@
 /* Begin PBXFileReference section */
 		9F03F8D219F8E74B00D39B10 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9F06E536193F37FF00EDA245 /* i_p_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = i_p_r.png; path = "../../../My Stuff /ios pics/i_p_r.png"; sourceTree = "<group>"; };
+		9F08037E1A6BAE3B00A4CB9C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		9F08037F1A6BAE3B00A4CB9C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		9F0803821A6BC95B00A4CB9C /* CAAnimation+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Blocks.h"; sourceTree = "<group>"; };
+		9F0803831A6BC95B00A4CB9C /* CAAnimation+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Blocks.m"; sourceTree = "<group>"; };
+		9F0803841A6BC95B00A4CB9C /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
+		9F0803851A6BC95B00A4CB9C /* Evaluate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluate.m; sourceTree = "<group>"; };
+		9F0803861A6BC95B00A4CB9C /* OMVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMVector.h; sourceTree = "<group>"; };
+		9F0803871A6BC95B00A4CB9C /* UIButton+LongTapShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LongTapShare.h"; sourceTree = "<group>"; };
+		9F0803881A6BC95B00A4CB9C /* UIButton+LongTapShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LongTapShare.m"; sourceTree = "<group>"; };
+		9F0803891A6BC95B00A4CB9C /* YLLongTapShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLongTapShareView.h; sourceTree = "<group>"; };
+		9F08038A1A6BC95B00A4CB9C /* YLLongTapShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLongTapShareView.m; sourceTree = "<group>"; };
+		9F08038B1A6BC95B00A4CB9C /* YLShareAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLShareAnimationHelper.h; sourceTree = "<group>"; };
+		9F08038C1A6BC95B00A4CB9C /* YLShareAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLShareAnimationHelper.m; sourceTree = "<group>"; };
+		9F08038D1A6BC95B00A4CB9C /* YLShareButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLShareButtonView.h; sourceTree = "<group>"; };
+		9F08038E1A6BC95B00A4CB9C /* YLShareButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLShareButtonView.m; sourceTree = "<group>"; };
+		9F08038F1A6BC95B00A4CB9C /* YLShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLShareView.h; sourceTree = "<group>"; };
+		9F0803901A6BC95B00A4CB9C /* YLShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLShareView.m; sourceTree = "<group>"; };
 		9F100CE219F8231300553FD7 /* PRRelatedProductsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedProductsCollectionViewController.h; sourceTree = "<group>"; };
 		9F100CE319F8231300553FD7 /* PRRelatedProductsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedProductsCollectionViewController.m; sourceTree = "<group>"; };
 		9F100CE519F8377800553FD7 /* PRRelatedSearchCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedSearchCollectionViewCell.h; sourceTree = "<group>"; };
@@ -238,6 +263,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F08037D1A6BAE1B00A4CB9C /* Sliding Effect Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F08037E1A6BAE3B00A4CB9C /* SWRevealViewController.h */,
+				9F08037F1A6BAE3B00A4CB9C /* SWRevealViewController.m */,
+			);
+			name = "Sliding Effect Files";
+			sourceTree = "<group>";
+		};
+		9F0803811A6BC8F300A4CB9C /* New Share */ = {
+			isa = PBXGroup;
+			children = (
+				9F0803821A6BC95B00A4CB9C /* CAAnimation+Blocks.h */,
+				9F0803831A6BC95B00A4CB9C /* CAAnimation+Blocks.m */,
+				9F0803841A6BC95B00A4CB9C /* Evaluate.h */,
+				9F0803851A6BC95B00A4CB9C /* Evaluate.m */,
+				9F0803861A6BC95B00A4CB9C /* OMVector.h */,
+				9F0803871A6BC95B00A4CB9C /* UIButton+LongTapShare.h */,
+				9F0803881A6BC95B00A4CB9C /* UIButton+LongTapShare.m */,
+				9F0803891A6BC95B00A4CB9C /* YLLongTapShareView.h */,
+				9F08038A1A6BC95B00A4CB9C /* YLLongTapShareView.m */,
+				9F08038B1A6BC95B00A4CB9C /* YLShareAnimationHelper.h */,
+				9F08038C1A6BC95B00A4CB9C /* YLShareAnimationHelper.m */,
+				9F08038D1A6BC95B00A4CB9C /* YLShareButtonView.h */,
+				9F08038E1A6BC95B00A4CB9C /* YLShareButtonView.m */,
+				9F08038F1A6BC95B00A4CB9C /* YLShareView.h */,
+				9F0803901A6BC95B00A4CB9C /* YLShareView.m */,
+			);
+			name = "New Share";
+			sourceTree = "<group>";
+		};
 		9F100CE119F822BD00553FD7 /* Related Searches */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +482,8 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F0803811A6BC8F300A4CB9C /* New Share */,
+				9F08037D1A6BAE1B00A4CB9C /* Sliding Effect Files */,
 				9F90E1411A24F2C5009EE5AB /* Cache */,
 				9F7B02D51A22242F00FCA8E4 /* Keyboard */,
 				9FBB2EC519F907A300735B6A /* Settings */,
@@ -632,8 +690,11 @@
 				9FDEEE0219F80A060002210E /* PRLeaderboardViewCell.m in Sources */,
 				9F812116194175D600249BAC /* PRCollectionCell.m in Sources */,
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
+				9F0803941A6BC95B00A4CB9C /* YLLongTapShareView.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
+				9F0803921A6BC95B00A4CB9C /* Evaluate.m in Sources */,
 				9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */,
+				9F0803971A6BC95B00A4CB9C /* YLShareView.m in Sources */,
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F100CE719F8377800553FD7 /* PRRelatedSearchCollectionViewCell.m in Sources */,
@@ -649,13 +710,17 @@
 				9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */,
 				9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */,
 				9F100CE419F8231300553FD7 /* PRRelatedProductsCollectionViewController.m in Sources */,
+				9F0803951A6BC95B00A4CB9C /* YLShareAnimationHelper.m in Sources */,
 				9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */,
 				9FB1F323191E206200776A16 /* main.m in Sources */,
 				9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */,
 				9FC814D219F8A0E900C29B55 /* PRDetailRelatedPostViewController.m in Sources */,
 				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
 				9FA28A541A33609F005D509C /* PRUserLocation.m in Sources */,
+				9F0803911A6BC95B00A4CB9C /* CAAnimation+Blocks.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
+				9F0803961A6BC95B00A4CB9C /* YLShareButtonView.m in Sources */,
+				9F0803801A6BAE3B00A4CB9C /* SWRevealViewController.m in Sources */,
 				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */,
 				9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */,
@@ -668,6 +733,7 @@
 				9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */,
 				9FDEEDFF19F808B40002210E /* PRLeaderBoardViewController.m in Sources */,
 				9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */,
+				9F0803931A6BC95B00A4CB9C /* UIButton+LongTapShare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

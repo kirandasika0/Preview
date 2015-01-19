@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="aDw-K7-iXJ" kind="relationship" relationship="viewControllers" id="kDg-4L-nHo"/>
                         <segue destination="Nvc-bX-5HG" kind="relationship" relationship="viewControllers" id="7ZL-KB-F0J"/>
+                        <segue destination="YY7-6e-KTg" kind="relationship" relationship="viewControllers" id="WNB-Is-P30"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKh-My-okE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -491,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhT-nJ-BL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="1303"/>
+            <point key="canvasLocation" x="3622" y="1303"/>
         </scene>
         <!--Modal Detail Feed View Controller-->
         <scene sceneID="NvX-ic-rhV">
@@ -545,12 +546,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol3-x3-zP6">
+                                <rect key="frame" x="131" y="371" width="46" height="30"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="category" destination="15K-gw-Uig" id="wPU-9E-ww5"/>
                         <outlet property="feedImageView" destination="1Ci-tv-rDB" id="NRQ-qR-BAt"/>
+                        <outlet property="longTapShareButton" destination="ol3-x3-zP6" id="FTJ-T9-eQm"/>
                         <outlet property="numberOfLikesLabel" destination="TxY-EH-4CO" id="zpz-Nh-4dm"/>
                         <outlet property="numberOfReviewsLabel" destination="IHY-gu-HuT" id="BkN-AY-a8p"/>
                         <outlet property="productDecpTextView" destination="dIT-Yu-7di" id="dU3-I2-nEh"/>
@@ -1181,7 +1190,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kls-6R-Oj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="1373"/>
+            <point key="canvasLocation" x="1511" y="1373"/>
         </scene>
         <!--Detail Related Post View Controller-->
         <scene sceneID="Cot-p9-8uf">
@@ -1227,7 +1236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVa-vd-dwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="1373"/>
+            <point key="canvasLocation" x="1920" y="1373"/>
         </scene>
         <!--Leaderboards-->
         <scene sceneID="LOV-IL-y9O">
@@ -1248,13 +1257,158 @@
             </objects>
             <point key="canvasLocation" x="447" y="678"/>
         </scene>
+        <!--You-->
+        <scene sceneID="twA-fc-Eao">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YY7-6e-KTg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="You" image="friends" selectedImage="full_star.png" id="B70-Af-EXj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X1W-Ho-Mmo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3p3-TE-i6K" kind="relationship" relationship="rootViewController" id="6q8-qn-89z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9f-CD-EIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1358"/>
+        </scene>
+        <!--Your Profile-->
+        <scene sceneID="aFF-2z-Xva">
+            <objects>
+                <viewController id="3p3-TE-i6K" customClass="PRProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LwQ-2h-W28"/>
+                        <viewControllerLayoutGuide type="bottom" id="Edf-MW-r0t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ko6-lL-gzm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8F1-Bb-A4v"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc3-uJ-WmK">
+                                <rect key="frame" x="16" y="273" width="288" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="OKH-7z-E0M"/>
+                                    <constraint firstAttribute="width" constant="288" id="oOe-Gq-JPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="17"/>
+                                <color key="textColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="navBarBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Voa-PI-2El">
+                                <rect key="frame" x="0.0" y="64" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AP4-zm-Ogs"/>
+                                    <constraint firstAttribute="width" constant="320" id="NqR-MF-m2i"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="MHl-ag-U4O">
+                                <rect key="frame" x="110" y="165" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="T5A-CQ-jKh"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zpk-cY-eHl"/>
+                                </constraints>
+                            </imageView>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-n0-lRx">
+                                <rect key="frame" x="10" y="322" width="300" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YZo-R6-ncx"/>
+                                    <constraint firstAttribute="width" constant="300" id="tme-Wp-pde"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mc3-uJ-WmK" secondAttribute="centerY" id="4Ic-yw-Uz8"/>
+                            <constraint firstItem="mc3-uJ-WmK" firstAttribute="trailing" secondItem="ko6-lL-gzm" secondAttribute="trailingMargin" id="AmW-gF-KDd"/>
+                            <constraint firstItem="Voa-PI-2El" firstAttribute="leading" secondItem="ko6-lL-gzm" secondAttribute="leadingMargin" constant="-16" id="Ici-yh-wfH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Voa-PI-2El" secondAttribute="trailing" constant="-16" id="S70-tm-V9k"/>
+                            <constraint firstItem="tIj-n0-lRx" firstAttribute="top" secondItem="mc3-uJ-WmK" secondAttribute="bottom" constant="8" id="Svu-nY-Bch"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MHl-ag-U4O" secondAttribute="trailing" constant="94" id="Tnp-Fe-FwX"/>
+                            <constraint firstItem="tIj-n0-lRx" firstAttribute="leading" secondItem="ko6-lL-gzm" secondAttribute="leadingMargin" constant="-6" id="VaC-Ew-JFm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tIj-n0-lRx" secondAttribute="trailing" constant="-6" id="gXl-yA-y5S"/>
+                            <constraint firstItem="mc3-uJ-WmK" firstAttribute="top" secondItem="Voa-PI-2El" secondAttribute="bottom" constant="59" id="jIW-15-GkZ"/>
+                            <constraint firstItem="MHl-ag-U4O" firstAttribute="leading" secondItem="ko6-lL-gzm" secondAttribute="leadingMargin" constant="94" id="ono-Hs-Pnh"/>
+                            <constraint firstItem="mc3-uJ-WmK" firstAttribute="top" secondItem="MHl-ag-U4O" secondAttribute="bottom" constant="8" id="rAi-O5-1if"/>
+                            <constraint firstItem="mc3-uJ-WmK" firstAttribute="leading" secondItem="ko6-lL-gzm" secondAttribute="leadingMargin" id="u6u-j0-Cz1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Profile" id="hMg-sz-O8P">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="uou-sO-GdM">
+                            <connections>
+                                <segue destination="5SJ-Ed-onB" kind="modal" id="l5C-l3-gAA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coverImageView" destination="Voa-PI-2El" id="6Ml-Yc-Y8A"/>
+                        <outlet property="displaySeenProductsWebView" destination="tIj-n0-lRx" id="NSf-BQ-JEB"/>
+                        <outlet property="profilePictureImageView" destination="MHl-ag-U4O" id="57A-xn-lGc"/>
+                        <outlet property="userFullNameLabel" destination="mc3-uJ-WmK" id="wRd-kS-BMB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJh-Zl-ee4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="1358"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="UBs-Un-7uR">
+            <objects>
+                <viewController id="5SJ-Ed-onB" customClass="PREditProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GVN-5P-vhD"/>
+                        <viewControllerLayoutGuide type="bottom" id="anH-lR-EXp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aWd-O6-1vS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-rj-fij">
+                                <rect key="frame" x="0.0" y="-9" width="320" height="568"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTv-qX-PlL">
+                                <rect key="frame" x="0.0" y="519" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Set as DP" width="126" id="0o4-kM-FYC">
+                                        <connections>
+                                            <action selector="setAsDPButton:" destination="5SJ-Ed-onB" id="Zvn-dx-Hnp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Set as Cover Image" id="L11-ME-tfS">
+                                        <connections>
+                                            <action selector="setAsCoverImageButton:" destination="5SJ-Ed-onB" id="rpH-Sj-A3l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RpU-nM-O8T"/>
+                    <connections>
+                        <outlet property="imageView" destination="0Xh-rj-fij" id="5Iu-QT-1eI"/>
+                        <outlet property="setAsCoverImageButton" destination="L11-ME-tfS" id="baJ-0C-Tpu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8EJ-r0-qjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="2072"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Leaderboard" width="40" height="40"/>
         <image name="add" width="50" height="50"/>
         <image name="category" width="32" height="32"/>
         <image name="day_view-50" width="50" height="50"/>
+        <image name="default-avatar" width="1032" height="1032"/>
         <image name="export" width="25" height="25"/>
+        <image name="friends" width="40" height="24"/>
+        <image name="full_star.png" width="10" height="10"/>
         <image name="home" width="32" height="32"/>
         <image name="navBarBackground" width="1" height="1"/>
         <image name="navBarBackground.png" width="1" height="1"/>

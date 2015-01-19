@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PREditProfileViewController : UIViewController
+@interface PREditProfileViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)setAsDPButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *setAsCoverImageButton;
+- (IBAction)setAsCoverImageButton:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
-- (IBAction)saveAction:(id)sender;
 
+@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (strong, nonatomic) CIImage *CIImage;
 @end

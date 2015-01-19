@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PRProfileViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *bioLabel;
-
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
-@property (strong, nonatomic) IBOutlet UIView *contentView;
+//USername label and IB outlet must be created in order to display the username
+@property (weak, nonatomic) IBOutlet UILabel *userFullNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (weak, nonatomic) IBOutlet UIWebView *displaySeenProductsWebView;
 
 @end

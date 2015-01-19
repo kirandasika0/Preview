@@ -8,6 +8,7 @@
 
 #import "PRProfileViewController.h"
 #import <Parse/Parse.h>
+#import "SAMCache.h"
 
 @interface PRProfileViewController ()
 
@@ -18,47 +19,62 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //Hiding the navigation bar.
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-   //Setting the image view with the profile picture.
-    PFUser *currentUser = [PFUser currentUser];
-    NSLog(@"%@",currentUser);
-    NSURL *imageURL = [NSURL URLWithString:@"https://lh4.ggpht.com/vdK_CsMSsJoYvJpYgaj91fiJ1T8rnSHHbXL0Em378kQaaf_BGyvUek2aU9z2qbxJCAFV=w300"];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    UIImage *profilePictureImage = [UIImage imageWithData:imageData];
-    self.profilePicImageView.image = profilePictureImage;
-    
-    //Setting the username label property
-    self.usernameLabel.text = [currentUser objectForKey:@"fullName"];
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(moveTableft)];
-    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:leftSwipe];
-    //Setting up the right swipe
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(moveTabRight)];
-    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:rightSwipe];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     //Setting the tab bar controller
-    self.tabBarController.tabBar.hidden = YES;
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    //Setting up the profile page.
+    PFUser *currentUser = [PFUser currentUser];
+    //Setting the user full name on  the usernamelabel
+    self.userFullNameLabel.text = currentUser[@"fullName"];
+    self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.userFullNameLabel.numberOfLines = 0;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://burst.co.in/preview/web"]];
+    [self.displaySeenProductsWebView loadRequest: request];
+    //load the profile picture
+    //query the database to get the picture
+    PFQuery *queryForPic = [PFUser query];
+    [queryForPic whereKey:@"objectId" equalTo:currentUser.objectId];
+    [queryForPic findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Problem with the query.");
+        }
+        else{
+            for(PFObject *profilePictureObject in objects)
+            {
+                //Setting the profile picture
+                PFFile *file = [profilePictureObject objectForKey:@"pro_pic"];
+                NSURL *url = [NSURL URLWithString:file.url];
+                NSData *imageData = [NSData dataWithContentsOfURL:url];
+                UIImage *image = [UIImage imageWithData:imageData];
+                self.profilePictureImageView.image = image;
+                self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
+                //Setting the cover picture
+                PFFile *coverPictureFile = [profilePictureObject objectForKey:@"cover_pic"];
+                NSURL *urlForCoverPic = [NSURL URLWithString:coverPictureFile.url];
+                NSData *coverPictureData = [NSData dataWithContentsOfURL:urlForCoverPic];
+                UIImage *coverImage = [UIImage imageWithData:coverPictureData];
+                self.coverImageView.image = coverImage;
+            }
+        }
+    }];
+    
 }
 
--(void)moveTableft {
-    //[self.tabBarController setSelectedIndex:2];
+#pragma mark - Change Full Name to Username
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    PFUser *currentUser = [PFUser currentUser];
+    self.userFullNameLabel.text = currentUser.username;
+    self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.userFullNameLabel.numberOfLines = 0;
 }
 
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    [self.scrollerView layoutIfNeeded];
-    self.scrollerView.contentSize = self.contentView.bounds.size;
+#pragma mark - Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showEditProfile"]) {
+        [self.tabBarController setHidesBottomBarWhenPushed:YES];
+    }
 }
--(void)moveTabRight {
-    [self.tabBarController setSelectedIndex:0];
-}
-
 
 @end

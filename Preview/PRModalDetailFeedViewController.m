@@ -10,10 +10,12 @@
 #import "PRInsertCommentViewController.h"
 #import "PRcommentsCollectionViewController.h"
 #import <iAd/iAd.h>
+#import "YLLongTapShareView.h"
+#import "UIButton+LongTapShare.h"
 
 
 
-@interface PRModalDetailFeedViewController () <ADBannerViewDelegate>
+@interface PRModalDetailFeedViewController () <ADBannerViewDelegate, YLLongTapShareDelegate>
 
 @end
 
@@ -28,6 +30,16 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
+    //New Share Dialog
+    //Waking up a long press from a nib
+    if ([self.view isKindOfClass:[YLLongTapShareView class]]) {
+        ((YLLongTapShareView*)self.view).delegate = self;
+        [(YLLongTapShareView*)self.view addShareItem:[YLShareItem itemWithIcon:[UIImage imageNamed:@"facebook"] andTitle:@"Facebook"]];
+    }
+    
+    [self.longTapShareButton addShareItem:[YLShareItem itemWithIcon:[UIImage imageNamed:@"facebook"] andTitle:@"Facebook"]];
+    
+    
     //the blow fnction is for getting the numbe of comments and the number of likes.
     [self getMainContent];
     //We are setting the currentUser property to the current user..
@@ -266,4 +278,7 @@
     [UIView commitAnimations];
 }
  */
+- (UIColor*)colorOfShareView {
+    return [UIColor colorWithRed:123 green:89 blue:227 alpha:1.0f];
+}
 @end
