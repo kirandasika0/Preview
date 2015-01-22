@@ -27,7 +27,7 @@
     //Setting up the profile page.
     PFUser *currentUser = [PFUser currentUser];
     //Setting the user full name on  the usernamelabel
-    self.userFullNameLabel.text = currentUser[@"fullName"];
+    self.userFullNameLabel.text = [NSString stringWithFormat:@"%@ | %@",currentUser[@"fullName"],currentUser.username];
     self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.userFullNameLabel.numberOfLines = 0;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://burst.co.in/preview/web"]];
@@ -60,14 +60,6 @@
         }
     }];
     
-}
-
-#pragma mark - Change Full Name to Username
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    PFUser *currentUser = [PFUser currentUser];
-    self.userFullNameLabel.text = currentUser.username;
-    self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.userFullNameLabel.numberOfLines = 0;
 }
 
 #pragma mark - Segue

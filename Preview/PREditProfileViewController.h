@@ -18,4 +18,7 @@
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) CIImage *CIImage;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+- (IBAction)cancelButton:(id)sender;
+
 @end

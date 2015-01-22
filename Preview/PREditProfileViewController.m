@@ -47,7 +47,7 @@
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.tabBarController setSelectedIndex:0];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -76,8 +76,8 @@
     }
     PFFile *file = [PFFile fileWithName:fileName data:fileData];
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (error) {
-            NSLog(@"Problem in uploading");
+        if(error){
+            
         }
         else{
             PFQuery *query = [PFUser query];
@@ -95,6 +95,8 @@
                 }];
             }];
         }
+    } progressBlock:^(int percentDone) {
+        [self.progressBar setProgress:(percentDone / 100.0)];
     }];
 }
 - (IBAction)setAsCoverImageButton:(id)sender {
@@ -132,6 +134,17 @@
                 }
             }];
         }
+        
+    } progressBlock:^(int percentDone) {
+        [self.progressBar setProgress:(percentDone / 100.0)];
     }];
+}
+//turning status bar off
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+- (IBAction)cancelButton:(id)sender {
+    self.image = nil;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

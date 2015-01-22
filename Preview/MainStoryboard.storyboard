@@ -1368,11 +1368,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-rj-fij">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-rj-fij">
                                 <rect key="frame" x="0.0" y="-9" width="320" height="568"/>
+                                <color key="tintColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="O4w-5g-dQh"/>
+                                    <constraint firstAttribute="width" constant="320" id="ZQr-8H-KNs"/>
+                                </constraints>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTv-qX-PlL">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTv-qX-PlL">
                                 <rect key="frame" x="0.0" y="519" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Y5L-Np-hSD"/>
+                                    <constraint firstAttribute="height" constant="44" id="vsz-Od-B4J"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Set as DP" width="126" id="0o4-kM-FYC">
                                         <connections>
@@ -1386,18 +1395,49 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LPn-Ey-VIj">
+                                <rect key="frame" x="85" y="495" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QdM-dV-xHk"/>
+                                    <constraint firstAttribute="height" constant="2" id="dc6-jH-JGH"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECK-Nw-56y">
+                                <rect key="frame" x="16" y="20" width="55" height="22"/>
+                                <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="5SJ-Ed-onB" eventType="touchUpInside" id="bp6-My-0ct"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="69" id="2IW-fW-IBQ"/>
+                            <constraint firstAttribute="centerX" secondItem="0Xh-rj-fij" secondAttribute="centerX" id="HL1-XH-PkA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LPn-Ey-VIj" secondAttribute="trailing" constant="69" id="M05-dG-ftY"/>
+                            <constraint firstItem="anH-lR-EXp" firstAttribute="top" secondItem="0Xh-rj-fij" secondAttribute="bottom" constant="9" id="MzO-Qs-FPF"/>
+                            <constraint firstItem="xTv-qX-PlL" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="-16" id="SYE-3P-rwr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Xh-rj-fij" secondAttribute="trailing" constant="-16" id="UX9-8W-yU4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xTv-qX-PlL" secondAttribute="trailing" constant="-16" id="WdO-0J-Zn1"/>
+                            <constraint firstItem="0Xh-rj-fij" firstAttribute="top" secondItem="aWd-O6-1vS" secondAttribute="topMargin" constant="-9" id="YGA-QO-caY"/>
+                            <constraint firstAttribute="centerY" secondItem="0Xh-rj-fij" secondAttribute="centerY" id="ms8-cf-w3G"/>
+                            <constraint firstItem="0Xh-rj-fij" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="-16" id="r4U-zw-gdG"/>
+                            <constraint firstItem="anH-lR-EXp" firstAttribute="top" secondItem="xTv-qX-PlL" secondAttribute="bottom" constant="5" id="wdD-jN-hFJ"/>
+                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="top" secondItem="GVN-5P-vhD" secondAttribute="bottom" constant="475" id="x2E-eX-Jf3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RpU-nM-O8T"/>
                     <connections>
                         <outlet property="imageView" destination="0Xh-rj-fij" id="5Iu-QT-1eI"/>
+                        <outlet property="progressBar" destination="LPn-Ey-VIj" id="T64-nB-pZw"/>
                         <outlet property="setAsCoverImageButton" destination="L11-ME-tfS" id="baJ-0C-Tpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EJ-r0-qjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="2072"/>
+            <point key="canvasLocation" x="1183" y="2072"/>
         </scene>
     </scenes>
     <resources>
