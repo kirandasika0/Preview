@@ -253,10 +253,10 @@
     currentProduct[@"product_rating"] = self.productRating;
     currentProduct[@"username"] = self.currentUser.username;
     currentProduct[@"userID"] = self.currentUser.objectId;
-    
-    [currentProduct saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [currentProduct saveEventually:^(BOOL succeeded, NSError *error) {
         if (error) {
-            NSLog(@"Error!");
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
         }
     }];
     

@@ -24,6 +24,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
     self.currentUser = [PFUser currentUser];
     [self getUsers];
 }

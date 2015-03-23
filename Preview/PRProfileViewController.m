@@ -23,6 +23,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
     //Setting the tab bar controller
     //Setting up the profile page.
     PFUser *currentUser = [PFUser currentUser];
@@ -43,18 +44,27 @@
         else{
             for(PFObject *profilePictureObject in objects)
             {
+                //Caching the picture
+                NSString *key = [NSString stringWithFormat:@"%@-dp",[[PFUser currentUser] objectId]];
+                UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
                 //Setting the profile picture
                 PFFile *file = [profilePictureObject objectForKey:@"pro_pic"];
                 NSURL *url = [NSURL URLWithString:file.url];
                 NSData *imageData = [NSData dataWithContentsOfURL:url];
                 UIImage *image = [UIImage imageWithData:imageData];
+                [[SAMCache sharedCache] setImage:image forKey:key];
                 self.profilePictureImageView.image = image;
                 self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
                 //Setting the cover picture
+                //Key for cover picture
+                NSString *keyForCoverPic = [NSString stringWithFormat:@"%@-cp",[[PFUser currentUser] objectId]];
+                UIImage *cpImage = [[SAMCache sharedCache] imageForKey:key];
                 PFFile *coverPictureFile = [profilePictureObject objectForKey:@"cover_pic"];
                 NSURL *urlForCoverPic = [NSURL URLWithString:coverPictureFile.url];
                 NSData *coverPictureData = [NSData dataWithContentsOfURL:urlForCoverPic];
                 UIImage *coverImage = [UIImage imageWithData:coverPictureData];
+                //Caching the image
+                [[SAMCache sharedCache] setImage:coverImage forKey:keyForCoverPic];
                 self.coverImageView.image = coverImage;
             }
         }

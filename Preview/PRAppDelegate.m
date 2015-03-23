@@ -9,6 +9,8 @@
 #import "PRAppDelegate.h"
 #import <Parse/Parse.h>
 #import <StartApp/StartApp.h>
+#import <GoogleMapsM4B/GoogleMaps.h>
+#import "PRNearbyViewController.h"
 
 @implementation PRAppDelegate
 
@@ -17,6 +19,7 @@
     [Parse setApplicationId:@"KCxFjHvenUvaCDy0YnlvfG7SpwfyE0rCMy3tNPd6"
                   clientKey:@"cUYdwtwVwIjb8a8EAdjpvnFoYkQy4hzCU491pDDk"];
     [self coustomizeUserInterface];
+    [GMSServices provideAPIKey:@"AIzaSyBSt_NvODtSWO0xO0nKIpX0W2YZoj0S7xo"];
     // Register for Push Notitications, if running iOS 8
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
@@ -44,7 +47,18 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     
+    [self generateLocalNotification];
+    
+    //setting up google maps
     return YES;
+}
+
+-(void)generateLocalNotification{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:3600];
+    localNotification.alertBody = @"Come back, we are missing you. It's been an hour!";
+    localNotification.applicationIconBadgeNumber = 2;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 //Parse Push Notification Setup

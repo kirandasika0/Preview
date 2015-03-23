@@ -47,7 +47,7 @@
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];
-    [self.tabBarController setSelectedIndex:0];
+    [self.tabBarController setSelectedIndex:2];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -141,7 +141,7 @@
 }
 //turning status bar off
 -(BOOL)prefersStatusBarHidden{
-    return YES;
+    return NO;
 }
 - (IBAction)cancelButton:(id)sender {
     self.image = nil;

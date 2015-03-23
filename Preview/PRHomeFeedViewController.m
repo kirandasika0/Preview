@@ -46,6 +46,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    self.tabBarController.tabBar.hidden = NO;
     //Showing the User's location in the userLocationLabel in the cellForRowat index
 }
 
@@ -237,6 +238,7 @@
 #pragma mark - Main Method
 
 -(void)refresh {
+    NSLog(@"%@", [[NSBundle mainBundle] bundleIdentifier]);
     //We are doing this in order to make sure than w=only when a user is logged in the the feed loads up ..
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
