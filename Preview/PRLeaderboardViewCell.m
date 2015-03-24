@@ -26,6 +26,7 @@
     self.usersFullNameLabel.text = [entry objectForKey:@"fullName"];
     self.usernameLabel.text = entry.username;
     PFQuery *query = [PFQuery queryWithClassName:@"comments"];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"user_id" equalTo:entry.objectId];
     [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
         if (error) {

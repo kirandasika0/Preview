@@ -12,6 +12,8 @@
 #import <iAd/iAd.h>
 #import "YLLongTapShareView.h"
 #import "UIButton+LongTapShare.h"
+#import "PRDetailPictureViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 
@@ -19,7 +21,9 @@
 
 @end
 
-@implementation PRModalDetailFeedViewController
+@implementation PRModalDetailFeedViewController{
+    UIDynamicAnimator *_animator;
+}
 
 
 - (void)viewDidLoad
@@ -32,7 +36,38 @@
     [super viewWillAppear: animated];
     //New Share Dialog
     //Waking up a long press from a nib
+    //Making the loading sqaures circle
+    self.yellowSqaure.layer.cornerRadius = CGRectGetWidth(self.yellowSqaure.frame) / 2.0f;
+    self.blueSquare.layer.cornerRadius = CGRectGetWidth(self.blueSquare.frame) / 2.0f;
     
+    //Setting the loading animation
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    
+    //Setting gravity for the blue and the yellow loading circles
+    UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[self.blueSquare]];
+    //adding the behaviour of the gravity to the animator
+    [_animator addBehavior:gravity];
+    
+    //Setting collision for both the circles
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.blueSquare,self.yellowSqaure]];
+    collision.translatesReferenceBoundsIntoBoundary = YES;
+    //adding the collision to the view
+    [_animator addBehavior:collision];
+    
+    //Dynamic attri
+    UIDynamicItemBehavior *dynamicItem = [[UIDynamicItemBehavior alloc] initWithItems:@[self.yellowSqaure]];
+    dynamicItem.elasticity = 1.0;
+    [_animator addBehavior:dynamicItem];
+    
+    //Attachment Behaviour
+    UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc] initWithItem:self.yellowSqaure attachedToAnchor:self.blueSquare.center];
+    attachment.frequency = 1.0;
+    attachment.damping = 1.0;
+    [_animator addBehavior:attachment];
+    
+    
+    //Dissmiss the loaders after 5 secc
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(hideLoader) userInfo:nil repeats:NO];
     
     //the blow fnction is for getting the numbe of comments and the number of likes.
     [self getMainContent];
@@ -196,6 +231,11 @@
         PRcommentsCollectionViewController *modalViewForCommentsViewing = (PRcommentsCollectionViewController *)segue.destinationViewController;
         modalViewForCommentsViewing.productUniqueID = self.productUniqueID;
     }
+    if ([segue.identifier isEqualToString:@"showDetailPicture"]) {
+        PRDetailPictureViewController *modalViewController = (PRDetailPictureViewController *)
+        segue.destinationViewController;
+        modalViewController.imageData = self.thumbImageData;
+}
 }
 -(void)getMainContent{
     PFQuery *queryForLikes = [PFQuery queryWithClassName:@"liked_products"];
@@ -240,5 +280,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+- (IBAction)showPicture:(id)sender {
+    //Show the picture view
+    [self performSegueWithIdentifier:@"showDetailPicture" sender:sender];
+}
+
+-(void)hideLoader{
+    //Hide the balls if they are on the view
+    [self.blueSquare setHidden:YES];
+    [self.yellowSqaure setHidden:YES];
+}
 
 @end

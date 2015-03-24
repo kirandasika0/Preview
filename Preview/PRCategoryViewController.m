@@ -10,6 +10,8 @@
 #import "PRCategoryTitles.h"
 #import "PRSelectedCategoryViewController.h"
 #import <iAd/iAd.h>
+#import <QuartzCore/QuartzCore.h>
+#import "AFNetworking.h"
 
 @interface PRCategoryViewController ()
 
@@ -22,10 +24,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self loadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    /*
     [super viewWillAppear:animated];
     NSURL *feedURL = [NSURL URLWithString:@"http://www.burst.co.in/preview/json_emitter_2.php"];
     
@@ -43,7 +46,8 @@
         feedPost.emitterURL = [cgDictionary objectForKey:@"emitter_file"];
         [self.categoryPost addObject:feedPost];
     }
-
+     */
+    [self loadData];
 }
 
 
@@ -74,12 +78,14 @@
         NSData *imageData = [NSData dataWithContentsOfURL:feedPost.thumbnailURL];
         UIImage *image = [UIImage imageWithData:imageData];
         cell.imageView.image = image;
+        cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
+        
     } else {
         cell.imageView.image = [UIImage imageNamed:@"export"];
     }
     
     cell.textLabel.text = feedPost.title;
-    
+    NSLog(@"%@",feedPost.title);
     
     return cell;
 }
@@ -133,4 +139,34 @@
     [UIView commitAnimations];
 }
 */
+-(void)loadData{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    
+    //Setting the NSURL
+    NSURL *url = [NSURL URLWithString:@"http://burst.co.in/preview/json_emitter_2.php"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    //Data task
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        }
+        else {
+            //NSLog(@"%@",responseObject);
+            self.categoryPost = [NSMutableArray array];
+            NSArray *feedPostsArray = [responseObject objectForKey:@"fetches"];
+            for(NSDictionary *cgDictionary in feedPostsArray){
+                PRCategoryTitles *feedPost = [PRCategoryTitles blogPostWithTitle:[cgDictionary objectForKey:@"category_name"]];
+                feedPost.thumbnail = [cgDictionary objectForKey:@"category_icon_32"];
+                feedPost.emitterURL = [cgDictionary objectForKey:@"emitter_file"];
+                [self.categoryPost addObject:feedPost];
+                NSLog(@"%@",self.categoryPost);
+                
+            }
+        }
+    }];
+    [dataTask resume];
+}
 @end

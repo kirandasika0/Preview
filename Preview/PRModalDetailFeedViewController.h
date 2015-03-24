@@ -40,4 +40,10 @@
 
 - (IBAction)homeTabAction:(id)sender;
 
+//Loading Physics views
+
+@property (weak, nonatomic) IBOutlet UIView *yellowSqaure;
+@property (weak, nonatomic) IBOutlet UIView *blueSquare;
+
+
 @end

@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "default-avatar.png"
+      "filename" : "picture-32.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "picture-50.png"
     },
     {
       "idiom" : "universal",
