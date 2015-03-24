@@ -32,12 +32,6 @@
     [super viewWillAppear: animated];
     //New Share Dialog
     //Waking up a long press from a nib
-    if ([self.view isKindOfClass:[YLLongTapShareView class]]) {
-        ((YLLongTapShareView*)self.view).delegate = self;
-        [(YLLongTapShareView*)self.view addShareItem:[YLShareItem itemWithIcon:[UIImage imageNamed:@"facebook"] andTitle:@"Facebook"]];
-    }
-    
-    [self.longTapShareButton addShareItem:[YLShareItem itemWithIcon:[UIImage imageNamed:@"facebook"] andTitle:@"Facebook"]];
     
     
     //the blow fnction is for getting the numbe of comments and the number of likes.
@@ -127,25 +121,7 @@
     [locationManager startUpdatingLocation];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    if (bannerView == nil) {
-        bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top withView:self.view withDelegate:nil];
-    [self.view addSubview:bannerView];
-    }
-    
-    //[startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
-}
 
--(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
-    [bannerView didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-//For iOS 8
--(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    [bannerView viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-}
 -(void)likeProduct{
     PFQuery *queryForLike = [PFQuery queryWithClassName:@"liked_products"];
     [queryForLike whereKey:@"product_id" equalTo:self.productUniqueID];
@@ -263,22 +239,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-#pragma mark - iAd Banner Methods
-/*
--(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
-    [banner setAlpha:1];
-    [UIView commitAnimations];
-}
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
-    [banner setAlpha:0];
-    [UIView commitAnimations];
-}
- */
-- (UIColor*)colorOfShareView {
-    return [UIColor colorWithRed:123 green:89 blue:227 alpha:1.0f];
-}
+
+
 @end
