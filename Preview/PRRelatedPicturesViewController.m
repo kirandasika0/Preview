@@ -9,6 +9,8 @@
 #import "PRRelatedPicturesViewController.h"
 #import "PRFeedPost.h"
 #import "PRCollectionCell.h"
+#import "PRShowOriginalPictureViewController.h"
+#import "SAMCache.h"
 
 @interface PRRelatedPicturesViewController ()
 
@@ -31,12 +33,20 @@
     [super viewWillAppear:animated];
     NSLog(@"%@",self.productName);
     [self refresh];
+    
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    flow.itemSize = CGSizeMake(80, 80);
+    flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flow.minimumInteritemSpacing = 0;
+    flow.minimumLineSpacing = 0;
+    
 }
 
 -(void)refresh {
+    [self.activityInd startAnimating];
     NSURLSession *session = [NSURLSession sharedSession];
     NSString *urlString = [[NSString alloc] initWithFormat:@"http://www.burst.co.in/preview/related_pics_json.php?product_id=%@",self.productUniqueID];
-    NSLog(@"%@",urlString);
+    //NSLog(@"%@",urlString);
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
@@ -57,12 +67,17 @@
             PRFeedPost *feedPost = [[PRFeedPost alloc] init];
             feedPost.relatedPictureOriginal = [fdDictionary objectForKey:@"image_original"];
             feedPost.relatedPictureThumbnail = [fdDictionary objectForKey:@"image_thumbnail"];
-            
+            feedPost.relatedPictureId = [fdDictionary objectForKey:@"id"];
             [self.allPics addObject:feedPost];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
+            if ([self.allPics count] <= 0) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Looks like there aren't any pictures available.Please try later" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+                [alertView show];
+            }
+            [self.activityInd stopAnimating];
         });
     }];
     [task resume];
@@ -78,18 +93,71 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PRCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"photo" forIndexPath:indexPath];
-    
     PRFeedPost *relatedPicFeedPost = [self.allPics objectAtIndex:indexPath.row];
     NSURL *thumbnailURL = [NSURL URLWithString:relatedPicFeedPost.relatedPictureThumbnail];
-    NSData *thumbnailData = [NSData dataWithContentsOfURL:thumbnailURL];
-    cell.imageView.image = [UIImage imageWithData:thumbnailData];
+    
+    //Using Samcache
+    NSString *key = [NSString stringWithFormat:@"%@-thumbnail",relatedPicFeedPost.relatedPictureId];
+    UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
+    if (photo) {
+        cell.imageView.image = photo;
+        
+    }
+    else{
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
+            NSData *thumbnailData = [NSData dataWithContentsOfURL:thumbnailURL];
+            if (thumbnailData != nil) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.imageView.image = [UIImage imageWithData:thumbnailData];
+                    [[SAMCache sharedCache] setImage:[UIImage imageWithData:thumbnailData] forKey:key];
+                });
+            }
+        });
+    }
     
     //Styling cell
-    [cell.layer setBorderWidth:2.0f];
+    /*[cell.layer setBorderWidth:2.0f];
     [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [cell.layer setCornerRadius:50.0f];
+    [cell.layer setCornerRadius:50.0f]; */
+    
+    
+    [cell.layer setBorderWidth:1.0f];
+    [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithObject:indexPath];
+    
+    if (self.selectedItemIndexPath) {
+        
+        if ([indexPath compare:self.selectedItemIndexPath] == NSOrderedSame) {
+            
+            self.selectedItemIndexPath = nil;
+        }
+        else{
+            [indexPaths addObject:self.selectedItemIndexPath];
+            self.selectedItemIndexPath = indexPath;
+            [self performSegueWithIdentifier:@"showPicture" sender:self];
+        }
+    }
+    else{
+        self.selectedItemIndexPath = indexPath;
+        [self performSegueWithIdentifier:@"showPicture" sender:self];
+    }
+    
+    [collectionView reloadItemsAtIndexPaths:indexPaths];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showPicture"]) {
+        PRFeedPost *feedPost = [self.allPics objectAtIndex:self.selectedItemIndexPath.row];
+        PRShowOriginalPictureViewController *modalViewController = (PRShowOriginalPictureViewController *)segue.destinationViewController;
+        modalViewController.productName = self.productName;
+        modalViewController.orignalImageString = feedPost.relatedPictureOriginal;
+}
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,5 +169,14 @@
 -(void)dismissView {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != [alertView cancelButtonIndex]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 @end

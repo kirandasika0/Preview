@@ -38,6 +38,7 @@
 		9F40F75E1A73A5C40066E92F /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F40F75D1A73A5C40066E92F /* libicucore.dylib */; };
 		9F40F7601A73A5CE0066E92F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F40F75F1A73A5CE0066E92F /* libz.dylib */; };
 		9F40F7621A73A5DA0066E92F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F40F7611A73A5DA0066E92F /* OpenGLES.framework */; };
+		9F411CAC1AC293290055B172 /* PRShowOriginalPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F411CAB1AC293290055B172 /* PRShowOriginalPictureViewController.m */; };
 		9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */; };
 		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
 		9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */; };
@@ -174,6 +175,8 @@
 		9F40F75D1A73A5C40066E92F /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		9F40F75F1A73A5CE0066E92F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9F40F7611A73A5DA0066E92F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9F411CAA1AC293290055B172 /* PRShowOriginalPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowOriginalPictureViewController.h; sourceTree = "<group>"; };
+		9F411CAB1AC293290055B172 /* PRShowOriginalPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowOriginalPictureViewController.m; sourceTree = "<group>"; };
 		9F447E1C19EEFAB3007BD7FB /* PRPurchaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPurchaseWebViewController.h; sourceTree = "<group>"; };
 		9F447E1D19EEFAB3007BD7FB /* PRPurchaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPurchaseWebViewController.m; sourceTree = "<group>"; };
 		9F58550B191E876000E2E6D1 /* PRFeedPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFeedPost.h; sourceTree = "<group>"; };
@@ -431,14 +434,16 @@
 				9F58550C191E876000E2E6D1 /* PRFeedPost.m */,
 				9F93BE82191EFE2300D9711D /* PRModalDetailFeedViewController.h */,
 				9F93BE83191EFE2300D9711D /* PRModalDetailFeedViewController.m */,
-				9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */,
 				9FCA65281940BF1F009CA8D3 /* PRRelatedPicturesViewController.h */,
+				9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */,
 				9F812114194175D600249BAC /* PRCollectionCell.h */,
 				9F812115194175D600249BAC /* PRCollectionCell.m */,
 				9FCCC5D819E538AA00D7FC39 /* PRShowJustReviewsViewController.h */,
 				9FCCC5D919E538AA00D7FC39 /* PRShowJustReviewsViewController.m */,
 				9FE227DA1AC132C600C6DE11 /* PRDetailPictureViewController.h */,
 				9FE227DB1AC132C600C6DE11 /* PRDetailPictureViewController.m */,
+				9F411CAA1AC293290055B172 /* PRShowOriginalPictureViewController.h */,
+				9F411CAB1AC293290055B172 /* PRShowOriginalPictureViewController.m */,
 			);
 			name = "Home Feed";
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				9F7EEAF51AC17F9800663CDE /* PRTimepassViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
 				9F7EEAF11AC14BC800663CDE /* AFURLSessionManager.m in Sources */,
+				9F411CAC1AC293290055B172 /* PRShowOriginalPictureViewController.m in Sources */,
 				9F40F7501A739F250066E92F /* PRNearbyViewController.m in Sources */,
 				9F0803921A6BC95B00A4CB9C /* Evaluate.m in Sources */,
 				9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */,

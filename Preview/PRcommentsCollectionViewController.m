@@ -72,4 +72,8 @@ static NSString * const reuseIdentifier = @"CommentCell";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 @end

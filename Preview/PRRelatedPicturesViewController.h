@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PRRelatedPicturesViewController : UICollectionViewController
+@interface PRRelatedPicturesViewController : UICollectionViewController<UIAlertViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
 @property (strong,nonatomic) NSString *productUniqueID;
@@ -20,6 +20,8 @@
 
 #pragma mark - IB Outlets
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+
+@property (nonatomic,strong) NSIndexPath *selectedItemIndexPath;
 
 
 @end

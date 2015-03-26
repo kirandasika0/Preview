@@ -33,5 +33,5 @@
 
 @property (nonatomic,strong) NSString *relatedPictureOriginal;
 @property (nonatomic,strong) NSString *relatedPictureThumbnail;
-
+@property (nonatomic,strong) NSString *relatedPictureId;
 @end

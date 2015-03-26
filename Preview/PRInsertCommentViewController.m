@@ -35,7 +35,7 @@
 - (IBAction)insertComment:(id)sender {
     NSString *comment = [self.commentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([comment length] == 0) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Looks like you have'nt typed anything in the comment text box." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Looks like you haven't typed anything in the comment text box." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     }
     else {
@@ -118,6 +118,10 @@
         [task resume];
 
     }
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

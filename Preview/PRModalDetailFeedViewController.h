@@ -45,5 +45,13 @@
 @property (weak, nonatomic) IBOutlet UIView *yellowSqaure;
 @property (weak, nonatomic) IBOutlet UIView *blueSquare;
 
+//Share button IBOutlet
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *showRelatedPics;
+- (IBAction)showRelatedPics:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *linkCopy;
+- (IBAction)linkCopy:(id)sender;
 
 @end

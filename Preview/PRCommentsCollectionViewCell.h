@@ -17,5 +17,6 @@
 
 +(CGFloat)heightForEntry:(PFObject *)entry;
 -(void)configureCellForEntry:(PFObject *)entry;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @end

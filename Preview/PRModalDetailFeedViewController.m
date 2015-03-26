@@ -14,6 +14,7 @@
 #import "UIButton+LongTapShare.h"
 #import "PRDetailPictureViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PRRelatedPicturesViewController.h"
 
 
 
@@ -45,11 +46,15 @@
     
     //Setting gravity for the blue and the yellow loading circles
     UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[self.blueSquare]];
+    
+    //Setting magnitude of gravity
+    //gravity.magnitude = 20.0;
+    
     //adding the behaviour of the gravity to the animator
     [_animator addBehavior:gravity];
     
     //Setting collision for both the circles
-    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.blueSquare,self.yellowSqaure]];
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.yellowSqaure,self.blueSquare]];
     collision.translatesReferenceBoundsIntoBoundary = YES;
     //adding the collision to the view
     [_animator addBehavior:collision];
@@ -59,15 +64,19 @@
     dynamicItem.elasticity = 1.0;
     [_animator addBehavior:dynamicItem];
     
-    //Attachment Behaviour
-    UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc] initWithItem:self.yellowSqaure attachedToAnchor:self.blueSquare.center];
-    attachment.frequency = 1.0;
-    attachment.damping = 1.0;
-    [_animator addBehavior:attachment];
     
     
-    //Dissmiss the loaders after 5 secc
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(hideLoader) userInfo:nil repeats:NO];
+    //Dissmiss the loaders after 3 secc
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideLoader) userInfo:nil repeats:NO];
+    
+    //Making the related pictures circle
+    self.showRelatedPics.layer.cornerRadius = CGRectGetWidth(self.showRelatedPics.frame) / 2.0;
+    
+    //Making share button circle
+    self.shareButton.layer.cornerRadius = CGRectGetWidth(self.shareButton.frame) / 2.0;
+    
+    //Making copy Link button Circle
+    self.linkCopy.layer.cornerRadius = CGRectGetWidth(self.linkCopy.frame) / 2.0;
     
     //the blow fnction is for getting the numbe of comments and the number of likes.
     [self getMainContent];
@@ -236,6 +245,12 @@
         segue.destinationViewController;
         modalViewController.imageData = self.thumbImageData;
 }
+    if ([segue.identifier isEqualToString:@"showRelatedPics"]) {
+        PRRelatedPicturesViewController *modalViewController = (PRRelatedPicturesViewController *)segue.destinationViewController;
+        modalViewController.productUniqueID = self.productUniqueID;
+        modalViewController.productName = self.productName;
+        
+    }
 }
 -(void)getMainContent{
     PFQuery *queryForLikes = [PFQuery queryWithClassName:@"liked_products"];
@@ -295,4 +310,16 @@
     [self.yellowSqaure setHidden:YES];
 }
 
+- (IBAction)showRelatedPics:(id)sender {
+    [self performSegueWithIdentifier:@"showRelatedPics" sender:sender];
+}
+- (IBAction)linkCopy:(id)sender {
+    //Add the link to the clip board
+    UIPasteboard *copyLink = [UIPasteboard generalPasteboard];
+    NSString *link = [NSString stringWithFormat:@"http://burst.co.in/preview/web/view_product.php?id=%@",self.productUniqueID];
+    copyLink.string = link;
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied to Clipboard" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles: nil];
+    [alertView show];
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
 @end
