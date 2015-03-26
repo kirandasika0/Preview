@@ -798,23 +798,12 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-yI-Xlj">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="44"/>
-                                            <color key="barTintColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <textAttributes key="titleTextAttributes">
-                                                <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </textAttributes>
-                                            <items>
-                                                <navigationItem title="Reviews" id="3M7-Uo-m5Z"/>
-                                            </items>
-                                        </navigationBar>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="commentTextView" destination="EIZ-Gm-ntk" id="ePF-MC-EG4"/>
-                                    <outlet property="navigationBar" destination="yuI-yI-Xlj" id="Wf0-Dq-UXl"/>
                                     <outlet property="postedTimeAgoLabel" destination="N9D-bB-uWX" id="muu-qx-QfQ"/>
                                     <outlet property="profilePictureImageView" destination="9Nb-Vs-Uxw" id="lhd-nL-YyD"/>
                                     <outlet property="usersNameLabel" destination="HPr-6Y-XbG" id="TWZ-Sw-xO2"/>

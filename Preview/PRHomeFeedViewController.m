@@ -121,7 +121,7 @@
         UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
         if (photo) {
             cell.imageView.image = photo;
-            cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
+            cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0;
             self.userLocationLabel.lineBreakMode = NSLineBreakByWordWrapping;
             self.userLocationLabel.text = [NSString stringWithFormat:@"Previewing from: %@, %@", feedPost.userCity,feedPost.userCountry];
         }
@@ -133,7 +133,7 @@
                     UIImage *image = [UIImage imageWithData:imageData];
                     [[SAMCache sharedCache] setImage:image forKey:key];
                     cell.imageView.image = image;
-                    cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
+                    cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0;
                 });
             }
         });
