@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 
-@interface PRProfileViewController : UIViewController
+@interface PRProfileViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 //USername label and IB outlet must be created in order to display the username
 @property (weak, nonatomic) IBOutlet UILabel *userFullNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (weak, nonatomic) IBOutlet UIWebView *displaySeenProductsWebView;
+
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong) PFUser *currentUser;
+@property (nonatomic,strong) NSArray *userReviews;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *openRelatedSearches;
+- (IBAction)openRelatedSearches:(id)sender;
+
 
 @end

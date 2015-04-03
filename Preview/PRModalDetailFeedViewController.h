@@ -53,5 +53,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *linkCopy;
 - (IBAction)linkCopy:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *markAsFavButton;
+- (IBAction)markAsFavButton:(id)sender;
 
 @end

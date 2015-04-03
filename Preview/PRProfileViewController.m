@@ -7,8 +7,8 @@
 //
 
 #import "PRProfileViewController.h"
-#import <Parse/Parse.h>
 #import "SAMCache.h"
+#import "PRRelatedViewController.h"
 
 @interface PRProfileViewController ()
 
@@ -20,9 +20,13 @@
 {
     [super viewDidLoad];
     
+    [self.view addSubview:self.tableView];
+    self.currentUser = [PFUser currentUser];
+    
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self getUserReviews];
     self.tabBarController.tabBar.hidden = NO;
     //Setting the tab bar controller
     //Setting up the profile page.
@@ -31,8 +35,6 @@
     self.userFullNameLabel.text = [NSString stringWithFormat:@"%@ | %@",currentUser[@"fullName"],currentUser.username];
     self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.userFullNameLabel.numberOfLines = 0;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://burst.co.in/preview/web"]];
-    [self.displaySeenProductsWebView loadRequest: request];
     //load the profile picture
     //query the database to get the picture
     PFQuery *queryForPic = [PFUser query];
@@ -47,6 +49,9 @@
                 //Caching the picture
                 NSString *key = [NSString stringWithFormat:@"%@-dp",[[PFUser currentUser] objectId]];
                 UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
+                if (photo) {
+                    self.profilePictureImageView.image = photo;
+                }
                 //Setting the profile picture
                 PFFile *file = [profilePictureObject objectForKey:@"pro_pic"];
                 NSURL *url = [NSURL URLWithString:file.url];
@@ -59,6 +64,9 @@
                 //Key for cover picture
                 NSString *keyForCoverPic = [NSString stringWithFormat:@"%@-cp",[[PFUser currentUser] objectId]];
                 UIImage *cpImage = [[SAMCache sharedCache] imageForKey:key];
+                if (cpImage) {
+                    self.coverImageView.image = cpImage;
+                }
                 PFFile *coverPictureFile = [profilePictureObject objectForKey:@"cover_pic"];
                 NSURL *urlForCoverPic = [NSURL URLWithString:coverPictureFile.url];
                 NSData *coverPictureData = [NSData dataWithContentsOfURL:urlForCoverPic];
@@ -72,6 +80,37 @@
     
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 0;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.userReviews count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    PFObject *review = [self.userReviews objectAtIndex:indexPath.row];
+    cell.textLabel.text = [review objectForKey:@"username"];
+    NSLog(@"%@",[review objectForKey:@"username"]);
+    cell.detailTextLabel.text = [review objectForKey:@"comment"];
+    return cell;
+}
+
+
+-(void)getUserReviews{
+    PFQuery *query = [PFQuery queryWithClassName:@"comments"];
+    [query whereKey:@"user_id" equalTo:self.currentUser];
+    //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.userReviews = objects;
+            //NSLog(@"%@",self.userReviews);
+            [self.tableView reloadData];
+        }
+    }];
+}
+
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"showEditProfile"]) {
@@ -79,4 +118,8 @@
     }
 }
 
+- (IBAction)openRelatedSearches:(id)sender {
+    PRRelatedViewController *viewController = [[PRRelatedViewController alloc] init];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
 @end

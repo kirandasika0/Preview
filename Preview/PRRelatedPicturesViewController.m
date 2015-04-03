@@ -19,6 +19,15 @@
 @implementation PRRelatedPicturesViewController
 
 
+-(instancetype)init{
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(106.0, 106.0);
+    layout.minimumInteritemSpacing = 1.0;
+    layout.minimumLineSpacing = 1.0;
+    return (self = [super initWithCollectionViewLayout:layout]);
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,12 +42,6 @@
     [super viewWillAppear:animated];
     NSLog(@"%@",self.productName);
     [self refresh];
-    
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    flow.itemSize = CGSizeMake(80, 80);
-    flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flow.minimumInteritemSpacing = 0;
-    flow.minimumLineSpacing = 0;
     
 }
 

@@ -78,6 +78,9 @@
     //Making copy Link button Circle
     self.linkCopy.layer.cornerRadius = CGRectGetWidth(self.linkCopy.frame) / 2.0;
     
+    //Making favorite button circle
+    self.markAsFavButton.layer.cornerRadius = CGRectGetWidth(self.markAsFavButton.frame) / 2.0;
+    
     //the blow fnction is for getting the numbe of comments and the number of likes.
     [self getMainContent];
     //We are setting the currentUser property to the current user..
@@ -163,6 +166,13 @@
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
+}
+
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.yellowSqaure setHidden:YES];
+    [self.blueSquare setHidden:YES];
 }
 
 
@@ -304,6 +314,8 @@
     [self performSegueWithIdentifier:@"showDetailPicture" sender:sender];
 }
 
+
+
 -(void)hideLoader{
     //Hide the balls if they are on the view
     [self.blueSquare setHidden:YES];
@@ -321,5 +333,7 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied to Clipboard" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles: nil];
     [alertView show];
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
+- (IBAction)markAsFavButton:(id)sender {
 }
 @end
