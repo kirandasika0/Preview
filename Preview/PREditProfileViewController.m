@@ -52,7 +52,7 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+        NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
         UIImage *pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
         self.imageView.image = pickedImage;
         

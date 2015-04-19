@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PPR-QT-58R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PPR-QT-58R">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -780,7 +780,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="nQM-mu-nJu" customClass="PRCommentsCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.79999999999999982" contentMode="center" reuseIdentifier="CommentCell" id="nQM-mu-nJu" customClass="PRCommentsCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -812,7 +812,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="commentTextView" destination="EIZ-Gm-ntk" id="ePF-MC-EG4"/>
                                     <outlet property="postedTimeAgoLabel" destination="N9D-bB-uWX" id="muu-qx-QfQ"/>
@@ -1547,18 +1547,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-rj-fij">
-                                <rect key="frame" x="0.0" y="-9" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="tintColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="O4w-5g-dQh"/>
-                                    <constraint firstAttribute="width" constant="320" id="ZQr-8H-KNs"/>
+                                    <constraint firstAttribute="width" secondItem="0Xh-rj-fij" secondAttribute="height" multiplier="40:71" id="CcG-3a-BRx"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTv-qX-PlL">
-                                <rect key="frame" x="0.0" y="519" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Y5L-Np-hSD"/>
-                                    <constraint firstAttribute="height" constant="44" id="vsz-Od-B4J"/>
+                                    <constraint firstAttribute="width" secondItem="xTv-qX-PlL" secondAttribute="height" multiplier="80:11" id="xZ2-qP-LcD"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Set as DP" width="126" id="0o4-kM-FYC">
@@ -1574,36 +1572,25 @@
                                 </items>
                             </toolbar>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LPn-Ey-VIj">
-                                <rect key="frame" x="85" y="495" width="150" height="2"/>
+                                <rect key="frame" x="85" y="18" width="150" height="2"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="QdM-dV-xHk"/>
-                                    <constraint firstAttribute="height" constant="2" id="dc6-jH-JGH"/>
+                                    <constraint firstAttribute="width" secondItem="LPn-Ey-VIj" secondAttribute="height" multiplier="75:1" id="3cb-UD-JfT"/>
                                 </constraints>
                                 <color key="progressTintColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECK-Nw-56y">
-                                <rect key="frame" x="16" y="20" width="55" height="22"/>
-                                <state key="normal" title="cancel"/>
-                                <connections>
-                                    <action selector="cancelButton:" destination="5SJ-Ed-onB" eventType="touchUpInside" id="bp6-My-0ct"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="69" id="2IW-fW-IBQ"/>
-                            <constraint firstAttribute="centerX" secondItem="0Xh-rj-fij" secondAttribute="centerX" id="HL1-XH-PkA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LPn-Ey-VIj" secondAttribute="trailing" constant="69" id="M05-dG-ftY"/>
-                            <constraint firstItem="anH-lR-EXp" firstAttribute="top" secondItem="0Xh-rj-fij" secondAttribute="bottom" constant="9" id="MzO-Qs-FPF"/>
-                            <constraint firstItem="xTv-qX-PlL" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="-16" id="SYE-3P-rwr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Xh-rj-fij" secondAttribute="trailing" constant="-16" id="UX9-8W-yU4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xTv-qX-PlL" secondAttribute="trailing" constant="-16" id="WdO-0J-Zn1"/>
-                            <constraint firstItem="0Xh-rj-fij" firstAttribute="top" secondItem="aWd-O6-1vS" secondAttribute="topMargin" constant="-9" id="YGA-QO-caY"/>
-                            <constraint firstAttribute="centerY" secondItem="0Xh-rj-fij" secondAttribute="centerY" id="ms8-cf-w3G"/>
-                            <constraint firstItem="0Xh-rj-fij" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="-16" id="r4U-zw-gdG"/>
-                            <constraint firstItem="anH-lR-EXp" firstAttribute="top" secondItem="xTv-qX-PlL" secondAttribute="bottom" constant="5" id="wdD-jN-hFJ"/>
-                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="top" secondItem="GVN-5P-vhD" secondAttribute="bottom" constant="475" id="x2E-eX-Jf3"/>
+                            <constraint firstItem="0Xh-rj-fij" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leading" id="A4H-jw-ip2"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xh-rj-fij" secondAttribute="trailing" id="AdJ-Gj-rNp"/>
+                            <constraint firstItem="anH-lR-EXp" firstAttribute="top" secondItem="xTv-qX-PlL" secondAttribute="bottom" id="GZt-mn-Q3U"/>
+                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leadingMargin" constant="69" id="KDY-3r-ltA"/>
+                            <constraint firstItem="LPn-Ey-VIj" firstAttribute="top" secondItem="aWd-O6-1vS" secondAttribute="topMargin" constant="18" id="NYp-tk-0Qo"/>
+                            <constraint firstAttribute="trailing" secondItem="xTv-qX-PlL" secondAttribute="trailing" id="ZG4-ZU-Y1V"/>
+                            <constraint firstAttribute="centerY" secondItem="0Xh-rj-fij" secondAttribute="centerY" id="dqL-Vw-TW5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LPn-Ey-VIj" secondAttribute="trailing" constant="69" id="gOJ-PG-bWv"/>
+                            <constraint firstItem="xTv-qX-PlL" firstAttribute="leading" secondItem="aWd-O6-1vS" secondAttribute="leading" id="jNf-6o-FD3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RpU-nM-O8T"/>
@@ -1615,7 +1602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EJ-r0-qjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="2072"/>
+            <point key="canvasLocation" x="1184" y="2071"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="Rup-kA-Ui5">
