@@ -9,7 +9,6 @@
 #import "PRAppDelegate.h"
 #import <Parse/Parse.h>
 #import <StartApp/StartApp.h>
-#import <GoogleMapsM4B/GoogleMaps.h>
 #import "PRNearbyViewController.h"
 
 @implementation PRAppDelegate
@@ -19,7 +18,6 @@
     [Parse setApplicationId:@"KCxFjHvenUvaCDy0YnlvfG7SpwfyE0rCMy3tNPd6"
                   clientKey:@"cUYdwtwVwIjb8a8EAdjpvnFoYkQy4hzCU491pDDk"];
     [self coustomizeUserInterface];
-    [GMSServices provideAPIKey:@"AIzaSyBSt_NvODtSWO0xO0nKIpX0W2YZoj0S7xo"];
     // Register for Push Notitications, if running iOS 8
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
