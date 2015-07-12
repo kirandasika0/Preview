@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
 
+@class PRColorWheel;
 @interface PRModalDetailFeedViewController : UIViewController<CLLocationManagerDelegate>
 {
         CLLocationManager *locationManager;
@@ -21,6 +22,7 @@
 @property (nonatomic,strong) NSData *thumbImageData;
 @property (nonatomic,strong) NSString *productRating;
 @property (nonatomic,strong) NSString *productUniqueID;
+@property (nonatomic, strong) PRColorWheel *colorWheel;
 
 #pragma mark - Parse Objects
 @property (nonatomic,strong) PFUser *currentUser;

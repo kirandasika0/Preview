@@ -21,5 +21,8 @@
 
 //Properties
 @property (nonatomic, strong) PRColorWheel *colorWheel;
+@property (nonatomic, strong) NSDictionary *returnDictionary;
+- (IBAction)playGame:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *playGameButton;
 
 @end

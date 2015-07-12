@@ -15,6 +15,7 @@
 #import "PRDetailPictureViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "PRRelatedPicturesViewController.h"
+#import "PRColorWheel.h"
 
 
 
@@ -30,7 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    //Change the views background
+//    self.colorWheel = [[PRColorWheel alloc] init];
+//    self.view.backgroundColor = [self.colorWheel randomColor];
+//    self.productDecpTextView.backgroundColor = [self.colorWheel randomColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

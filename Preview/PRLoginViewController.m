@@ -8,6 +8,7 @@
 
 #import "PRLoginViewController.h"
 #import <Parse/Parse.h>
+#import "UIImageEffects.h"
 
 @interface PRLoginViewController ()
 
@@ -20,9 +21,15 @@
 {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"login-background"];
+    UIImage *effectImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:20.0 tintColor:[UIColor colorWithWhite:1 alpha:0.2] saturationDeltaFactor:1.5 maskImage:nil];
+    self.backgoundImageView.image = effectImage;
+    
 }
 -(void)viewWillAppear:(BOOL)animated  {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
 }
 
 
@@ -54,6 +61,30 @@
 
 - (IBAction)openContactUsPage:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://burst.co.in/preview/contact_us.php"]];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];// this will do the trick
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return  YES;
+}
+
+
+-(UIImage *)loadRandomImage
+{
+    NSArray *backgroundImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"login-background"],
+                                [UIImage imageNamed:@"login-background2"],
+                                 [UIImage imageNamed:@"login-background3"],
+                                 [UIImage imageNamed:@"login-backgound4"],
+                                 [UIImage imageNamed:@"login-background5"],
+                                 [UIImage imageNamed:@"login-background6"], nil];
+    
+    int random = arc4random_uniform((int) backgroundImages.count);
+    
+    return  [backgroundImages objectAtIndex:random];
 }
 
 @end

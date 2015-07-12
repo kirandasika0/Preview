@@ -51,5 +51,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Coquette Bold.ttf</string>
+		<string>futura-normal.ttf</string>
+	</array>
 </dict>
 </plist>

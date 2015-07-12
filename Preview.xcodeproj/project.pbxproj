@@ -17,6 +17,7 @@
 		9F0803961A6BC95B00A4CB9C /* YLShareButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F08038E1A6BC95B00A4CB9C /* YLShareButtonView.m */; };
 		9F0803971A6BC95B00A4CB9C /* YLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0803901A6BC95B00A4CB9C /* YLShareView.m */; };
 		9F0F98F61AEE485F000511CC /* PRRateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F98F51AEE485F000511CC /* PRRateGameViewController.m */; };
+		9F1A07001B10244B00CAEF12 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A06FF1B10244B00CAEF12 /* UIImageEffects.m */; };
 		9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */; };
 		9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */; };
 		9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */; };
@@ -24,6 +25,8 @@
 		9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1C19DFFB83006C7135 /* PRcommentsCollectionViewController.m */; };
 		9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */; };
 		9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */; };
+		9F39BC721B10555100B8357B /* Coquette Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F39BC711B10555100B8357B /* Coquette Bold.ttf */; };
+		9F39BC741B1057BA00B8357B /* futura-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F39BC731B1057BA00B8357B /* futura-normal.ttf */; };
 		9F3B23A8191EA47E0057BFA5 /* PRCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */; };
 		9F40F7501A739F250066E92F /* PRNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F74F1A739F250066E92F /* PRNearbyViewController.m */; };
 		9F40F7521A73A5330066E92F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F40F7511A73A5330066E92F /* AVFoundation.framework */; };
@@ -103,6 +106,8 @@
 		9FDEEDFF19F808B40002210E /* PRLeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEEDFE19F808B40002210E /* PRLeaderBoardViewController.m */; };
 		9FDEEE0219F80A060002210E /* PRLeaderboardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */; };
 		9FE227DC1AC132C600C6DE11 /* PRDetailPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE227DB1AC132C600C6DE11 /* PRDetailPictureViewController.m */; };
+		9FE6778B1B0FAB2E00FBF83C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE6778A1B0FAB2E00FBF83C /* CoreVideo.framework */; };
+		9FE6778D1B0FAB3D00FBF83C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE6778C1B0FAB3D00FBF83C /* CoreMedia.framework */; };
 		9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */; };
 		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
 		9FF92F5E1A9E59040089A3C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF92F5D1A9E59040089A3C8 /* MapKit.framework */; };
@@ -139,6 +144,8 @@
 		9F0803901A6BC95B00A4CB9C /* YLShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLShareView.m; sourceTree = "<group>"; };
 		9F0F98F41AEE485F000511CC /* PRRateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRateGameViewController.h; sourceTree = "<group>"; };
 		9F0F98F51AEE485F000511CC /* PRRateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRateGameViewController.m; sourceTree = "<group>"; };
+		9F1A06FE1B10244B00CAEF12 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		9F1A06FF1B10244B00CAEF12 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		9F1E4E6419E1454300E3B242 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
 		9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
 		9F1F507F191F5C5700551499 /* PRSuggestProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSuggestProductViewController.h; sourceTree = "<group>"; };
@@ -153,6 +160,8 @@
 		9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCommentsCollectionViewCell.m; sourceTree = "<group>"; };
 		9F342A2119E00197006C7135 /* PRInsertCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRInsertCommentViewController.h; sourceTree = "<group>"; };
 		9F342A2219E00197006C7135 /* PRInsertCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRInsertCommentViewController.m; sourceTree = "<group>"; };
+		9F39BC711B10555100B8357B /* Coquette Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coquette Bold.ttf"; sourceTree = "<group>"; };
+		9F39BC731B1057BA00B8357B /* futura-normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-normal.ttf"; sourceTree = "<group>"; };
 		9F3B23A6191EA47E0057BFA5 /* PRCategoryTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryTitles.h; sourceTree = "<group>"; };
 		9F3B23A7191EA47E0057BFA5 /* PRCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryTitles.m; sourceTree = "<group>"; };
 		9F40F74E1A739F250066E92F /* PRNearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRNearbyViewController.h; sourceTree = "<group>"; };
@@ -276,6 +285,8 @@
 		9FDEEE0119F80A060002210E /* PRLeaderboardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRLeaderboardViewCell.m; sourceTree = "<group>"; };
 		9FE227DA1AC132C600C6DE11 /* PRDetailPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRDetailPictureViewController.h; sourceTree = "<group>"; };
 		9FE227DB1AC132C600C6DE11 /* PRDetailPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRDetailPictureViewController.m; sourceTree = "<group>"; };
+		9FE6778A1B0FAB2E00FBF83C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9FE6778C1B0FAB3D00FBF83C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9FEE1D5F194C8D0B005F7A46 /* PREditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PREditProfileViewController.h; sourceTree = "<group>"; };
 		9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PREditProfileViewController.m; sourceTree = "<group>"; };
 		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
@@ -288,6 +299,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE6778D1B0FAB3D00FBF83C /* CoreMedia.framework in Frameworks */,
+				9FE6778B1B0FAB2E00FBF83C /* CoreVideo.framework in Frameworks */,
 				9FF92F5E1A9E59040089A3C8 /* MapKit.framework in Frameworks */,
 				9FAC4FED1A7533D40023C66A /* Accounts.framework in Frameworks */,
 				9FAC4FEB1A7533CC0023C66A /* Social.framework in Frameworks */,
@@ -577,6 +590,8 @@
 		9FB1F315191E206200776A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FE6778C1B0FAB3D00FBF83C /* CoreMedia.framework */,
+				9FE6778A1B0FAB2E00FBF83C /* CoreVideo.framework */,
 				9FF92F5D1A9E59040089A3C8 /* MapKit.framework */,
 				9FAC4FEC1A7533D40023C66A /* Accounts.framework */,
 				9FAC4FEA1A7533CC0023C66A /* Social.framework */,
@@ -616,6 +631,7 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9FE679711B0FAC3400FBF83C /* UIImagEffects */,
 				9FD45EF21B0F3FE500A36F8F /* Color Wheel */,
 				9F0F98F31AEE4833000511CC /* Rate */,
 				9F7EEAF21AC17ED800663CDE /* Dynamic */,
@@ -656,6 +672,8 @@
 		9FB1F31D191E206200776A16 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F39BC731B1057BA00B8357B /* futura-normal.ttf */,
+				9F39BC711B10555100B8357B /* Coquette Bold.ttf */,
 				9FB1F31E191E206200776A16 /* Preview-Info.plist */,
 				9FB1F31F191E206200776A16 /* InfoPlist.strings */,
 				9FB1F322191E206200776A16 /* main.m */,
@@ -724,6 +742,15 @@
 				9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */,
 			);
 			name = Leaderboard;
+			sourceTree = "<group>";
+		};
+		9FE679711B0FAC3400FBF83C /* UIImagEffects */ = {
+			isa = PBXGroup;
+			children = (
+				9F1A06FE1B10244B00CAEF12 /* UIImageEffects.h */,
+				9F1A06FF1B10244B00CAEF12 /* UIImageEffects.m */,
+			);
+			name = UIImagEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -812,6 +839,8 @@
 			files = (
 				9FB1F35A191E22F700776A16 /* MainStoryboard.storyboard in Resources */,
 				9FAD219519430B720055FA9D /* navBarBackground.png in Resources */,
+				9F39BC741B1057BA00B8357B /* futura-normal.ttf in Resources */,
+				9F39BC721B10555100B8357B /* Coquette Bold.ttf in Resources */,
 				9FA28A571A3367A2005D509C /* StartApp.bundle in Resources */,
 				9FB1F321191E206200776A16 /* InfoPlist.strings in Resources */,
 				9FB1F329191E206200776A16 /* Images.xcassets in Resources */,
@@ -841,6 +870,7 @@
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
 				9F7EEAF11AC14BC800663CDE /* AFURLSessionManager.m in Sources */,
 				9F411CAC1AC293290055B172 /* PRShowOriginalPictureViewController.m in Sources */,
+				9F1A07001B10244B00CAEF12 /* UIImageEffects.m in Sources */,
 				9F0F98F61AEE485F000511CC /* PRRateGameViewController.m in Sources */,
 				9F40F7501A739F250066E92F /* PRNearbyViewController.m in Sources */,
 				9F0803921A6BC95B00A4CB9C /* Evaluate.m in Sources */,
@@ -1092,7 +1122,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Preview";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Srinivas Dasika (6754879FL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Dasika (HK4MMNN2Y8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1106,6 +1136,7 @@
 				INFOPLIST_FILE = "Preview/Preview-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e899858c-a7bb-46c4-bdc8-9c1d3b7e0ec9";
 				WRAPPER_EXTENSION = app;

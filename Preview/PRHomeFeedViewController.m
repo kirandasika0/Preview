@@ -26,11 +26,12 @@
     [super viewDidLoad];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
-        NSLog(@"Current User: %@", currentUser.username);
+        //NSLog(@"Current User: %@", currentUser.username);
     }
     else {
         [self performSegueWithIdentifier:@"showLogin" sender:nil];
     }
+    
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     
@@ -238,7 +239,7 @@
 #pragma mark - Main Method
 
 -(void)refresh {
-    NSLog(@"%@", [[NSBundle mainBundle] bundleIdentifier]);
+    //NSLog(@"%@", [[NSBundle mainBundle] bundleIdentifier]);
     //We are doing this in order to make sure than w=only when a user is logged in the the feed loads up ..
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {

@@ -23,6 +23,7 @@
 }
 
 -(void)configureCellForEntry:(PFUser *)entry{
+    
     self.usersFullNameLabel.text = [entry objectForKey:@"fullName"];
     self.usernameLabel.text = entry.username;
     PFQuery *query = [PFQuery queryWithClassName:@"comments"];
@@ -54,4 +55,9 @@
     self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
 }
 
+- (void)setFrame:(CGRect)frame {
+    frame.origin.y += 4;
+    frame.size.height -= 2 * 4;
+    [super setFrame:frame];
+}
 @end

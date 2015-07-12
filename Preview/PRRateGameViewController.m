@@ -8,6 +8,7 @@
 
 #import "PRRateGameViewController.h"
 #import "PRColorWheel.h"
+#import "UIImageEffects.h"
 
 @interface PRRateGameViewController ()
 
@@ -19,21 +20,73 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //Change the background of the view
-    self.colorWheel = [[PRColorWheel alloc] init];
-    self.vView.backgroundColor = [self.colorWheel randomColor];
-    
-    //Make the vs view round
-    self.vView.clipsToBounds = YES;
-    self.vView.layer.cornerRadius = CGRectGetWidth(self.vView.frame) / 2.0f;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    self.tabBarController.tabBar.hidden = NO;
+    
+    
+    //setting the product's image view's nil to make sure we can proceed with alorithm.
+    self.product1ImageView.image = nil;
+    self.product2ImageView.image = nil;
+    
+    [self getProductCategory:1];
 }
 
+-(NSDictionary *)getProductCategory:(int)c
+{
+    static NSDictionary *returnDictionary = nil;
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://burst.co.in/preview/GetProduct.php?cat=%d", c]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data.length > 0 && connectionError == nil) {
+            NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            returnDictionary = greeting;
+        }
+    }];
+    return returnDictionary;
+}
 
+-(void)initProduct1{
+    static NSDictionary *returnDictionary = nil;
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://burst.co.in/preview/GetProduct.php?cat=1"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data.length > 0 && connectionError == nil) {
+            NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            returnDictionary = greeting;
+            NSLog(@"Product 1: %@", returnDictionary);
+        }
+    }];
+    
+    
+    self.product2ImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:returnDictionary[@"image_full_size"]]]];
+}
+
+-(void)initProduct2{
+    static NSDictionary *returnDictionary = nil;
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://burst.co.in/preview/GetProduct.php?cat=1"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data.length > 0 && connectionError == nil) {
+            NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            returnDictionary = greeting;
+            NSLog(@"Product 2: %@", returnDictionary);
+        }
+    }];
+    
+    self.product2ImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:returnDictionary[@"image_full_size"]]]];
+
+}
+- (IBAction)playGame:(id)sender {
+    [self initProduct1];
+    [self initProduct2];
+}
 
 @end
