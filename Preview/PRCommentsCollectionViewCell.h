@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *usersNameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 @property (weak, nonatomic) IBOutlet UILabel *postedTimeAgoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userRatingLabel;
 
 +(CGFloat)heightForEntry:(PFObject *)entry;
 -(void)configureCellForEntry:(PFObject *)entry;

@@ -39,6 +39,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfLikesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfReviewsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *longTapShareButton;
+@property (weak, nonatomic) IBOutlet UILabel *userRatingLabel;
+
 
 - (IBAction)homeTabAction:(id)sender;
 

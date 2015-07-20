@@ -22,17 +22,30 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"login-background"];
-    UIImage *effectImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:20.0 tintColor:[UIColor colorWithWhite:1 alpha:0.2] saturationDeltaFactor:1.5 maskImage:nil];
+    UIImage *backgroundImage = [UIImage imageNamed:@"tabBarBackground"];
+    UIImage *effectImage = [UIImageEffects imageByApplyingBlurToImage:backgroundImage withRadius:30.0 tintColor:[UIColor colorWithWhite:1 alpha:0.2] saturationDeltaFactor:1.5 maskImage:nil];
     self.backgoundImageView.image = effectImage;
     
 }
 -(void)viewWillAppear:(BOOL)animated  {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
+    self.usernameField.alpha = 0.0;
+    self.passwordField.alpha = 0.0;
+    self.loginButton.alpha = 0.0;
 }
 
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //having a ease in affect of the app
+    [UIView animateWithDuration:1.2 animations:^{
+        self.usernameField.alpha = 1.0; //username field will now be visible
+        self.passwordField.alpha = 1.0; //password will now be visible
+        self.loginButton.alpha = 1.0; //login button will now be visible
+    } completion:nil];
+    //end of animation
+}
 
 
 - (IBAction)login:(id)sender {
@@ -52,8 +65,18 @@
                 [alertView show];
             }
             else {
+                //performing ease out animation
+                [UIView animateWithDuration:1.5 animations:^{
+                    self.usernameField.alpha = 0.0;
+                    self.passwordField.alpha = 0.0;
+                    self.loginButton.alpha = 0.0;
+                } completion:^(BOOL finished) {
+                    if (finished == TRUE) {
+                        [self.navigationController popToRootViewControllerAnimated:YES];
+                    }
+                }];
                 //Now the user can go to the home page.
-                [self.navigationController popToRootViewControllerAnimated:YES];
+                
             }
         }];
     }

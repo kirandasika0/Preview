@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIImageView *backgoundImageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
+
 - (IBAction)login:(id)sender;
 - (IBAction)openContactUsPage:(id)sender;
 

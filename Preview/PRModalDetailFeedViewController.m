@@ -39,6 +39,12 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
+    //setting alpha of user label 0 for animation
+    self.userRatingLabel.alpha = 0.0;
+    //setting temp text for user rating label for status indication
+    self.userRatingLabel.text = @"User Rating(AVG): ..../10";
+    //calling user ratings method
+    [self getUserRatings];
     //New Share Dialog
     //Waking up a long press from a nib
     //Making the loading sqaures circle
@@ -124,9 +130,21 @@
     if ([self.productCategory isEqualToString:@"9"]) {
         self.category.text = @"Category: Sports";
     }
-    UIImage *displayImage = [UIImage imageWithData:self.thumbImageData];
     
-    self.feedImageView.image = displayImage;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.thumbImageData != nil) {
+            UIImage *displayImage = [UIImage imageWithData:self.thumbImageData];
+            
+            self.feedImageView.image = displayImage;
+        }
+        else{
+            //there is no data in the image.
+            NSLog(@"No Image data");
+            
+            UIImage *placeHolderImage = [UIImage imageNamed:@"image_placeholder"];
+            self.feedImageView.image = placeHolderImage;
+        }
+    });
     
     //We have to show the discription.
     
@@ -170,6 +188,11 @@
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
+    
+    //adding gesutre to the feed image view
+    UITapGestureRecognizer *tapGestueForFeedImageView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureForFeedImageView)];
+    tapGestueForFeedImageView.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tapGestueForFeedImageView];
 }
 
 
@@ -339,5 +362,75 @@
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }
 - (IBAction)markAsFavButton:(id)sender {
+}
+
+
+-(void)getUserRatings{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://burst.co.in/preview/send_star_rating.php?type=get&product_id=%@", self.productUniqueID]];
+    //NSLog(@"%@", url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data.length > 0 && connectionError == nil) {
+            //there was no connection error
+            
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSDictionary *ratingsDictionary = responseDictionary[@"ratings"];
+            
+            NSMutableArray *userRatings = [[NSMutableArray alloc] init];
+            
+            for (NSDictionary *ratDict in ratingsDictionary) {
+                [userRatings addObject:ratDict[@"rating"]];
+            }
+            
+            
+            if (userRatings.count > 0) {
+                CGFloat average = [self calculateAverageWithRatings:userRatings];
+                
+                NSLog(@"%.1f", average);
+                
+                
+                NSString *userRatingLabelString = [NSString stringWithFormat:@"User Rating(AVG): %.1f/10", average];
+                //setting text to the user rating label
+                [UIView animateWithDuration:1.5 animations:^{
+                    self.userRatingLabel.alpha = 1.0;
+                } completion:^(BOOL finished) {
+                    self.userRatingLabel.text = userRatingLabelString;
+                }];
+            }
+            else{
+                [self.userRatingLabel setHidden:YES];
+            }
+            
+            
+            
+        }
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:[connectionError.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+            NSLog(@"%@", connectionError);
+        }
+    }];
+}
+
+#pragma mark - Main Average Alogirthm
+-(CGFloat)calculateAverageWithRatings:(NSMutableArray *)userRatings{
+    //initing the average var
+    CGFloat average = 0.0;
+    //inting the total var
+    CGFloat total = 0.0;
+    
+    for (NSNumber *num in userRatings) {
+        total += [num intValue];
+    }
+    
+    average = total / userRatings.count; //this instance if the cgfloat gives us that actual rating.
+    
+    return average;
+    
+}
+
+#pragma mark - Feed Image View Tap Handle
+-(void)handleTapGestureForFeedImageView{
+    NSLog(@"The image was tapped");
 }
 @end

@@ -9,6 +9,7 @@
 #import "PRProfileViewController.h"
 #import "SAMCache.h"
 #import "PRRelatedViewController.h"
+#import "NSDate+NVTimeAgo.h"
 
 @interface PRProfileViewController ()
 
@@ -22,6 +23,48 @@
     
     [self.view addSubview:self.tableView];
     self.currentUser = [PFUser currentUser];
+    self.tableView.alpha = 0.0;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.profilePictureImageView.layer.cornerRadius = 50.0;
+    
+    //getting the profile picture only for once.
+    PFQuery *profilePictureQuery = [PFUser query];
+    [profilePictureQuery getObjectInBackgroundWithId:self.currentUser.objectId block:^(PFObject *object, NSError *error) {
+        if (!error) {
+            PFFile *profilePictureFile = object[@"pro_pic"];
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            
+            dispatch_async(queue, ^{
+                NSData *profileImageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profilePictureFile.url]];
+                if(profileImageData != nil){
+                    //setting up another grand dispatch for setting the ui image
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIImage *profileImage = [UIImage imageWithData:profileImageData]; //we have the uiimage object
+                        //setting the uiimage above to the image view
+                        self.profilePictureImageView.image = profileImage;
+                    });
+                }
+            });
+            
+            //getting cover image too
+            
+            PFFile *coverPictureFile = object[@"cover_pic"];
+            dispatch_async(queue, ^{
+                NSData *coverImageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:coverPictureFile.url]];
+                if (coverImageData != nil) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIImage *coverImage = [UIImage imageWithData:coverImageData];
+                        self.coverImageView.image = coverImage;
+                    });
+                }
+            });
+            
+        }
+    }];
+    
+    
+
     
 }
 -(void)viewWillAppear:(BOOL)animated {
@@ -36,52 +79,26 @@
     self.userFullNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.userFullNameLabel.numberOfLines = 0;
     //load the profile picture
-    //query the database to get the picture
-    PFQuery *queryForPic = [PFUser query];
-    [queryForPic whereKey:@"objectId" equalTo:currentUser.objectId];
-    [queryForPic findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Problem with the query.");
-        }
-        else{
-            for(PFObject *profilePictureObject in objects)
-            {
-                //Caching the picture
-                NSString *key = [NSString stringWithFormat:@"%@-dp",[[PFUser currentUser] objectId]];
-                UIImage *photo = [[SAMCache sharedCache] imageForKey:key];
-                if (photo) {
-                    self.profilePictureImageView.image = photo;
-                }
-                //Setting the profile picture
-                PFFile *file = [profilePictureObject objectForKey:@"pro_pic"];
-                NSURL *url = [NSURL URLWithString:file.url];
-                NSData *imageData = [NSData dataWithContentsOfURL:url];
-                UIImage *image = [UIImage imageWithData:imageData];
-                [[SAMCache sharedCache] setImage:image forKey:key];
-                self.profilePictureImageView.image = image;
-                self.profilePictureImageView.layer.cornerRadius = CGRectGetWidth(self.profilePictureImageView.frame) / 2.0f;
-                //Setting the cover picture
-                //Key for cover picture
-                NSString *keyForCoverPic = [NSString stringWithFormat:@"%@-cp",[[PFUser currentUser] objectId]];
-                UIImage *cpImage = [[SAMCache sharedCache] imageForKey:key];
-                if (cpImage) {
-                    self.coverImageView.image = cpImage;
-                }
-                PFFile *coverPictureFile = [profilePictureObject objectForKey:@"cover_pic"];
-                NSURL *urlForCoverPic = [NSURL URLWithString:coverPictureFile.url];
-                NSData *coverPictureData = [NSData dataWithContentsOfURL:urlForCoverPic];
-                UIImage *coverImage = [UIImage imageWithData:coverPictureData];
-                //Caching the image
-                [[SAMCache sharedCache] setImage:coverImage forKey:keyForCoverPic];
-                self.coverImageView.image = coverImage;
-            }
-        }
-    }];
+
+    
+    //adding long press gesture for deleting a review
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    longPressGesture.minimumPressDuration = 2.0;
+    longPressGesture.delegate = self;
+    [self.tableView addGestureRecognizer:longPressGesture];
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //adding animation here for better ui
+    [UIView animateWithDuration:4.0 animations:^{
+        self.tableView.alpha = 1.0;
+    } completion:nil];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 0;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -91,8 +108,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     PFObject *review = [self.userReviews objectAtIndex:indexPath.row];
-    cell.textLabel.text = [review objectForKey:@"username"];
-    NSLog(@"%@",[review objectForKey:@"username"]);
+    NSDate *commentedDate = [review objectForKey:@"sentOn"];
+    NSString *mainString = [NSString stringWithFormat:@"%@ | %@", [review objectForKey:@"username"], [commentedDate formattedAsTimeAgo]];
+    cell.textLabel.text = mainString;
     cell.detailTextLabel.text = [review objectForKey:@"comment"];
     return cell;
 }
@@ -100,13 +118,20 @@
 
 -(void)getUserReviews{
     PFQuery *query = [PFQuery queryWithClassName:@"comments"];
-    [query whereKey:@"user_id" equalTo:self.currentUser];
+    [query whereKey:@"user_id" equalTo:self.currentUser.objectId];
+    [query orderByDescending:@"createdAt"];
     //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.userReviews = objects;
-            //NSLog(@"%@",self.userReviews);
+            //if there are no reviews then hide the table view
+            if(self.userReviews.count != 0){
             [self.tableView reloadData];
+            }
+            else{
+                //hide the table view if the there are no users.
+                [self.tableView setHidden:YES];
+            }
         }
     }];
 }
@@ -119,7 +144,52 @@
 }
 
 - (IBAction)openRelatedSearches:(id)sender {
-    PRRelatedViewController *viewController = [[PRRelatedViewController alloc] init];
-    [self presentViewController:viewController animated:YES completion:nil];
+//    PRRelatedViewController *viewController = [[PRRelatedViewController alloc] init];
+//    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    CGPoint p = [gestureRecognizer locationInView:self.tableView];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
+    if (indexPath == nil) {
+        //NSLog(@"long press on table view but not on a row");
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        //NSLog(@"long press on table view at row %ld", (long)indexPath.row);
+        
+        //we have to ask the user to delete his selected review
+        
+        UIAlertView *deleteReviewAlertView = [[UIAlertView alloc] initWithTitle:@"Are you sure?" message:@"Do you want to delete this review?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        [deleteReviewAlertView show];
+        self.toBeDeletedIndexPath = indexPath;
+        
+    } else {
+        //NSLog(@"gestureRecognizer.state = %ld", (long)gestureRecognizer.state);
+    }
+}
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    //NSLog(@"%ld", (long)buttonIndex);
+    
+    //Checks For Approval
+    if (buttonIndex == 1) {
+        //do something because they selected button one, yes
+        //this object has to be deleted now
+        PFObject *reviewObject = [self.userReviews objectAtIndex:self.toBeDeletedIndexPath.row];
+        [reviewObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                //we can now reload the data in the table view
+                [self getUserReviews];
+            }
+            else{
+                NSLog(@"Error: %@", [error.userInfo objectForKeyedSubscript:@"error"]);
+            }
+        }];
+        
+    } else {
+        //do nothing because they selected no
+    }
 }
 @end

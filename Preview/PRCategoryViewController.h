@@ -10,6 +10,7 @@
 #import <StartApp/StartApp.h>
 #import <StartApp/STABannerView.h>
 #import <StartApp/STABannerSize.h>
+#import <Parse/Parse.h>
 
 @interface PRCategoryViewController : UITableViewController
 {
@@ -17,5 +18,6 @@
 }
 
 @property (nonatomic,strong) NSMutableArray *categoryPost;
+@property (nonatomic, strong) NSArray *categoryTitles;
 
 @end

@@ -43,6 +43,8 @@
 		9F58550D191E876000E2E6D1 /* PRFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58550C191E876000E2E6D1 /* PRFeedPost.m */; };
 		9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */; };
 		9F648F0C1A092BF300D15BD2 /* PRShowReviewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */; };
+		9F65BCA81B5CDBD1001C0FF3 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65BCA71B5CDBD1001C0FF3 /* MSCellAccessory.m */; };
+		9F65BCAB1B5CDCF3001C0FF3 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65BCAA1B5CDCF3001C0FF3 /* UIView+AccessViewController.m */; };
 		9F6F189819443BDA0071360E /* PRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F189719443BDA0071360E /* PRProfileViewController.m */; };
 		9F7B02D81A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B02D71A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m */; };
 		9F7EEAE91AC14BC800663CDE /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7EEAD71AC14BC800663CDE /* AFHTTPRequestOperation.m */; };
@@ -185,6 +187,10 @@
 		9F648F081A092AAA00D15BD2 /* PRShowAllReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowAllReviewsViewController.m; sourceTree = "<group>"; };
 		9F648F0A1A092BF300D15BD2 /* PRShowReviewViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowReviewViewCell.h; sourceTree = "<group>"; };
 		9F648F0B1A092BF300D15BD2 /* PRShowReviewViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRShowReviewViewCell.m; sourceTree = "<group>"; };
+		9F65BCA61B5CDBD1001C0FF3 /* MSCellAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCellAccessory.h; sourceTree = "<group>"; };
+		9F65BCA71B5CDBD1001C0FF3 /* MSCellAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCellAccessory.m; sourceTree = "<group>"; };
+		9F65BCA91B5CDCF3001C0FF3 /* UIView+AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewController.h"; sourceTree = "<group>"; };
+		9F65BCAA1B5CDCF3001C0FF3 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewController.m"; sourceTree = "<group>"; };
 		9F6F189619443BDA0071360E /* PRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProfileViewController.h; sourceTree = "<group>"; };
 		9F6F189719443BDA0071360E /* PRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProfileViewController.m; sourceTree = "<group>"; };
 		9F7B02D61A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -496,6 +502,17 @@
 			name = "EXC Content";
 			sourceTree = "<group>";
 		};
+		9F65BCA51B5CDBAF001C0FF3 /* MS Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				9F65BCA91B5CDCF3001C0FF3 /* UIView+AccessViewController.h */,
+				9F65BCAA1B5CDCF3001C0FF3 /* UIView+AccessViewController.m */,
+				9F65BCA61B5CDBD1001C0FF3 /* MSCellAccessory.h */,
+				9F65BCA71B5CDBD1001C0FF3 /* MSCellAccessory.m */,
+			);
+			name = "MS Accessory";
+			sourceTree = "<group>";
+		};
 		9F6F189519443BC00071360E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +648,7 @@
 		9FB1F31C191E206200776A16 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				9F65BCA51B5CDBAF001C0FF3 /* MS Accessory */,
 				9FE679711B0FAC3400FBF83C /* UIImagEffects */,
 				9FD45EF21B0F3FE500A36F8F /* Color Wheel */,
 				9F0F98F31AEE4833000511CC /* Rate */,
@@ -899,6 +917,7 @@
 				9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */,
 				9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */,
 				9F7EEAEA1AC14BC800663CDE /* AFHTTPRequestOperationManager.m in Sources */,
+				9F65BCAB1B5CDCF3001C0FF3 /* UIView+AccessViewController.m in Sources */,
 				9FA28A541A33609F005D509C /* PRUserLocation.m in Sources */,
 				9F0803911A6BC95B00A4CB9C /* CAAnimation+Blocks.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
@@ -915,6 +934,7 @@
 				9F7EEAEF1AC14BC800663CDE /* AFURLRequestSerialization.m in Sources */,
 				9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */,
 				9FB1F35D191E277B00776A16 /* PRHomeFeedViewController.m in Sources */,
+				9F65BCA81B5CDBD1001C0FF3 /* MSCellAccessory.m in Sources */,
 				9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */,
 				9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */,
 				9FD45EF51B0F3FFF00A36F8F /* PRColorWheel.m in Sources */,

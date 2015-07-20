@@ -24,7 +24,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -47,7 +46,9 @@
         [self.categoryPost addObject:feedPost];
     }
      */
-    [self loadData];
+    //[self loadData];
+    
+    [self loadCategories];
 }
 
 
@@ -72,20 +73,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    PRCategoryTitles *feedPost = [self.categoryPost objectAtIndex:indexPath.row];
+    PFObject *category = [self.categoryTitles objectAtIndex:indexPath.row];
     
-    if ( [feedPost.thumbnail isKindOfClass:[NSString class]]) {
-        NSData *imageData = [NSData dataWithContentsOfURL:feedPost.thumbnailURL];
-        UIImage *image = [UIImage imageWithData:imageData];
-        cell.imageView.image = image;
-        cell.imageView.layer.cornerRadius = CGRectGetWidth(cell.imageView.frame) / 2.0f;
-        
-    } else {
-        cell.imageView.image = [UIImage imageNamed:@"export"];
-    }
     
-    cell.textLabel.text = feedPost.title;
-    NSLog(@"%@",feedPost.title);
+    NSLog(@"%@", category[@"category_name"]);
     
     return cell;
 }
@@ -139,34 +130,27 @@
     [UIView commitAnimations];
 }
 */
--(void)loadData{
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+-(void)loadCategories{
+    //send reqeust to the json file to get products
+    NSURL *categoriesURL = [NSURL URLWithString:@"http://burst.co.in/preview/json_emitter_2.php"];
+    NSURLRequest *categoriesRequest = [NSURLRequest requestWithURL:categoriesURL];
     
-    
-    //Setting the NSURL
-    NSURL *url = [NSURL URLWithString:@"http://burst.co.in/preview/json_emitter_2.php"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    //Data task
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (error) {
-            NSLog(@"%@",error);
+    [NSURLConnection sendAsynchronousRequest:categoriesRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //checking for errors
+        if (data.length > 0 && connectionError == nil) {
+            //we have got the data
+            //this is the main dictionary that is holding the key of fetches
+            NSDictionary *mainDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            //an array with all category titles
+            self.categoryTitles = [mainDictionary objectForKey:@"fetches"];
+//            for (PFObject *category in self.categoryTitles) {
+//                NSLog(@"%@", category[@"category_name"]);
+//            }
         }
-        else {
-            //NSLog(@"%@",responseObject);
-            self.categoryPost = [NSMutableArray array];
-            NSArray *feedPostsArray = [responseObject objectForKey:@"fetches"];
-            for(NSDictionary *cgDictionary in feedPostsArray){
-                PRCategoryTitles *feedPost = [PRCategoryTitles blogPostWithTitle:[cgDictionary objectForKey:@"category_name"]];
-                feedPost.thumbnail = [cgDictionary objectForKey:@"category_icon_32"];
-                feedPost.emitterURL = [cgDictionary objectForKey:@"emitter_file"];
-                [self.categoryPost addObject:feedPost];
-                NSLog(@"%@",self.categoryPost);
-                
-            }
+        else{
+            NSLog(@"There was an error in getting the data from the server.");
         }
     }];
-    [dataTask resume];
+    
 }
 @end
