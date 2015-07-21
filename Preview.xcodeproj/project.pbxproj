@@ -97,7 +97,6 @@
 		9FB1F366191E38A400776A16 /* PRSignUPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F365191E38A400776A16 /* PRSignUPViewController.m */; };
 		9FB33AFA1AC7D8E80050B45B /* PRRelatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB33AF91AC7D8E80050B45B /* PRRelatedViewController.m */; };
 		9FBAAEFA194066FA006F39B3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */; };
-		9FBB2EC819F907CF00735B6A /* PRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */; };
 		9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */; };
 		9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */; };
 		9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */; };
@@ -113,6 +112,8 @@
 		9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1D60194C8D0B005F7A46 /* PREditProfileViewController.m */; };
 		9FF126B5191ECF6600759248 /* PRSelectedCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */; };
 		9FF92F5E1A9E59040089A3C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF92F5D1A9E59040089A3C8 /* MapKit.framework */; };
+		9FFDD6601B5E051C0097ED0A /* PRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFDD65F1B5E051C0097ED0A /* PRSettingsViewController.m */; };
+		9FFDD6631B5E135E0097ED0A /* PRDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFDD6621B5E135E0097ED0A /* PRDetailSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,8 +270,6 @@
 		9FB33AF81AC7D8E80050B45B /* PRRelatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedViewController.h; sourceTree = "<group>"; };
 		9FB33AF91AC7D8E80050B45B /* PRRelatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedViewController.m; sourceTree = "<group>"; };
 		9FBAAEF9194066FA006F39B3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		9FBB2EC619F907CF00735B6A /* PRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSettingsViewController.h; sourceTree = "<group>"; };
-		9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSettingsViewController.m; sourceTree = "<group>"; };
 		9FBB579319DD63A900F62CE8 /* PRFriendsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewController.h; sourceTree = "<group>"; };
 		9FBB579419DD63A900F62CE8 /* PRFriendsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFriendsCollectionViewController.m; sourceTree = "<group>"; };
 		9FBB579619DD641100F62CE8 /* PRFriendsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFriendsCollectionViewCell.h; sourceTree = "<group>"; };
@@ -298,6 +297,10 @@
 		9FF126B3191ECF6600759248 /* PRSelectedCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSelectedCategoryViewController.h; sourceTree = "<group>"; };
 		9FF126B4191ECF6600759248 /* PRSelectedCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryViewController.m; sourceTree = "<group>"; };
 		9FF92F5D1A9E59040089A3C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9FFDD65E1B5E051C0097ED0A /* PRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSettingsViewController.h; sourceTree = "<group>"; };
+		9FFDD65F1B5E051C0097ED0A /* PRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSettingsViewController.m; sourceTree = "<group>"; };
+		9FFDD6611B5E135E0097ED0A /* PRDetailSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRDetailSettingViewController.h; sourceTree = "<group>"; };
+		9FFDD6621B5E135E0097ED0A /* PRDetailSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRDetailSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -721,8 +724,10 @@
 		9FBB2EC519F907A300735B6A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				9FBB2EC619F907CF00735B6A /* PRSettingsViewController.h */,
-				9FBB2EC719F907CF00735B6A /* PRSettingsViewController.m */,
+				9FFDD65E1B5E051C0097ED0A /* PRSettingsViewController.h */,
+				9FFDD65F1B5E051C0097ED0A /* PRSettingsViewController.m */,
+				9FFDD6611B5E135E0097ED0A /* PRDetailSettingViewController.h */,
+				9FFDD6621B5E135E0097ED0A /* PRDetailSettingViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -883,6 +888,7 @@
 				9FDEEE0219F80A060002210E /* PRLeaderboardViewCell.m in Sources */,
 				9F812116194175D600249BAC /* PRCollectionCell.m in Sources */,
 				9FB1F360191E2EDA00776A16 /* PRLoginViewController.m in Sources */,
+				9FFDD6601B5E051C0097ED0A /* PRSettingsViewController.m in Sources */,
 				9F0803941A6BC95B00A4CB9C /* YLLongTapShareView.m in Sources */,
 				9F7EEAF51AC17F9800663CDE /* PRTimepassViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
@@ -895,11 +901,11 @@
 				9F8F67BE1A1FB31200F3E000 /* PRSelectedCategory.m in Sources */,
 				9F0803971A6BC95B00A4CB9C /* YLShareView.m in Sources */,
 				9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */,
+				9FFDD6631B5E135E0097ED0A /* PRDetailSettingViewController.m in Sources */,
 				9F7EEAED1AC14BC800663CDE /* AFSecurityPolicy.m in Sources */,
 				9F342A2319E00197006C7135 /* PRInsertCommentViewController.m in Sources */,
 				9F7EEAEC1AC14BC800663CDE /* AFNetworkReachabilityManager.m in Sources */,
 				9F93BE84191EFE2300D9711D /* PRModalDetailFeedViewController.m in Sources */,
-				9FBB2EC819F907CF00735B6A /* PRSettingsViewController.m in Sources */,
 				9FE227DC1AC132C600C6DE11 /* PRDetailPictureViewController.m in Sources */,
 				9F447E1E19EEFAB3007BD7FB /* PRPurchaseWebViewController.m in Sources */,
 				9F7B02D81A22244400FCA8E4 /* TPKeyboardAvoidingScrollView.m in Sources */,

@@ -432,5 +432,6 @@
 #pragma mark - Feed Image View Tap Handle
 -(void)handleTapGestureForFeedImageView{
     NSLog(@"The image was tapped");
+    //we should implement an image view so that the user can see the main picture even better.
 }
 @end

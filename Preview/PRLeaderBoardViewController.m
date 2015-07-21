@@ -54,12 +54,12 @@
     PFQuery *query = [PFUser query];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error.");
-        }
-        else{
+        if (!error) {
             self.allUsers = objects;
             [self.tableView reloadData];
+        }
+        else{
+            NSLog(@"%@", [error.userInfo objectForKey:@"error"]);
         }
     }];
 }

@@ -141,6 +141,10 @@
     if ([segue.identifier isEqualToString:@"showEditProfile"]) {
         [self.tabBarController setHidesBottomBarWhenPushed:YES];
     }
+    
+    if ([segue.identifier isEqualToString:@"showSettings"]) {
+        [self.tabBarController setHidesBottomBarWhenPushed:YES];
+    }
 }
 
 - (IBAction)openRelatedSearches:(id)sender {

@@ -1605,6 +1605,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Profile" id="hMg-sz-O8P">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" style="plain" id="2xD-GD-jGa">
+                            <connections>
+                                <segue destination="fTS-At-azM" kind="push" identifier="showSettings" id="1sB-ju-9XM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="edit_user_settings" id="uou-sO-GdM">
                             <connections>
                                 <segue destination="5SJ-Ed-onB" kind="modal" id="l5C-l3-gAA"/>
@@ -1621,6 +1626,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJh-Zl-ee4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973" y="1358"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="uR6-lL-xN8">
+            <objects>
+                <viewController id="fTS-At-azM" customClass="PRSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Kr-dX-evR"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFt-5H-M02"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VNP-X6-4lX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_appraisal" translatesAutoresizingMaskIntoConstraints="NO" id="iiu-w9-y7a">
+                                <rect key="frame" x="0.0" y="64" width="320" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iiu-w9-y7a" secondAttribute="height" multiplier="160:121" id="dqU-3E-HMH"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-wp-AsV">
+                                <rect key="frame" x="0.0" y="308" width="320" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U4e-wp-AsV" secondAttribute="height" multiplier="320:211" id="D0T-4X-Vsr"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="CxZ-cI-45l" rowHeight="86" style="IBUITableViewCellStyleDefault" id="qbF-fC-pPy">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qbF-fC-pPy" id="iET-Od-AVv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Settings Titles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CxZ-cI-45l">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iiu-w9-y7a" firstAttribute="leading" secondItem="VNP-X6-4lX" secondAttribute="leading" id="LXq-gW-9pi"/>
+                            <constraint firstItem="aFt-5H-M02" firstAttribute="top" secondItem="U4e-wp-AsV" secondAttribute="bottom" id="cES-LN-Tao"/>
+                            <constraint firstAttribute="trailing" secondItem="U4e-wp-AsV" secondAttribute="trailing" id="cLD-ga-dj9"/>
+                            <constraint firstItem="U4e-wp-AsV" firstAttribute="leading" secondItem="VNP-X6-4lX" secondAttribute="leading" id="gRP-P7-NQz"/>
+                            <constraint firstItem="iiu-w9-y7a" firstAttribute="top" secondItem="4Kr-dX-evR" secondAttribute="bottom" id="oyx-nu-l0n"/>
+                            <constraint firstAttribute="trailing" secondItem="iiu-w9-y7a" secondAttribute="trailing" id="ui0-a0-rbC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Dst-71-RCC"/>
+                    <connections>
+                        <outlet property="appraisalImageView" destination="iiu-w9-y7a" id="AKD-lp-Wt8"/>
+                        <outlet property="settingsTableView" destination="U4e-wp-AsV" id="QkJ-0E-q41"/>
+                        <segue destination="SPp-aQ-WAR" kind="push" identifier="showDetailSetting" id="AgQ-kr-Gsd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7H-Mc-8Y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="1358"/>
+        </scene>
+        <!--Detail Setting View Controller-->
+        <scene sceneID="und-ep-ceV">
+            <objects>
+                <viewController id="SPp-aQ-WAR" customClass="PRDetailSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JUx-yp-pWF"/>
+                        <viewControllerLayoutGuide type="bottom" id="CUp-c9-ZRV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddj-4s-bm5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7TK-bE-vZL">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hny-BY-wjw"/>
+                    <connections>
+                        <outlet property="settingWebView" destination="7TK-bE-vZL" id="INP-lJ-ZKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKx-d5-ntv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="1358"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="UBs-Un-7uR">
@@ -1714,6 +1810,7 @@
     </scenes>
     <resources>
         <image name="Leaderboard" width="40" height="40"/>
+        <image name="Settings" width="32" height="32"/>
         <image name="add" width="50" height="50"/>
         <image name="category" width="32" height="32"/>
         <image name="close" width="32" height="32"/>
@@ -1729,6 +1826,7 @@
         <image name="image_placeholder" width="600" height="350"/>
         <image name="navBarBackground" width="1" height="1"/>
         <image name="picture" width="32" height="32"/>
+        <image name="settings_appraisal" width="800" height="600"/>
         <image name="share-32" width="32" height="32"/>
         <image name="tabBarBackground" width="1" height="1"/>
         <image name="thumb_up-50" width="50" height="50"/>
