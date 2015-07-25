@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.settingsTableView.delegate = self;
     self.settingsTableView.dataSource = self;
-    self.settingsTitles = [NSArray arrayWithObjects:@"About Us", @"Terms of use", @"Privacy Policy", nil];
+    self.settingsTitles = [NSArray arrayWithObjects:@"Terms of use", @"Privacy Policy", nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -48,9 +48,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [self.settingsTableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     PRColorWheel *colorwheel = [[PRColorWheel alloc] init];
+    self.randomColor = [colorwheel randomColor];
     cell.textLabel.text = [self.settingsTitles objectAtIndex:indexPath.row];
-    cell.textLabel.textColor = [colorwheel randomColor];
-    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_DISCLOSURE_INDICATOR color:[colorwheel randomColor]];
+    cell.textLabel.textColor = self.randomColor;
+    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_DISCLOSURE_INDICATOR color:self.randomColor];
     return cell;
 }
 
@@ -64,18 +65,18 @@
 -(void)setPropertiesWithTitle:(NSString *)settingTitle{
     if ([settingTitle isEqualToString:@"About Us"]) {
         //change detail url link to the about us
-        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/about_us.php"];
+        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/web/about_us.php"];
         [self performSegueWithIdentifier:@"showDetailSetting" sender:self];
         
     }
     else if ([settingTitle isEqualToString:@"Terms of use"]){
         //change detail url to terms of use
-        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/terms.php"];
+        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/web/terms.php"];
         [self performSegueWithIdentifier:@"showDetailSetting" sender:self];
     }
     else{
         //change to privacy policy
-        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/privacy.php"];
+        self.detailSettingURL = [NSURL URLWithString:@"http://burst.co.in/preview/web/privacy.php"];
         [self performSegueWithIdentifier:@"showDetailSetting" sender:self];
     }
 }

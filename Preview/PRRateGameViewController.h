@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PRProductA.h"
+#import "PRProductB.h"
 
 @class  PRColorWheel;
 
 @interface PRRateGameViewController : UIViewController
 //Iboutlets
-@property (weak, nonatomic) IBOutlet UIImageView *product1ImageView;
-@property (weak, nonatomic) IBOutlet UILabel *product1Label;
-@property (weak, nonatomic) IBOutlet UIImageView *product2ImageView;
-@property (weak, nonatomic) IBOutlet UILabel *product2Label;
+@property (nonatomic, weak) IBOutlet UIView *productAView;
+@property (nonatomic, weak) IBOutlet UIView *productBView;
+@property (nonatomic, weak) IBOutlet UIImageView *productAImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *productBImageView;
 @property (weak, nonatomic) IBOutlet UIView *vView;
+@property (weak, nonatomic) IBOutlet UILabel *productName;
+@property (weak, nonatomic) IBOutlet UILabel *productBNameLabel;
 
 
 //Properties
@@ -24,5 +28,8 @@
 @property (nonatomic, strong) NSDictionary *returnDictionary;
 - (IBAction)playGame:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *playGameButton;
+@property (strong, nonatomic) NSDictionary *productAInformation;
+@property (strong, nonatomic) NSDictionary *productBInformation;
+@property (strong, nonatomic) PRProductA *sampleProductAInstance;
 
 @end

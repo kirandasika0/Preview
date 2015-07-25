@@ -17,5 +17,6 @@
 #pragma mark - Properties
 @property (nonatomic, strong) NSArray *settingsTitles;
 @property (nonatomic, strong) NSURL *detailSettingURL;
+@property (nonatomic, strong) UIColor *randomColor;
 
 @end

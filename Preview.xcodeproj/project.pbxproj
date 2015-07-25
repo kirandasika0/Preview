@@ -21,6 +21,7 @@
 		9F1E4E6619E1454300E3B242 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E4E6519E1454300E3B242 /* NSDate+NVTimeAgo.m */; };
 		9F1F5081191F5C5700551499 /* PRSuggestProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */; };
 		9F1F5084191F5D6A00551499 /* PRSuggestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */; };
+		9F29E9C61B5F735300A0001F /* PRProductA.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F29E9C51B5F735300A0001F /* PRProductA.m */; };
 		9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32FC60191E98BC00520497 /* PRCategoryViewController.m */; };
 		9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1C19DFFB83006C7135 /* PRcommentsCollectionViewController.m */; };
 		9F342A2019DFFBA1006C7135 /* PRCommentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F342A1F19DFFBA1006C7135 /* PRCommentsCollectionViewCell.m */; };
@@ -101,6 +102,7 @@
 		9FBB579819DD641100F62CE8 /* PRFriendsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB579719DD641100F62CE8 /* PRFriendsCollectionViewCell.m */; };
 		9FBCC987191EBBE700B2D3FB /* PRSelectedCategoryTitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */; };
 		9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1A57919F56922006FBD0F /* PRForgotPasswordViewController.m */; };
+		9FC96E631B5FD08200BA869B /* PRProductB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC96E621B5FD08200BA869B /* PRProductB.m */; };
 		9FCA652A1940BF1F009CA8D3 /* PRRelatedPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */; };
 		9FCCC5DA19E538AA00D7FC39 /* PRShowJustReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC5D919E538AA00D7FC39 /* PRShowJustReviewsViewController.m */; };
 		9FD45EF51B0F3FFF00A36F8F /* PRColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD45EF41B0F3FFF00A36F8F /* PRColorWheel.m */; };
@@ -155,6 +157,8 @@
 		9F1F5080191F5C5700551499 /* PRSuggestProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSuggestProductViewController.m; sourceTree = "<group>"; };
 		9F1F5082191F5D6A00551499 /* PRSuggestCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSuggestCategoryViewController.h; sourceTree = "<group>"; };
 		9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSuggestCategoryViewController.m; sourceTree = "<group>"; };
+		9F29E9C41B5F735300A0001F /* PRProductA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProductA.h; sourceTree = "<group>"; };
+		9F29E9C51B5F735300A0001F /* PRProductA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProductA.m; sourceTree = "<group>"; };
 		9F32FC5F191E98BC00520497 /* PRCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCategoryViewController.h; sourceTree = "<group>"; };
 		9F32FC60191E98BC00520497 /* PRCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCategoryViewController.m; sourceTree = "<group>"; };
 		9F342A1B19DFFB83006C7135 /* PRcommentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRcommentsCollectionViewController.h; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 		9FBCC986191EBBE700B2D3FB /* PRSelectedCategoryTitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSelectedCategoryTitles.m; sourceTree = "<group>"; };
 		9FC1A57819F56922006FBD0F /* PRForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRForgotPasswordViewController.h; sourceTree = "<group>"; };
 		9FC1A57919F56922006FBD0F /* PRForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRForgotPasswordViewController.m; sourceTree = "<group>"; };
+		9FC96E611B5FD08200BA869B /* PRProductB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProductB.h; sourceTree = "<group>"; };
+		9FC96E621B5FD08200BA869B /* PRProductB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProductB.m; sourceTree = "<group>"; };
 		9FCA65281940BF1F009CA8D3 /* PRRelatedPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRelatedPicturesViewController.h; sourceTree = "<group>"; };
 		9FCA65291940BF1F009CA8D3 /* PRRelatedPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRelatedPicturesViewController.m; sourceTree = "<group>"; };
 		9FCCC5D819E538AA00D7FC39 /* PRShowJustReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRShowJustReviewsViewController.h; sourceTree = "<group>"; };
@@ -390,6 +396,8 @@
 		9F0F98F31AEE4833000511CC /* Rate */ = {
 			isa = PBXGroup;
 			children = (
+				9FC96E601B5FD07300BA869B /* Product B */,
+				9F29E9C01B5F650A00A0001F /* Product A */,
 				9F0F98F41AEE485F000511CC /* PRRateGameViewController.h */,
 				9F0F98F51AEE485F000511CC /* PRRateGameViewController.m */,
 			);
@@ -423,6 +431,15 @@
 				9F1F5083191F5D6A00551499 /* PRSuggestCategoryViewController.m */,
 			);
 			name = Suggest;
+			sourceTree = "<group>";
+		};
+		9F29E9C01B5F650A00A0001F /* Product A */ = {
+			isa = PBXGroup;
+			children = (
+				9F29E9C41B5F735300A0001F /* PRProductA.h */,
+				9F29E9C51B5F735300A0001F /* PRProductA.m */,
+			);
+			name = "Product A";
 			sourceTree = "<group>";
 		};
 		9F342A1A19DFFB59006C7135 /* Comments */ = {
@@ -743,6 +760,15 @@
 			name = Friends;
 			sourceTree = "<group>";
 		};
+		9FC96E601B5FD07300BA869B /* Product B */ = {
+			isa = PBXGroup;
+			children = (
+				9FC96E611B5FD08200BA869B /* PRProductB.h */,
+				9FC96E621B5FD08200BA869B /* PRProductB.m */,
+			);
+			name = "Product B";
+			sourceTree = "<group>";
+		};
 		9FD45EF21B0F3FE500A36F8F /* Color Wheel */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,6 +941,7 @@
 				9F32FC61191E98BC00520497 /* PRCategoryViewController.m in Sources */,
 				9F7EEAE91AC14BC800663CDE /* AFHTTPRequestOperation.m in Sources */,
 				9F648F091A092AAA00D15BD2 /* PRShowAllReviewsViewController.m in Sources */,
+				9FC96E631B5FD08200BA869B /* PRProductB.m in Sources */,
 				9FEE1D61194C8D0B005F7A46 /* PREditProfileViewController.m in Sources */,
 				9F7EEAF01AC14BC800663CDE /* AFURLResponseSerialization.m in Sources */,
 				9F0803951A6BC95B00A4CB9C /* YLShareAnimationHelper.m in Sources */,
@@ -928,6 +955,7 @@
 				9F0803911A6BC95B00A4CB9C /* CAAnimation+Blocks.m in Sources */,
 				9FC1A57A19F56922006FBD0F /* PRForgotPasswordViewController.m in Sources */,
 				9F0803961A6BC95B00A4CB9C /* YLShareButtonView.m in Sources */,
+				9F29E9C61B5F735300A0001F /* PRProductA.m in Sources */,
 				9F0803801A6BAE3B00A4CB9C /* SWRevealViewController.m in Sources */,
 				9FBB579519DD63A900F62CE8 /* PRFriendsCollectionViewController.m in Sources */,
 				9FB33AFA1AC7D8E80050B45B /* PRRelatedViewController.m in Sources */,
