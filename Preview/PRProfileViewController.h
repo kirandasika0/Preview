@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Parse/Parse.h>
 
-@interface PRProfileViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
+@interface PRProfileViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIGestureRecognizerDelegate>
 //USername label and IB outlet must be created in order to display the username
 @property (weak, nonatomic) IBOutlet UILabel *userFullNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;

@@ -167,6 +167,8 @@
         UIAlertView *deleteReviewAlertView = [[UIAlertView alloc] initWithTitle:@"Are you sure?" message:@"Do you want to delete this review?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
         [deleteReviewAlertView show];
         self.toBeDeletedIndexPath = indexPath;
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        [cell setHidden:YES];
         
     } else {
         //NSLog(@"gestureRecognizer.state = %ld", (long)gestureRecognizer.state);

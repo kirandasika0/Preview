@@ -163,15 +163,47 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     PRFeedPost *feedPost = [self.feedPosts objectAtIndex:indexPath.row];
     NSLog(@"%@",feedPost.title);
-    if (feedPost.title != 0) {
-        [self performSegueWithIdentifier:@"showDetailPostFeed" sender:self];
-    }
-    else {
-        //We are gonna do nothing for now.
-    }
+    
+    [UIView animateWithDuration:1.0f delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        
+        
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        
+        CAKeyframeAnimation * anim = [ CAKeyframeAnimation animationWithKeyPath:@"transform" ] ;
+        
+        anim.values = @[ [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-10.0f, 0.0f, 0.0f) ], [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(10.0f, 0.0f, 0.0f) ] ] ;
+        
+        anim.autoreverses = YES ;
+        
+        anim.repeatCount = 2.0f ;
+        
+        anim.duration = 0.1f ;
+        
+        
+        
+        [ cell.layer addAnimation:anim forKey:nil ] ;
+        
+        
+        
+    } completion:^(BOOL finished) {
+        if (feedPost.title != 0) {
+            [self performSegueWithIdentifier:@"showDetailPostFeed" sender:self];
+        }
+    }];
+    
+    
+//    if (feedPost.title != 0) {
+//        [self performSegueWithIdentifier:@"showDetailPostFeed" sender:self];
+//    }
+//    else {
+//        //We are gonna do nothing for now.
+//    }
 }
+
+
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row) {
         //The table view has loaded so now we can hide the avtivity indicator.

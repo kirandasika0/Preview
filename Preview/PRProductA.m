@@ -11,6 +11,7 @@
 
 //constants
 #define K_FACTOR 30
+#define K_FACTOR_15 15
 @implementation PRProductA
 
 -(id)init{
@@ -48,7 +49,7 @@
     }];
     return responseDictionary;
     //decremening the value of the semaphore
-    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER); //waiting for the network request to complete
 }
 
 -(void)calculateNewBaseRatingForProductAWithId:(NSInteger)productAId andProductABaseRating:(CGFloat)productABaseRating andForProductBWithId:(NSInteger)productBId andProductBBaseRating:(CGFloat)productBBaseRating{
@@ -85,6 +86,10 @@
 
 -(CGFloat)getNewProductBaseRating{
     return self.newBaseRating;
+}
+
+-(NSInteger)getNewRounds{
+    return  self.newRounds;
 }
 
 

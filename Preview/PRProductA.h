@@ -15,4 +15,5 @@
 
 @property (strong, nonatomic) NSDictionary *productInformation;
 @property (nonatomic) CGFloat newBaseRating;
+@property (nonatomic) NSInteger newRounds;
 @end
