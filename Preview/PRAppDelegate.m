@@ -53,9 +53,9 @@
 
 -(void)generateLocalNotification{
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:3600];
+    localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:36000];
     localNotification.alertBody = @"Come back, we are missing you. It's been an hour!";
-    localNotification.applicationIconBadgeNumber = 2;
+    localNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
