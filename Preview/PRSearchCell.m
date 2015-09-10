@@ -38,9 +38,13 @@
     dispatch_async(queue, ^{
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
         if (imageData != nil) {
-            UIImage *productImage = [UIImage imageWithData:imageData];
-            UIImage *effectedProductImage = [UIImageEffects imageByApplyingBlurToImage:productImage withRadius:11.5 tintColor:[UIColor colorWithWhite:1 alpha:0.42] saturationDeltaFactor:1.2 maskImage:nil];
-            self.productImageView.image = effectedProductImage;
+            //getting back to the main queue
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *productImage = [UIImage imageWithData:imageData];
+                UIImage *effectedProductImage = [UIImageEffects imageByApplyingBlurToImage:productImage withRadius:11.5 tintColor:[UIColor colorWithWhite:1 alpha:0.42] saturationDeltaFactor:1.2 maskImage:nil];
+                self.productImageView.image = effectedProductImage;
+
+            });
         }
     });
     }

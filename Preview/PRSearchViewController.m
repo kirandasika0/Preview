@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "PRSearchCell.h"
 #import "PRDetailSearchResultViewController.h"
+#import "PRColorWheel.h"
 
 @interface PRSearchViewController ()
 
@@ -58,6 +59,7 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [manager POST:@"https://preview-backend.herokuapp.com/backend/" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             //hiding the network indicator
+            //NSLog(@"%@", responseObject);
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
             //clearing the mutablearray if there are any results
             if ([self.resultsArray count] != 0) {
@@ -65,7 +67,7 @@
             }
             
             for (NSDictionary *product in responseObject[@"results"]) {
-                [self.resultsArray addObject:product];
+                [self.resultsArray addObject:product]; //adding the results into a mutable array
             }
             
             [self.tableView reloadData];
@@ -75,7 +77,7 @@
         }];
     }
     else{
-        NSLog(@"We have to type a bigger word");
+        NSLog(@"Please type in a bigger word.");
     }
 }
 
@@ -96,6 +98,8 @@
     PRSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if ([self.resultsArray count] != 0) {
         NSDictionary *product = [self.resultsArray objectAtIndex:indexPath.row];
+        cell.backgroundColor = [[[PRColorWheel alloc] init] randomColor];
+        //we have suclassed the uitablviewcell the SearchCell and that will configure the cell with appropriate data
         [cell configureCellForProduct:product];
     }
     // Configure the cell...

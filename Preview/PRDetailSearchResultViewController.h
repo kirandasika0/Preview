@@ -16,4 +16,8 @@
 - (IBAction)revealImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *productBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *revealBackgroundImageButton;
+@property (strong, nonatomic) UIImage *originalImage;
+
+- (IBAction)showGallery:(id)sender;
+
 @end

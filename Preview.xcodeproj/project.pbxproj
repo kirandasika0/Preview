@@ -68,6 +68,7 @@
 		9FA28A581A3367A2005D509C /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A561A3367A2005D509C /* StartApp.framework */; };
 		9FA28A5A1A3367DF005D509C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A591A3367DF005D509C /* CoreTelephony.framework */; };
 		9FA28A5C1A3367FF005D509C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA28A5B1A3367FF005D509C /* AdSupport.framework */; };
+		9FA3BD791B9CF92A00CF9C3D /* PRProductGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3BD781B9CF92A00CF9C3D /* PRProductGalleryViewController.m */; };
 		9FAC4FEB1A7533CC0023C66A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC4FEA1A7533CC0023C66A /* Social.framework */; };
 		9FAC4FED1A7533D40023C66A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC4FEC1A7533D40023C66A /* Accounts.framework */; };
 		9FAD219519430B720055FA9D /* navBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAD219419430B720055FA9D /* navBarBackground.png */; };
@@ -240,6 +241,8 @@
 		9FA28A561A3367A2005D509C /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		9FA28A591A3367DF005D509C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9FA28A5B1A3367FF005D509C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9FA3BD771B9CF92A00CF9C3D /* PRProductGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRProductGalleryViewController.h; sourceTree = "<group>"; };
+		9FA3BD781B9CF92A00CF9C3D /* PRProductGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRProductGalleryViewController.m; sourceTree = "<group>"; };
 		9FAC4FEA1A7533CC0023C66A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9FAC4FEC1A7533D40023C66A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9FAD219419430B720055FA9D /* navBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBackground.png; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 				9FB60DE61B6CB04700B67347 /* PRSearchCell.m */,
 				9FB60DE81B6CCE5300B67347 /* PRDetailSearchResultViewController.h */,
 				9FB60DE91B6CCE5300B67347 /* PRDetailSearchResultViewController.m */,
+				9FA3BD771B9CF92A00CF9C3D /* PRProductGalleryViewController.h */,
+				9FA3BD781B9CF92A00CF9C3D /* PRProductGalleryViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -942,6 +947,7 @@
 				9F7EEAF51AC17F9800663CDE /* PRTimepassViewController.m in Sources */,
 				9F342A1D19DFFB83006C7135 /* PRcommentsCollectionViewController.m in Sources */,
 				9F7EEAF11AC14BC800663CDE /* AFURLSessionManager.m in Sources */,
+				9FA3BD791B9CF92A00CF9C3D /* PRProductGalleryViewController.m in Sources */,
 				9F411CAC1AC293290055B172 /* PRShowOriginalPictureViewController.m in Sources */,
 				9F1A07001B10244B00CAEF12 /* UIImageEffects.m in Sources */,
 				9F0F98F61AEE485F000511CC /* PRRateGameViewController.m in Sources */,

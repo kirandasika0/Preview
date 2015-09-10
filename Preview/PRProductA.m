@@ -28,6 +28,7 @@
         dispatch_semaphore_signal(sem);
     }
     
+    
     return responseDictionary;
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
 }

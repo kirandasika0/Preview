@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PPR-QT-58R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PPR-QT-58R">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -115,17 +115,91 @@
                             <constraint firstItem="NGl-QL-7UD" firstAttribute="trailing" secondItem="e4T-L4-hY0" secondAttribute="trailingMargin" id="Rge-FN-hdi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5Sw-GM-sr6"/>
+                    <navigationItem key="navigationItem" id="5Sw-GM-sr6">
+                        <barButtonItem key="rightBarButtonItem" image="Gallery" id="cYt-8y-OEy">
+                            <connections>
+                                <action selector="showGallery:" destination="064-UR-58s" id="q5E-RY-b8z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="productBackgroundImageView" destination="8KZ-Jo-paM" id="L4K-UN-txy"/>
                         <outlet property="productDescrptionTextView" destination="aph-ue-SXH" id="YmZ-KB-gBX"/>
                         <outlet property="productNameLabel" destination="NGl-QL-7UD" id="exZ-mE-7Re"/>
                         <outlet property="revealBackgroundImageButton" destination="8Qv-t8-vgQ" id="78h-GL-eI9"/>
+                        <segue destination="29S-uy-A3Z" kind="modal" identifier="showGallery" id="Z5f-Dq-021"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0j-Xq-fMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973" y="5860"/>
+        </scene>
+        <!--Product Gallery View Controller-->
+        <scene sceneID="GE2-Kn-Cg3">
+            <objects>
+                <viewController id="29S-uy-A3Z" customClass="PRProductGalleryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RoF-M7-oJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cz1-Zc-mLD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TX9-YO-0Hq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-48-EQE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.55138192809999997" green="0.46279177189999998" blue="0.81129765070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Images" id="hfc-fr-BzA">
+                                        <barButtonItem key="leftBarButtonItem" image="close" id="P9v-fc-9ef">
+                                            <connections>
+                                                <action selector="closeView:" destination="29S-uy-A3Z" id="kCa-N4-dQB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tXS-lg-RgP">
+                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKD-jy-Frf">
+                                <rect key="frame" x="16" y="499" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Hhu-L0-XO7" appends="YES" id="YrI-k9-UFK"/>
+                            <outletCollection property="gestureRecognizers" destination="ThI-jj-BJv" appends="YES" id="JmK-lx-mPi"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="C22-eb-Pdc"/>
+                    <connections>
+                        <outlet property="navBar" destination="IVO-48-EQE" id="wfl-97-zPL"/>
+                        <outlet property="picCounterLabel" destination="DKD-jy-Frf" id="MnG-77-Zoh"/>
+                        <outlet property="picImageView" destination="tXS-lg-RgP" id="qA0-da-PIY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRY-Zd-Nc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Hhu-L0-XO7">
+                    <connections>
+                        <action selector="handleSwipe:" destination="29S-uy-A3Z" id="zi2-Uj-ezg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ThI-jj-BJv">
+                    <connections>
+                        <action selector="handleSwipe:" destination="29S-uy-A3Z" id="S3z-wc-yc1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1613" y="5860"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="16v-Zk-GaJ">
@@ -142,7 +216,6 @@
                         <segue destination="aDw-K7-iXJ" kind="relationship" relationship="viewControllers" id="kDg-4L-nHo"/>
                         <segue destination="Nvc-bX-5HG" kind="relationship" relationship="viewControllers" id="7ZL-KB-F0J"/>
                         <segue destination="YY7-6e-KTg" kind="relationship" relationship="viewControllers" id="WNB-Is-P30"/>
-                        <segue destination="zx8-vd-vEw" kind="relationship" relationship="viewControllers" id="U9i-Ic-54L"/>
                         <segue destination="Geg-Yh-WD6" kind="relationship" relationship="viewControllers" id="1wD-Gh-38c"/>
                     </connections>
                 </tabBarController>
@@ -1707,30 +1780,11 @@
             </objects>
             <point key="canvasLocation" x="447" y="3064"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="39q-3t-zBH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zx8-vd-vEw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3vI-oK-ZNV"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dmb-KM-QeR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="EBh-HT-4uC" kind="relationship" relationship="rootViewController" id="cKu-yT-Ev8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuJ-b1-aUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-11" y="4921"/>
-        </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="exe-eA-7XP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Geg-Yh-WD6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gv8-ZY-LtR"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="gv8-ZY-LtR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rTy-cH-316">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1747,8 +1801,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gallery" width="32" height="32"/>
         <image name="Leaderboard" width="40" height="40"/>
         <image name="Play Button" width="32" height="32"/>
+        <image name="Search" width="32" height="32"/>
         <image name="Settings" width="32" height="32"/>
         <image name="add" width="50" height="50"/>
         <image name="category" width="32" height="32"/>
