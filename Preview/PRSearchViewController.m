@@ -78,6 +78,8 @@
     }
     else{
         NSLog(@"Please type in a bigger word.");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Your search term must be 3 or more than 3 charecters." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
     }
 }
 
@@ -114,11 +116,18 @@
     }
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"showDetailSearch"]) {
         PRDetailSearchResultViewController *viewController = (PRDetailSearchResultViewController *)segue.destinationViewController;
         viewController.product = self.selectedProduct;
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
+}
+- (IBAction)closeKeyboard:(id)sender {
+    //check if the keyboard is there then close
+    if ([self.view isFirstResponder]) {
+        [self.view resignFirstResponder];
     }
 }
 @end

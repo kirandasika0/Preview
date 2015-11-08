@@ -24,7 +24,6 @@ int imageIndex = 0;
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.view reloadInputViews];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"id": self.productId};
@@ -95,6 +94,7 @@ int imageIndex = 0;
     NSLog(@"%d", imageIndex);
     
     NSString *secondryNavBarString = [NSString stringWithFormat:@"%d of %ld", imageIndex + 1, self.imageLinks.count - 1];
+    //setting the navigation bar and the label below with the required information.
     self.picCounterLabel.text = secondryNavBarString;
     self.navBar.topItem.title = secondryNavBarString;
     

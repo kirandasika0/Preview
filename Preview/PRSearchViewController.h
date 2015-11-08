@@ -13,4 +13,6 @@
 @property (weak, nonatomic) NSString *searchString;
 @property (nonatomic, strong) NSMutableArray *resultsArray;
 @property (nonatomic, strong) NSDictionary *selectedProduct;
+- (IBAction)closeKeyboard:(id)sender;
+
 @end
